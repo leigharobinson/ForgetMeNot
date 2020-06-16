@@ -11,4 +11,9 @@ export default {
       result.json()
     );
   },
+  delete(id) {
+    return fetch(`${remoteURL}/loyaltyRewardsCards/${id}`, {
+      method: "DELETE",
+    }).then((result) => result.json());
+  },
 };

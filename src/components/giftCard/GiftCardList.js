@@ -17,11 +17,21 @@ const GiftCardList = () => {
     getGiftCards();
   }, []);
 
+  const deleteGiftCard = (id) => {
+    GiftCardManager.delete(id).then(() =>
+      GiftCardManager.getAll().then(setGiftCards)
+    );
+  };
+
   //Finally we use map() to "loop over" the coupons array to show a list of coupon cards
   return (
     <div className="container-cards">
       {giftCards.map((giftCard) => (
-        <GiftCard key={giftCard.id} giftCard={giftCard} />
+        <GiftCard
+          key={giftCard.id}
+          giftCard={giftCard}
+          deleteGiftCard={deleteGiftCard}
+        />
       ))}
     </div>
   );

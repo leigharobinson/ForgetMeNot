@@ -17,11 +17,21 @@ const CouponList = () => {
     getCoupons();
   }, []);
 
+  const deleteCoupon = (id) => {
+    CouponManager.delete(id).then(() =>
+      CouponManager.getAll().then(setCoupons)
+    );
+  };
+
   //Finally we use map() to "loop over" the coupons array to show a list of coupon cards
   return (
     <div className="container-cards">
       {coupons.map((coupon) => (
-        <CouponCard key={coupon.id} coupon={coupon} />
+        <CouponCard
+          key={coupon.id}
+          coupon={coupon}
+          deleteCoupon={deleteCoupon}
+        />
       ))}
     </div>
   );

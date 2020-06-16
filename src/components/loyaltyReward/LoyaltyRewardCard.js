@@ -11,6 +11,12 @@ const LoyaltyRewardCard = (props) => {
         </h3>
         <p>Visits until Reward: {props.loyaltyReward.visitsUntilReward}</p>
         <p>Expiration: {props.loyaltyReward.expirationDate}</p>
+        <button
+          type="button"
+          onClick={() => props.deleteLoyaltyRewardCard(props.loyaltyReward.id)}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

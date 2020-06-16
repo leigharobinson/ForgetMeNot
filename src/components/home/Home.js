@@ -1,7 +1,7 @@
 import React from "react";
-import GiftCard from "../giftCard/GiftCardCard";
-import CouponCard from "../coupon/CouponCard";
-import LoyaltyRewardCard from "../loyaltyReward/LoyaltyRewardCard";
+import GiftCardList from "../giftCard/GiftCardList";
+import CouponList from "../coupon/CouponList";
+import LoyaltyRewardList from "../loyaltyReward/LoyaltyRewardList";
 
 const Home = () => {
   return (
@@ -14,9 +14,9 @@ const Home = () => {
         <button>Search</button>
       </div>
       <div>
-        <GiftCard />
-        <CouponCard />
-        <LoyaltyRewardCard />
+        <GiftCardList />
+        <CouponList />
+        <LoyaltyRewardList />
       </div>
     </div>
   );

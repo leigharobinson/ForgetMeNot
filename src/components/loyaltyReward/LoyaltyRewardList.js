@@ -17,6 +17,12 @@ const LoyaltyRewardList = () => {
     getLoyaltyRewards();
   }, []);
 
+  const deleteLoyaltyRewardCard = (id) => {
+    LoyaltyRewardManager.delete(id).then(() =>
+      LoyaltyRewardManager.getAll().then(setLoyaltyRewards)
+    );
+  };
+
   //Finally we use map() to "loop over" the coupons array to show a list of coupon cards
   return (
     <div className="container-cards">
@@ -24,6 +30,7 @@ const LoyaltyRewardList = () => {
         <LoyaltyRewardCard
           key={loyaltyReward.id}
           loyaltyReward={loyaltyReward}
+          deleteLoyaltyRewardCard={deleteLoyaltyRewardCard}
         />
       ))}
     </div>
