@@ -1,25 +1,13 @@
 import React from "react";
 import "./ForgetMeNot.css";
-import "./components/coupon/CouponCard";
-import CouponCard from "./components/coupon/CouponCard";
-import GiftCard from "./components/giftCard/GiftCardCard";
-import LoyaltyRewardCard from "./components/loyaltyReward/LoyaltyRewardCard";
+import NavBar from "./components/navBar/NavBar";
+import ApplicationViews from "./components/ApplicationViews";
 const ForgetMeNot = () => {
   return (
-    <div>
-      <div>InsertLogo</div>
-      <h2>Welcome ___user______!</h2>
-      <br></br>
-      <div>
-        <h4>Card Library</h4>
-        <button>Search</button>
-      </div>
-      <div>
-        <GiftCard />
-        <CouponCard />
-        <LoyaltyRewardCard />
-      </div>
-    </div>
+    <>
+      <NavBar />
+      <ApplicationViews />
+    </>
   );
 };
 
