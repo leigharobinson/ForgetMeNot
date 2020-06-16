@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const LoyaltyRewardCard = (props) => {
   return (
     <div className="card">
@@ -11,6 +11,9 @@ const LoyaltyRewardCard = (props) => {
         </h3>
         <p>Visits until Reward: {props.loyaltyReward.visitsUntilReward}</p>
         <p>Expiration: {props.loyaltyReward.expirationDate}</p>
+        <Link to={`/loyalty_rewards/${props.loyaltyReward.id}`}>
+          <button>Details</button>
+        </Link>
         <button
           type="button"
           onClick={() => props.deleteLoyaltyRewardCard(props.loyaltyReward.id)}

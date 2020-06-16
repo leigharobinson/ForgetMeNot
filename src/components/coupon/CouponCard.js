@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CouponCard = (props) => {
   return (
@@ -10,6 +11,9 @@ const CouponCard = (props) => {
         </h3>
         <p>Discount: {props.coupon.discount} OFF</p>
         <p>Expiration: {props.coupon.expirationDate}</p>
+        <Link to={`/coupons/${props.coupon.id}`}>
+          <button>Details</button>
+        </Link>
         <button
           type="button"
           onClick={() => props.deleteCoupon(props.coupon.id)}
