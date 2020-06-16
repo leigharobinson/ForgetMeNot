@@ -4,7 +4,7 @@ import Home from "./home/Home";
 import GiftCardList from "./giftCard/GiftCardList";
 import GiftCardDetail from "./giftCard/GiftCardDetail";
 import CouponList from "./coupon/CouponList";
-import CouponDetail from "./loyaltyReward/LoyaltyRewardDetail";
+import CouponDetail from "./coupon/CouponDetail";
 import LoyaltyRewardList from "./loyaltyReward/LoyaltyRewardList";
 import LoyaltyRewardDetail from "./loyaltyReward/LoyaltyRewardDetail";
 const ApplicationViews = () => {
@@ -31,6 +31,7 @@ const ApplicationViews = () => {
           return (
             <GiftCardDetail
               giftCardId={parseInt(props.match.params.giftCardId)}
+              {...props}
             />
           );
         }}
@@ -45,9 +46,12 @@ const ApplicationViews = () => {
       <Route
         path="/coupons/:couponId(\d+)"
         render={(props) => {
-          // Pass the animalId to the AnimalDetailComponent
+          // Pass the couponId to the AnimalDetailComponent
           return (
-            <CouponDetail couponId={parseInt(props.match.params.couponId)} />
+            <CouponDetail
+              couponId={parseInt(props.match.params.couponId)}
+              {...props}
+            />
           );
         }}
       />
@@ -65,6 +69,7 @@ const ApplicationViews = () => {
           return (
             <LoyaltyRewardDetail
               loyaltyRewardId={parseInt(props.match.params.loyaltyRewardId)}
+              {...props}
             />
           );
         }}
