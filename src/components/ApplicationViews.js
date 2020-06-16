@@ -1,9 +1,9 @@
 import { Route } from "react-router-dom";
 import React from "react";
 import Home from "./home/Home";
-import GiftCard from "./giftCard/GiftCardCard";
-import CouponCard from "./coupon/CouponCard";
-import LoyaltyRewardCard from "./loyaltyReward/LoyaltyRewardCard";
+import GiftCardList from "./giftCard/GiftCardList";
+import CouponList from "./coupon/CouponList";
+import LoyaltyRewardList from "./loyaltyReward/LoyaltyRewardList";
 
 const ApplicationViews = () => {
   return (
@@ -18,19 +18,19 @@ const ApplicationViews = () => {
       <Route
         path="/gift_cards"
         render={(props) => {
-          return <GiftCard />;
+          return <GiftCardList />;
         }}
       />
       <Route
         path="/coupons"
         render={(props) => {
-          return <CouponCard />;
+          return <CouponList />;
         }}
       />
       <Route
         path="/loyalty_rewards"
         render={(props) => {
-          return <LoyaltyRewardCard />;
+          return <LoyaltyRewardList />;
         }}
       />
     </React.Fragment>
