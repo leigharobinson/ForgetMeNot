@@ -84,10 +84,10 @@
       "id": 1,
       "userId": 1,
       "datetime": "date",
-      "forLocation": "Bed, Bath & Beyond",
-      "discount": "20%",
+      "forLocation": "Bong's",
+      "discount": "25%",
       "expirationDate": "date",
-      "quantaty": 4,
+      "quantaty": 1,
       "url": "url",
       "notes": "string"
     },

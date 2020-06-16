@@ -8,9 +8,9 @@ const LoyaltyRewardDetail = (props) => {
     visitsUntilReward: "",
     expirationDate: "",
     url: "",
-    notes: "string",
+    notes: "",
   });
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     //get(id) from AnimalManager and hang on to the data; put it into state
     LoyaltyRewardManager.get(props.loyaltyRewardId).then((loyaltyReward) => {
@@ -22,8 +22,16 @@ const LoyaltyRewardDetail = (props) => {
         url: loyaltyReward.url,
         notes: loyaltyReward.notes,
       });
+      setIsLoading(false);
     });
   }, [props.loyaltyRewardId]);
+  const handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    setIsLoading(true);
+    LoyaltyRewardManager.delete(props.loyaltyRewardId).then(() =>
+      props.history.push("/loyalty_rewards")
+    );
+  };
 
   return (
     <div className="card">
@@ -43,6 +51,9 @@ const LoyaltyRewardDetail = (props) => {
         <p>Expiration Date: {loyaltyReward.expirationDate}</p>
         <p>Url: {loyaltyReward.url}</p>
         <p>Notes: {loyaltyReward.notes}</p>
+        <button type="button" disabled={isLoading} onClick={handleDelete}>
+          Delete
+        </button>
       </div>
     </div>
   );

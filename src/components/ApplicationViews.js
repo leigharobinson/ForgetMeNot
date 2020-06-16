@@ -31,6 +31,7 @@ const ApplicationViews = () => {
           return (
             <GiftCardDetail
               giftCardId={parseInt(props.match.params.giftCardId)}
+              {...props}
             />
           );
         }}
@@ -45,9 +46,12 @@ const ApplicationViews = () => {
       <Route
         path="/coupons/:couponId(\d+)"
         render={(props) => {
-          // Pass the animalId to the AnimalDetailComponent
+          // Pass the couponId to the AnimalDetailComponent
           return (
-            <CouponDetail couponId={parseInt(props.match.params.couponId)} />
+            <CouponDetail
+              couponId={parseInt(props.match.params.couponId)}
+              {...props}
+            />
           );
         }}
       />
@@ -65,6 +69,7 @@ const ApplicationViews = () => {
           return (
             <LoyaltyRewardDetail
               loyaltyRewardId={parseInt(props.match.params.loyaltyRewardId)}
+              {...props}
             />
           );
         }}
