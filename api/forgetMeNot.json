@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "id": 1,
       "username": "MargaretAnn23@gmail.com",
@@ -11,7 +11,7 @@
       "password": "123123"
     }
   ],
-  "giftCard": [
+  "giftCards": [
     {
       "id": 1,
       "userId": 1,
@@ -46,13 +46,13 @@
       "notes": "string"
     }
   ],
-  "coupon": [
+  "coupons": [
     {
       "id": 1,
       "userId": 1,
       "datetime": "date",
       "forLocation": "Bed, Bath & Beyond",
-      "Discount": "20%",
+      "discount": "20%",
       "expirationDate": "date",
       "quantaty": 4,
       "url": "url",
@@ -63,7 +63,7 @@
       "userId": 1,
       "datetime": "date",
       "forLocation": "Macy's",
-      "Discount": "25%",
+      "discount": "25%",
       "expirationDate": "date",
       "quantaty": 1,
       "url": "url",
@@ -74,14 +74,14 @@
       "userId": 2,
       "datetime": "date",
       "forLocation": "Macy's",
-      "Discount": "15%",
+      "discount": "15%",
       "expirationDate": "date",
       "quantaty": 1,
       "url": "url",
       "notes": "string"
     }
   ],
-  "loyaltyRewardsCard": [
+  "loyaltyRewardsCards": [
     {
       "id": 1,
       "userId": 1,

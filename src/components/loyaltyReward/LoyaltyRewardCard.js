@@ -1,15 +1,16 @@
 import React from "react";
 
-const LoyaltyRewardCard = () => {
+const LoyaltyRewardCard = (props) => {
   return (
     <div className="card">
       <h2>Loyalty Reward Card</h2>
       <div className="card-content">
         <h3>
-          For: <span className="card-for">Suby</span>
+          For:{" "}
+          <span className="card-for">{props.loyaltyReward.forLocation}</span>
         </h3>
-        <p>Visits until Reward: 2</p>
-        <p>Expiration: 31/10/2047</p>
+        <p>Visits until Reward: {props.loyaltyReward.visitsUntilReward}</p>
+        <p>Expiration: {props.loyaltyReward.expirationDate}</p>
       </div>
     </div>
   );
