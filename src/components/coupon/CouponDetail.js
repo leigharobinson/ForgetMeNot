@@ -9,7 +9,7 @@ const CouponDetail = (props) => {
     expirationDate: "",
     quantaty: "",
     url: "",
-    notes: "string",
+    notes: "",
   });
 
   useEffect(() => {

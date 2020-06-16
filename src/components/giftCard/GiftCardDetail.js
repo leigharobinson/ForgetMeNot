@@ -9,7 +9,7 @@ const GiftCardDetail = (props) => {
     expirationDate: "",
     quantaty: "",
     url: "",
-    notes: "string",
+    notes: "",
   });
 
   useEffect(() => {
