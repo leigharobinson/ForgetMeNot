@@ -4,7 +4,7 @@ import Home from "./home/Home";
 import GiftCardList from "./giftCard/GiftCardList";
 import GiftCardDetail from "./giftCard/GiftCardDetail";
 import CouponList from "./coupon/CouponList";
-import CouponDetail from "./loyaltyReward/LoyaltyRewardDetail";
+import CouponDetail from "./coupon/CouponDetail";
 import LoyaltyRewardList from "./loyaltyReward/LoyaltyRewardList";
 import LoyaltyRewardDetail from "./loyaltyReward/LoyaltyRewardDetail";
 const ApplicationViews = () => {

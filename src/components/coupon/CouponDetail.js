@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CouponManager from "../../modules/CouponManager";
-import "./CouponDetail.css";
+// import "./CouponDetail.css";
 
 const CouponDetail = (props) => {
   const [coupon, setCoupon] = useState({
@@ -12,7 +12,7 @@ const CouponDetail = (props) => {
     url: "",
     notes: "string",
   });
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     //get(id) from AnimalManager and hang on to the data; put it into state
@@ -26,17 +26,17 @@ const CouponDetail = (props) => {
         url: coupon.url,
         notes: coupon.notes,
       });
-      // setIsLoading(false);
+      setIsLoading(false);
     });
   }, [props.couponId]);
 
-  // const handleDelete = () => {
-  //   //invoke the delete function in AnimalManger and re-direct to the animal list.
-  //   setIsLoading(true);
-  //   CouponManager.delete(props.couponId).then(() =>
-  //     props.history.push("/coupons")
-  //   );
-  // };
+  const handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    setIsLoading(true);
+    CouponManager.delete(props.couponId).then(() =>
+      props.history.push("/coupons")
+    );
+  };
 
   return (
     <div className="card">
@@ -55,7 +55,9 @@ const CouponDetail = (props) => {
         <p>Quantaty: {coupon.quantaty}</p>
         <p>Url: {coupon.url}</p>
         <p>Notes: {coupon.notes}</p>
-        <p>Hello World</p>
+        <button type="button" disabled={isLoading} onClick={handleDelete}>
+          Delete
+        </button>
       </div>
     </div>
   );
