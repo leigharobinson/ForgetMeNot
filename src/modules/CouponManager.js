@@ -7,4 +7,9 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/coupons`).then((result) => result.json());
   },
+  delete(id) {
+    return fetch(`${remoteURL}/coupons/${id}`, {
+      method: "DELETE",
+    }).then((result) => result.json());
+  },
 };

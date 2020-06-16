@@ -9,4 +9,9 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/giftCards`).then((result) => result.json());
   },
+  delete(id) {
+    return fetch(`${remoteURL}/giftCards/${id}`, {
+      method: "DELETE",
+    }).then((result) => result.json());
+  },
 };

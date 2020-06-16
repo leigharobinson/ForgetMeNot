@@ -38,8 +38,41 @@
       "id": 3,
       "userId": 2,
       "datetime": "date",
-      "forLocation": "Target",
-      "amount": 125,
+      "forLocation": "Whole Foods",
+      "amount": 12,
+      "expirationDate": "date",
+      "quantaty": 1,
+      "url": "url",
+      "notes": "string"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "Amazon",
+      "amount": 50,
+      "expirationDate": "date",
+      "quantaty": 1,
+      "url": "url",
+      "notes": "string"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "Apple Bee's",
+      "amount": 15,
+      "expirationDate": "date",
+      "quantaty": 1,
+      "url": "url",
+      "notes": "string"
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "HomeDepot",
+      "amount": 75,
       "expirationDate": "date",
       "quantaty": 1,
       "url": "url",
@@ -79,6 +112,39 @@
       "quantaty": 1,
       "url": "url",
       "notes": "string"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "Publix",
+      "discount": "10%",
+      "expirationDate": "date",
+      "quantaty": 1,
+      "url": "url",
+      "notes": "string"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "Abercrombie",
+      "discount": "15%",
+      "expirationDate": "date",
+      "quantaty": 1,
+      "url": "url",
+      "notes": "string"
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "JC Penny",
+      "discount": "55%",
+      "expirationDate": "date",
+      "quantaty": 1,
+      "url": "url",
+      "notes": "string"
     }
   ],
   "loyaltyRewardsCards": [
@@ -98,6 +164,46 @@
       "datetime": "date",
       "forLocation": "Subway",
       "visitsUntilReward": 2,
+      "expirationDate": "date",
+      "url": "url",
+      "notes": "string"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "Panera",
+      "visitsUntilReward": 2,
+      "expirationDate": "date",
+      "url": "url",
+      "notes": "string"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "Barns & Nobel",
+      "visitsUntilReward": 7,
+      "expirationDate": "date",
+      "url": "url",
+      "notes": "string"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "Coffee Hut",
+      "visitsUntilReward": 1,
+      "expirationDate": "date",
+      "url": "url",
+      "notes": "string"
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "datetime": "date",
+      "forLocation": "Starbuck$$$",
+      "visitsUntilReward": 10,
       "expirationDate": "date",
       "url": "url",
       "notes": "string"

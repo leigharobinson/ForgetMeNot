@@ -10,6 +10,12 @@ const GiftCard = (props) => {
         </h3>
         <p>Amount: ${props.giftCard.amount}</p>
         <p>Expiration: {props.giftCard.expirationDate}</p>
+        <button
+          type="button"
+          onClick={() => props.deleteGiftCard(props.giftCard.id)}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );
