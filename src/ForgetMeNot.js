@@ -1,26 +1,18 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import "./ForgetMeNot.css";
 
-function App() {
+const ForgetMeNot = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>InsertLogo</div>
+      <h2>Welcome ___user______!</h2>
+      <br></br>
+      <div>
+        <h4>Card Library</h4>
+        <button>Search</button>
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default ForgetMeNot;
