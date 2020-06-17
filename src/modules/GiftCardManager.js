@@ -15,7 +15,7 @@ export default {
     }).then((result) => result.json());
   },
   post(newGiftCard) {
-    return fetch(`${remoteURL}/gift_cards`, {
+    return fetch(`${remoteURL}/giftCards`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

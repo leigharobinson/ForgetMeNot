@@ -18,7 +18,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/gift_cards">
+            <Link className="nav-link" to="/giftCards">
               Gift Cards
             </Link>
           </li>
@@ -28,7 +28,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/loyalty_rewards">
+            <Link className="nav-link" to="/loyaltyRewardsCards">
               Loyalty Reward Cards
             </Link>
           </li>

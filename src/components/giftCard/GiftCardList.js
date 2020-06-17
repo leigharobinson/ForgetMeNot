@@ -32,7 +32,7 @@ const GiftCardList = (props) => {
           type="button"
           className="btn"
           onClick={() => {
-            props.history.push("/gift_cards/new");
+            props.history.push("/giftCards/new");
           }}
         >
           Add Gift Card

@@ -22,21 +22,21 @@ const ApplicationViews = () => {
       />
       <Route
         exact
-        path="/gift_cards"
+        path="/giftCards"
         render={(props) => {
           return <GiftCardList {...props} />;
         }}
       />
       <Route
         exact
-        path="/gift_cards/new"
+        path="/giftCards/new"
         render={(props) => {
           return <GiftCardForm {...props} />;
         }}
       />
       <Route
         exact
-        path="/gift_cards/:giftCardId(\d+)"
+        path="/giftCards/:giftCardId(\d+)"
         render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
           return (
@@ -76,21 +76,21 @@ const ApplicationViews = () => {
       />
       <Route
         exact
-        path="/loyalty_rewards"
+        path="/loyaltyRewardsCards"
         render={(props) => {
           return <LoyaltyRewardList {...props} />;
         }}
       />
       <Route
         exact
-        path="/loyalty_rewards/new"
+        path="/loyaltyRewardsCards/new"
         render={(props) => {
           return <LoyaltyRewardForm {...props} />;
         }}
       />
       <Route
         exact
-        path="/loyalty_rewards/:loyaltyRewardId(\d+)"
+        path="/loyaltyRewardsCards/:loyaltyRewardId(\d+)"
         render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
           return (

@@ -29,7 +29,7 @@ const LoyaltyRewardDetail = (props) => {
     //invoke the delete function in AnimalManger and re-direct to the animal list.
     setIsLoading(true);
     LoyaltyRewardManager.delete(props.loyaltyRewardId).then(() =>
-      props.history.push("/loyalty_rewards")
+      props.history.push("/loyaltyRewardsCards")
     );
   };
 

@@ -32,7 +32,7 @@ const LoyaltyRewardList = (props) => {
           type="button"
           className="btn"
           onClick={() => {
-            props.history.push("/loyalty_rewards/new");
+            props.history.push("/loyaltyRewardsCards/new");
           }}
         >
           Add Loyalty Reward Card

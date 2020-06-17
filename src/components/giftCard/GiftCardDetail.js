@@ -33,7 +33,7 @@ const GiftCardDetail = (props) => {
     //invoke the delete function in AnimalManger and re-direct to the animal list.
     setIsLoading(true);
     GiftCardManager.delete(props.giftCardId).then(() =>
-      props.history.push("/gift_cards")
+      props.history.push("/giftCards")
     );
   };
 
