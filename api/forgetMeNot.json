@@ -34,23 +34,19 @@
   "giftCards": [
     {
       "id": 1,
-      "userId": 1,
+      "forLocation": "Subway",
       "datetime": "date",
-      "forLocation": "Kohl's",
-      "amount": 15,
+      "visitsUntilReward": "100",
       "expirationDate": "date",
-      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
     {
       "id": 2,
-      "userId": 1,
+      "forLocation": "Subway",
       "datetime": "date",
-      "forLocation": "Target",
-      "amount": 25,
+      "visitsUntilReward": "1000",
       "expirationDate": "date",
-      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -198,21 +194,10 @@
   ],
   "loyaltyRewardsCards": [
     {
-      "id": 1,
-      "userId": 1,
-      "datetime": "date",
-      "forLocation": "Subway",
-      "visitsUntilReward": 5,
-      "expirationDate": "date",
-      "url": "url",
-      "notes": "string"
-    },
-    {
       "id": 2,
-      "userId": 2,
-      "datetime": "date",
       "forLocation": "Subway",
-      "visitsUntilReward": 2,
+      "datetime": "date",
+      "visitsUntilReward": "10000",
       "expirationDate": "date",
       "url": "url",
       "notes": "string"

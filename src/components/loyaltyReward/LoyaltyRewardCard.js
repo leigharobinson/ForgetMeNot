@@ -16,6 +16,16 @@ const LoyaltyRewardCard = (props) => {
         </Link>
         <button
           type="button"
+          onClick={() =>
+            props.history.push(
+              `/loyaltyRewardsCards/${props.loyaltyReward.id}/edit`
+            )
+          }
+        >
+          Edit
+        </button>
+        <button
+          type="button"
           onClick={() => props.deleteLoyaltyRewardCard(props.loyaltyReward.id)}
         >
           Delete
