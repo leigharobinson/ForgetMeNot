@@ -77,6 +77,16 @@
       "quantity": 1,
       "url": "url",
       "notes": "string"
+    },
+    {
+      "forLocation": "Whole Foods",
+      "datetime": "2020-06-16",
+      "amount": "$100.00",
+      "expirationDate": "2020-07-11",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "use for Party next Thurs",
+      "id": 7
     }
   ],
   "coupons": [

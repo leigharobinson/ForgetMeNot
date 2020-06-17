@@ -21,7 +21,7 @@ const LoyaltyRewardForm = (props) => {
       setIsLoading(true);
       // Create the animal and redirect user to animal list
       LoyaltyRewardManager.post(loyaltyReward).then(() =>
-        props.history.push("/loyalty_rewards")
+        props.history.push("/loyaltyRewardsCardswards")
       );
     }
   };

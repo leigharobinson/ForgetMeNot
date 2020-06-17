@@ -11,7 +11,7 @@ const LoyaltyRewardCard = (props) => {
         </h3>
         <p>Visits until Reward: {props.loyaltyReward.visitsUntilReward}</p>
         <p>Expiration: {props.loyaltyReward.expirationDate}</p>
-        <Link to={`/loyalty_rewards/${props.loyaltyReward.id}`}>
+        <Link to={`/loyaltyRewardsCards/${props.loyaltyReward.id}`}>
           <button>Details</button>
         </Link>
         <button

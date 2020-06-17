@@ -17,7 +17,7 @@ export default {
     }).then((result) => result.json());
   },
   post(newLoyaltyReward) {
-    return fetch(`${remoteURL}/loyalty_rewards`, {
+    return fetch(`${remoteURL}/loyaltyRewardsCards`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -37,7 +37,7 @@ const GiftCardForm = (props) => {
       setIsLoading(true);
       // Create the animal and redirect user to animal list
       GiftCardManager.post(giftCard).then(() =>
-        props.history.push("/gift_cards")
+        props.history.push("/giftCards")
       );
     }
   };

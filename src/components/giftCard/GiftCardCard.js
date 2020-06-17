@@ -11,7 +11,7 @@ const GiftCard = (props) => {
         </h3>
         <p>Amount: ${props.giftCard.amount}</p>
         <p>Expiration: {props.giftCard.expirationDate}</p>
-        <Link to={`/gift_cards/${props.giftCard.id}`}>
+        <Link to={`/giftCards/${props.giftCard.id}`}>
           <button>Details</button>
         </Link>
         <button
