@@ -1,5 +1,7 @@
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import React from "react";
+import Login from "./authentication/Login";
+import NewUserForm from "./authentication/NewUserForm";
 import Home from "./home/Home";
 import GiftCardList from "./giftCard/GiftCardList";
 import GiftCardDetail from "./giftCard/GiftCardDetail";
@@ -10,21 +12,34 @@ import CouponForm from "./coupon/CouponForm";
 import LoyaltyRewardList from "./loyaltyReward/LoyaltyRewardList";
 import LoyaltyRewardDetail from "./loyaltyReward/LoyaltyRewardDetail";
 import LoyaltyRewardForm from "./loyaltyReward/LoyaltyRewardForm";
+
+const isAuthenticated = () =>
+  sessionStorage.getItem("credentials" || "user") !== null;
 const ApplicationViews = () => {
   return (
     <React.Fragment>
+      <Route path="/login" component={Login} />
+      <Route path="/newUser" component={NewUserForm} />
       <Route
         exact
         path="/"
         render={(props) => {
-          return <Home />;
+          if (isAuthenticated()) {
+            return <Home />;
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
       <Route
         exact
         path="/giftCards"
         render={(props) => {
-          return <GiftCardList {...props} />;
+          if (isAuthenticated()) {
+            return <GiftCardList {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
       <Route
@@ -51,7 +66,11 @@ const ApplicationViews = () => {
         exact
         path="/coupons"
         render={(props) => {
-          return <CouponList {...props} />;
+          if (isAuthenticated()) {
+            return <CouponList {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
       <Route
@@ -78,7 +97,11 @@ const ApplicationViews = () => {
         exact
         path="/loyaltyRewardsCards"
         render={(props) => {
-          return <LoyaltyRewardList {...props} />;
+          if (isAuthenticated()) {
+            return <LoyaltyRewardList {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
       <Route
