@@ -79,14 +79,14 @@
       "notes": "string"
     },
     {
-      "forLocation": "Whole Foods",
-      "datetime": "2020-06-16",
-      "amount": "$100.00",
-      "expirationDate": "2020-07-11",
+      "forLocation": "Big Bush Max",
+      "datetime": "2020-06-11",
+      "amount": "70.00",
+      "expirationDate": "2020-07-04",
       "quantity": "1",
       "url": "n/a",
-      "notes": "use for Party next Thurs",
-      "id": 7
+      "notes": "Filler",
+      "id": 8
     }
   ],
   "coupons": [
