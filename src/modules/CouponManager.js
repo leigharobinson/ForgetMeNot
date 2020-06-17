@@ -12,4 +12,13 @@ export default {
       method: "DELETE",
     }).then((result) => result.json());
   },
+  post(newCoupon) {
+    return fetch(`${remoteURL}/coupons`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newCoupon),
+    }).then((data) => data.json());
+  },
 };

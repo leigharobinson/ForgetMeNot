@@ -19,7 +19,7 @@
       "forLocation": "Kohl's",
       "amount": 15,
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -30,7 +30,7 @@
       "forLocation": "Target",
       "amount": 25,
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -41,7 +41,7 @@
       "forLocation": "Whole Foods",
       "amount": 12,
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -52,7 +52,7 @@
       "forLocation": "Amazon",
       "amount": 50,
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -63,7 +63,7 @@
       "forLocation": "Apple Bee's",
       "amount": 15,
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -74,7 +74,7 @@
       "forLocation": "HomeDepot",
       "amount": 75,
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     }
@@ -87,7 +87,7 @@
       "forLocation": "Bong's",
       "discount": "25%",
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -98,7 +98,7 @@
       "forLocation": "Macy's",
       "discount": "25%",
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -109,7 +109,7 @@
       "forLocation": "Macy's",
       "discount": "15%",
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -120,7 +120,7 @@
       "forLocation": "Publix",
       "discount": "10%",
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -131,7 +131,7 @@
       "forLocation": "Abercrombie",
       "discount": "15%",
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
     },
@@ -142,9 +142,29 @@
       "forLocation": "JC Penny",
       "discount": "55%",
       "expirationDate": "date",
-      "quantaty": 1,
+      "quantity": 1,
       "url": "url",
       "notes": "string"
+    },
+    {
+      "forLocation": "Big Bush Max",
+      "datetime": "2020-06-16",
+      "discount": "24%",
+      "expirationDate": "2024-10-16",
+      "quantity": "2",
+      "url": "https://www.burpee.com/vegetables/pumpkins/pumpkin-big-max-prod000859.html",
+      "notes": "For the Next fall Pumkin Seeds",
+      "id": 11
+    },
+    {
+      "forLocation": "TJ Maxx",
+      "datetime": "2020-06-16",
+      "discount": "10",
+      "expirationDate": "2020-06-26",
+      "quantity": "1",
+      "url": "https://tjmaxx.tjx.com/store/index.jsp",
+      "notes": "Use this for mom's birthday present",
+      "id": 12
     }
   ],
   "loyaltyRewardsCards": [

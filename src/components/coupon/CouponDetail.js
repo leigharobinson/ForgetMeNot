@@ -8,7 +8,7 @@ const CouponDetail = (props) => {
     datetime: "",
     discount: "",
     expirationDate: "",
-    quantaty: "",
+    quantity: "",
     url: "",
     notes: "",
   });
@@ -22,7 +22,7 @@ const CouponDetail = (props) => {
         datetime: coupon.datetime,
         discount: coupon.discount,
         expirationDate: coupon.expirationDate,
-        quantaty: coupon.quantaty,
+        quantity: coupon.quantity,
         url: coupon.url,
         notes: coupon.notes,
       });
@@ -52,7 +52,7 @@ const CouponDetail = (props) => {
         <p>Created: {coupon.datetime}</p>
         <p>Discount: {coupon.discount}</p>
         <p>Expiration Date: {coupon.expirationDate}</p>
-        <p>Quantaty: {coupon.quantaty}</p>
+        <p>Quantity: {coupon.quantity}</p>
         <p>Url: {coupon.url}</p>
         <p>Notes: {coupon.notes}</p>
         <button type="button" disabled={isLoading} onClick={handleDelete}>
