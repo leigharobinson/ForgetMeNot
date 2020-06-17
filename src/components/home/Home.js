@@ -13,11 +13,7 @@ const Home = (props) => {
         <h4>Card Library</h4>
         <button>Search</button>
       </div>
-      <div>
-        <GiftCardList />
-        <CouponList />
-        <LoyaltyRewardList />
-      </div>
+      <div></div>
     </div>
   );
 };

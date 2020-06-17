@@ -29,37 +29,32 @@
       "password": "123123123",
       "email": "FunNeverEnds@gmail.com",
       "id": 5
+    },
+    {
+      "username": "BunnyHop123",
+      "password": "1231231231",
+      "email": "Bunny5@gmail.com",
+      "id": 6
     }
   ],
   "giftCards": [
     {
-      "id": 1,
-      "forLocation": "Subway",
-      "datetime": "date",
-      "visitsUntilReward": "100",
-      "expirationDate": "date",
-      "url": "url",
-      "notes": "string"
-    },
-    {
       "id": 2,
       "forLocation": "Subway",
       "datetime": "date",
-      "visitsUntilReward": "1000",
       "expirationDate": "date",
       "url": "url",
-      "notes": "string"
+      "notes": "Use this For Hannah's b-day"
     },
     {
       "id": 3,
-      "userId": 2,
-      "datetime": "date",
       "forLocation": "Whole Foods",
+      "datetime": "date",
       "amount": 12,
       "expirationDate": "date",
       "quantity": 1,
       "url": "url",
-      "notes": "string"
+      "notes": "THsi should be used for Groceries "
     },
     {
       "id": 4,
