@@ -53,6 +53,7 @@ const GiftCardDetail = (props) => {
         <p>Quantity: {giftCard.quantity}</p>
         <p>Url: {giftCard.url}</p>
         <p>Notes: {giftCard.notes}</p>
+
         <button type="button" disabled={isLoading} onClick={handleDelete}>
           Delete
         </button>
