@@ -6,6 +6,7 @@ import Home from "./home/Home";
 import GiftCardList from "./giftCard/GiftCardList";
 import GiftCardDetail from "./giftCard/GiftCardDetail";
 import GiftCardForm from "./giftCard/GiftCardForm";
+import GiftCardEditForm from "./giftCard/GiftCardEditForm";
 import CouponList from "./coupon/CouponList";
 import CouponDetail from "./coupon/CouponDetail";
 import CouponForm from "./coupon/CouponForm";
@@ -13,7 +14,7 @@ import CouponEditForm from "./coupon/CouponEditForm";
 import LoyaltyRewardList from "./loyaltyReward/LoyaltyRewardList";
 import LoyaltyRewardDetail from "./loyaltyReward/LoyaltyRewardDetail";
 import LoyaltyRewardForm from "./loyaltyReward/LoyaltyRewardForm";
-
+import LoyaltyRewardEditForm from "./loyaltyReward/LoyaltyRewardEditForm";
 const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 const ApplicationViews = () => {
   return (
@@ -60,6 +61,16 @@ const ApplicationViews = () => {
               {...props}
             />
           );
+        }}
+      />
+      <Route
+        path="/giftCards/:giftCardId(\d+)/edit"
+        render={(props) => {
+          if (isAuthenticated()) {
+            return <GiftCardEditForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
       <Route
@@ -132,6 +143,16 @@ const ApplicationViews = () => {
               {...props}
             />
           );
+        }}
+      />
+      <Route
+        path="/loyaltyRewardsCards/:loyaltyRewardId(\d+)/edit"
+        render={(props) => {
+          if (isAuthenticated()) {
+            return <LoyaltyRewardEditForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
     </React.Fragment>

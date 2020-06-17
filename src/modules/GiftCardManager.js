@@ -23,4 +23,13 @@ export default {
       body: JSON.stringify(newGiftCard),
     }).then((data) => data.json());
   },
+  update(editedGiftCard) {
+    return fetch(`${remoteURL}/giftCards/${editedGiftCard.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(editedGiftCard),
+    }).then((data) => data.json());
+  },
 };

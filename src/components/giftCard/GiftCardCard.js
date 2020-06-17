@@ -16,6 +16,14 @@ const GiftCard = (props) => {
         </Link>
         <button
           type="button"
+          onClick={() =>
+            props.history.push(`/giftCards/${props.giftCard.id}/edit`)
+          }
+        >
+          Edit
+        </button>
+        <button
+          type="button"
           onClick={() => props.deleteGiftCard(props.giftCard.id)}
         >
           Delete
