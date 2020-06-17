@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 import LoyaltyRewardCard from "./LoyaltyRewardCard";
 
-const LoyaltyRewardList = () => {
+const LoyaltyRewardList = (props) => {
   //The initial state is an emptry array
   const [loyaltyRewards, setLoyaltyRewards] = useState([]);
 
@@ -25,15 +25,30 @@ const LoyaltyRewardList = () => {
 
   //Finally we use map() to "loop over" the coupons array to show a list of coupon cards
   return (
-    <div className="container-cards">
-      {loyaltyRewards.map((loyaltyReward) => (
-        <LoyaltyRewardCard
-          key={loyaltyReward.id}
-          loyaltyReward={loyaltyReward}
-          deleteLoyaltyRewardCard={deleteLoyaltyRewardCard}
-        />
-      ))}
-    </div>
+    <>
+      {/* //add this button above your display of animal cards */}
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            props.history.push("/loyalty_rewards/new");
+          }}
+        >
+          Add Loyalty Reward Card
+        </button>
+      </section>
+      <div className="container-cards">
+        {loyaltyRewards.map((loyaltyReward) => (
+          <LoyaltyRewardCard
+            key={loyaltyReward.id}
+            loyaltyReward={loyaltyReward}
+            deleteLoyaltyRewardCard={deleteLoyaltyRewardCard}
+            {...props}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

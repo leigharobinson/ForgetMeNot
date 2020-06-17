@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import GiftCardManager from "../../modules/GiftCardManager";
 import GiftCard from "./GiftCardCard";
 
-const GiftCardList = () => {
+const GiftCardList = (props) => {
   //The initial state is an emptry array
   const [giftCards, setGiftCards] = useState([]);
 
@@ -25,15 +25,30 @@ const GiftCardList = () => {
 
   //Finally we use map() to "loop over" the coupons array to show a list of coupon cards
   return (
-    <div className="container-cards">
-      {giftCards.map((giftCard) => (
-        <GiftCard
-          key={giftCard.id}
-          giftCard={giftCard}
-          deleteGiftCard={deleteGiftCard}
-        />
-      ))}
-    </div>
+    <>
+      {/* //add this button above your display of animal cards */}
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            props.history.push("/gift_cards/new");
+          }}
+        >
+          Add Gift Card
+        </button>
+      </section>
+      <div className="container-cards">
+        {giftCards.map((giftCard) => (
+          <GiftCard
+            key={giftCard.id}
+            giftCard={giftCard}
+            deleteGiftCard={deleteGiftCard}
+            {...props}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

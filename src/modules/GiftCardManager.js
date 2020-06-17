@@ -14,4 +14,13 @@ export default {
       method: "DELETE",
     }).then((result) => result.json());
   },
+  post(newGiftCard) {
+    return fetch(`${remoteURL}/gift_cards`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newGiftCard),
+    }).then((data) => data.json());
+  },
 };

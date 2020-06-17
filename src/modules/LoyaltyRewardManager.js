@@ -16,4 +16,13 @@ export default {
       method: "DELETE",
     }).then((result) => result.json());
   },
+  post(newLoyaltyReward) {
+    return fetch(`${remoteURL}/loyalty_rewards`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newLoyaltyReward),
+    }).then((data) => data.json());
+  },
 };

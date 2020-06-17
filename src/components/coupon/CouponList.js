@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CouponManager from "../../modules/CouponManager";
 import CouponCard from "./CouponCard";
 
-const CouponList = () => {
+const CouponList = (props) => {
   //The initial state is an emptry array
   const [coupons, setCoupons] = useState([]);
 
@@ -23,17 +23,32 @@ const CouponList = () => {
     );
   };
 
-  //Finally we use map() to "loop over" the coupons array to show a list of coupon cards
   return (
-    <div className="container-cards">
-      {coupons.map((coupon) => (
-        <CouponCard
-          key={coupon.id}
-          coupon={coupon}
-          deleteCoupon={deleteCoupon}
-        />
-      ))}
-    </div>
+    <>
+      {/* //add this button above your display of animal cards */}
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            props.history.push("/coupons/new");
+          }}
+        >
+          Add Coupon
+        </button>
+        {/* //Finally we use map() to "loop over" the coupons array to show a list of coupon cards */}
+      </section>
+      <div className="container-cards">
+        {coupons.map((coupon) => (
+          <CouponCard
+            key={coupon.id}
+            coupon={coupon}
+            deleteCoupon={deleteCoupon}
+            {...props}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

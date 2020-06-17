@@ -7,9 +7,9 @@ const GiftCardDetail = (props) => {
     datetime: "",
     amount: "",
     expirationDate: "",
-    quantaty: "",
+    quantity: "",
     url: "",
-    notes: "string",
+    notes: "",
   });
   const [isLoading, setIsLoading] = useState(true);
 
@@ -21,7 +21,7 @@ const GiftCardDetail = (props) => {
         datetime: giftCard.datetime,
         amount: giftCard.amount,
         expirationDate: giftCard.expirationDate,
-        quantaty: giftCard.quantaty,
+        quantity: giftCard.quantity,
         url: giftCard.url,
         notes: giftCard.notes,
       });
@@ -50,7 +50,7 @@ const GiftCardDetail = (props) => {
         <p>Created: {giftCard.datetime}</p>
         <p>Amount: ${giftCard.amount}</p>
         <p>Expiration Date: {giftCard.expirationDate}</p>
-        <p>Quantaty: {giftCard.quantaty}</p>
+        <p>Quantity: {giftCard.quantity}</p>
         <p>Url: {giftCard.url}</p>
         <p>Notes: {giftCard.notes}</p>
         <button type="button" disabled={isLoading} onClick={handleDelete}>
