@@ -3,7 +3,7 @@ import GiftCardList from "../giftCard/GiftCardList";
 import CouponList from "../coupon/CouponList";
 import LoyaltyRewardList from "../loyaltyReward/LoyaltyRewardList";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div>
       <div>InsertLogo</div>
