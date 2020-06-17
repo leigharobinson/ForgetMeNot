@@ -5,32 +5,32 @@ import UserManager from "../../modules/UserManager";
 //   sessionStorage.getItem("credentials" || "user") !== null;
 
 const NewUserForm = (props) => {
-  const [user, setUser] = useState({
+  const [credentials, setCredentials] = useState({
     username: "",
     password: "",
+    email: "",
   });
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = (evt) => {
-    const stateToChange = { ...user };
+    const stateToChange = { ...credentials };
     stateToChange[evt.target.id] = evt.target.value;
-    setUser(stateToChange);
+    setCredentials(stateToChange);
   };
 
   /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
    */
   const constructNewUser = (evt) => {
     evt.preventDefault();
-    if (!user.username || !user.password) {
+    if (!credentials.username || !credentials.password || !credentials.email) {
       window.alert("Please fill out new user form");
     } else {
       setIsLoading(true);
       // Create the animal and redirect user to animal list
-      UserManager.post(user).then(
-        sessionStorage.setItem("user", JSON.stringify(user))
+      UserManager.post(credentials).then(
+        sessionStorage.setItem("credentials", JSON.stringify(credentials))
       );
       props.history.push("/");
-      // UserManager.post(user).then(() => props.history.push("/"));
     }
   };
 
@@ -41,13 +41,22 @@ const NewUserForm = (props) => {
         <div className="formgrid">
           <input
             onChange={handleFieldChange}
-            type="email"
+            type="username"
             id="username"
+            placeholder="username"
+            required=""
+            autoFocus=""
+          />
+          <label htmlFor="username">User Name</label>
+          <input
+            onChange={handleFieldChange}
+            type="email"
+            id="email"
             placeholder="Email address"
             required=""
             autoFocus=""
           />
-          <label htmlFor="username">Email address</label>
+          <label htmlFor="email">Email address</label>
 
           <input
             onChange={handleFieldChange}

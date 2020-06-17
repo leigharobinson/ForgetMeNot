@@ -9,12 +9,12 @@ import GiftCardForm from "./giftCard/GiftCardForm";
 import CouponList from "./coupon/CouponList";
 import CouponDetail from "./coupon/CouponDetail";
 import CouponForm from "./coupon/CouponForm";
+import CouponEditForm from "./coupon/CouponEditForm";
 import LoyaltyRewardList from "./loyaltyReward/LoyaltyRewardList";
 import LoyaltyRewardDetail from "./loyaltyReward/LoyaltyRewardDetail";
 import LoyaltyRewardForm from "./loyaltyReward/LoyaltyRewardForm";
 
-const isAuthenticated = () =>
-  sessionStorage.getItem("credentials" || "user") !== null;
+const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 const ApplicationViews = () => {
   return (
     <React.Fragment>
@@ -91,6 +91,16 @@ const ApplicationViews = () => {
               {...props}
             />
           );
+        }}
+      />
+      <Route
+        path="/coupons/:couponId(\d+)/edit"
+        render={(props) => {
+          if (isAuthenticated()) {
+            return <CouponEditForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
         }}
       />
       <Route

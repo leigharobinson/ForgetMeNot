@@ -16,6 +16,12 @@ const CouponCard = (props) => {
         </Link>
         <button
           type="button"
+          onClick={() => props.history.push(`/coupons/${props.coupon.id}/edit`)}
+        >
+          Edit
+        </button>
+        <button
+          type="button"
           onClick={() => props.deleteCoupon(props.coupon.id)}
         >
           Delete

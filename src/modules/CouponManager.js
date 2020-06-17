@@ -21,4 +21,13 @@ export default {
       body: JSON.stringify(newCoupon),
     }).then((data) => data.json());
   },
+  update(editedCoupon) {
+    return fetch(`${remoteURL}/coupons/${editedCoupon.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(editedCoupon),
+    }).then((data) => data.json());
+  },
 };
