@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-
+import UserManager from "../../modules/UserManager";
 const Login = (props) => {
-  const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const [credentials, setCredentials] = useState({
+    username: "",
+
+    password: "",
+  });
 
   // Update state whenever an input field is edited
   const handleFieldChange = (evt) => {
@@ -12,17 +16,17 @@ const Login = (props) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (!credentials.email || !credentials.password) {
-      window.alert("Please fill out email and password");
-    } else {
-      /*
-            For now, just store the email and password that
-            the customer enters into session storage.
-            ...Let's just trust the user... That's a good idea, right????
-        */
-      sessionStorage.setItem("credentials", JSON.stringify(credentials));
-      props.history.push("/");
-    }
+    UserManager.searchUser(credentials.username).then((existingUser) => {
+      if (!credentials.password || !credentials.username) {
+        window.alert("Please fill out user name and password");
+      } else if (existingUser.length > 0) {
+        window.alert("Welcome back ");
+        sessionStorage.setItem("credentials", JSON.stringify(credentials));
+        props.history.push("/");
+      } else {
+        window.alert("Hmm... no match, please create a User Account");
+      }
+    });
   };
 
   return (
@@ -32,13 +36,13 @@ const Login = (props) => {
         <div className="formgrid">
           <input
             onChange={handleFieldChange}
-            type="email"
-            id="email"
-            placeholder="Email address"
+            type="username"
+            id="username"
+            placeholder="username"
             required=""
             autoFocus=""
           />
-          <label htmlFor="inputEmail">Email address</label>
+          <label htmlFor="username">User Name</label>
 
           <input
             onChange={handleFieldChange}

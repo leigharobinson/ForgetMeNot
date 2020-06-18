@@ -29,71 +29,27 @@
       "password": "123123123",
       "email": "FunNeverEnds@gmail.com",
       "id": 5
+    },
+    {
+      "username": "BunnyHop123",
+      "password": "1231231231",
+      "email": "Bunny5@gmail.com",
+      "id": 6
+    },
+    {
+      "username": "easy",
+      "password": "123",
+      "email": "easy",
+      "id": 7
+    },
+    {
+      "username": "easy",
+      "password": "123",
+      "email": "easy@gmail.com",
+      "id": 8
     }
   ],
   "giftCards": [
-    {
-      "id": 1,
-      "forLocation": "Subway",
-      "datetime": "date",
-      "visitsUntilReward": "100",
-      "expirationDate": "date",
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 2,
-      "forLocation": "Subway",
-      "datetime": "date",
-      "visitsUntilReward": "1000",
-      "expirationDate": "date",
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 3,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Whole Foods",
-      "amount": 12,
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Amazon",
-      "amount": 50,
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 5,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Apple Bee's",
-      "amount": 15,
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 6,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "HomeDepot",
-      "amount": 75,
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "string"
-    },
     {
       "forLocation": "Big Bush Max",
       "datetime": "2020-06-11",
@@ -107,60 +63,6 @@
   ],
   "coupons": [
     {
-      "id": 1,
-      "forLocation": "Bong's",
-      "datetime": "date",
-      "discount": "25%",
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "Many things have changed"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "datetime": "date",
-      "forLocation": "Macy's",
-      "discount": "25%",
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 3,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Macy's",
-      "discount": "15%",
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Publix",
-      "discount": "10%",
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 5,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Abercrombie",
-      "discount": "15%",
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "string"
-    },
-    {
       "id": 6,
       "userId": 2,
       "datetime": "date",
@@ -170,87 +72,9 @@
       "quantity": 1,
       "url": "url",
       "notes": "string"
-    },
-    {
-      "forLocation": "Big Bush Max",
-      "datetime": "2020-06-16",
-      "discount": "24%",
-      "expirationDate": "2024-10-16",
-      "quantity": "2",
-      "url": "https://www.burpee.com/vegetables/pumpkins/pumpkin-big-max-prod000859.html",
-      "notes": "For the Next fall Pumkin Seeds",
-      "id": 11
-    },
-    {
-      "forLocation": "TJ Maxx",
-      "datetime": "2020-06-16",
-      "discount": "10",
-      "expirationDate": "2020-06-26",
-      "quantity": "1",
-      "url": "https://tjmaxx.tjx.com/store/index.jsp",
-      "notes": "Use this for mom's birthday present",
-      "id": 12
     }
   ],
   "loyaltyRewardsCards": [
-    {
-      "id": 2,
-      "forLocation": "Subway",
-      "datetime": "date",
-      "visitsUntilReward": "10000",
-      "expirationDate": "date",
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 3,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Panera",
-      "visitsUntilReward": 2,
-      "expirationDate": "date",
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Barns & Nobel",
-      "visitsUntilReward": 7,
-      "expirationDate": "date",
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 5,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Coffee Hut",
-      "visitsUntilReward": 1,
-      "expirationDate": "date",
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "id": 6,
-      "userId": 2,
-      "datetime": "date",
-      "forLocation": "Starbuck$$$",
-      "visitsUntilReward": 10,
-      "expirationDate": "date",
-      "url": "url",
-      "notes": "string"
-    },
-    {
-      "forLocation": "SubWay",
-      "datetime": "2020-06-16",
-      "visitsUntilReward": "10",
-      "expirationDate": "2020-07-10",
-      "url": "https://www.subway.com/en-US",
-      "notes": "Get a Free 6\" sub",
-      "id": 7
-    },
     {
       "forLocation": "Apple Stand",
       "datetime": "2020-06-16",
