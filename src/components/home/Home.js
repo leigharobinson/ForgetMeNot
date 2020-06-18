@@ -9,6 +9,7 @@ const Home = (props) => {
       <div>InsertLogo</div>
       <h2>Welcome ___user______!</h2>
       <br></br>
+      {Math.random()}
       <div>
         <h4>Card Library</h4>
         <button>Search</button>

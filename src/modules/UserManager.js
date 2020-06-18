@@ -7,6 +7,11 @@ export default {
   getAll() {
     return fetch(`${remoteURL}/users`).then((result) => result.json());
   },
+  searchUser(username) {
+    return fetch(`${remoteURL}/users/?&q=${username}`).then((result) =>
+      result.json()
+    );
+  },
   delete(id) {
     return fetch(`${remoteURL}/users/${id}`, {
       method: "DELETE",
