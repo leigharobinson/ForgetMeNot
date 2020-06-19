@@ -3,7 +3,6 @@ import UserManager from "../../modules/UserManager";
 const Login = (props) => {
   const [credentials, setCredentials] = useState({
     username: "",
-
     password: "",
   });
 
@@ -19,9 +18,9 @@ const Login = (props) => {
     UserManager.searchUser(credentials.username).then((existingUser) => {
       if (!credentials.password || !credentials.username) {
         window.alert("Please fill out user name and password");
-      } else if (existingUser.length > 0) {
+      } else if (credentials.username === existingUser[0].username) {
         window.alert("Welcome back ");
-        sessionStorage.setItem("credentials", JSON.stringify(credentials));
+        sessionStorage.setItem("credentials", existingUser[0].id);
         props.history.push("/");
       } else {
         window.alert("Hmm... no match, please create a User Account");
