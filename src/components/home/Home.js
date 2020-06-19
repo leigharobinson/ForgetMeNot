@@ -1,11 +1,16 @@
 import React from "react";
-import GiftCardList from "../giftCard/GiftCardList";
-import CouponList from "../coupon/CouponList";
-import LoyaltyRewardList from "../loyaltyReward/LoyaltyRewardList";
-
+import Timer from "./Time";
+// currentTime: (new Date).toLocaleTimeString()
+// setInterval(xxx, 1000)
 const Home = (props) => {
   return (
     <div>
+      {new Date().toLocaleDateString()}
+      <br />
+      {new Date().toLocaleTimeString()}
+      <br></br>
+      <Timer />
+
       <div>InsertLogo</div>
       <h2>Welcome ___user______!</h2>
       <br></br>

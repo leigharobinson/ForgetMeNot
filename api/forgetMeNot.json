@@ -51,6 +51,7 @@
   ],
   "giftCards": [
     {
+      "userID": 1,
       "forLocation": "Big Bush Max",
       "datetime": "2020-06-11",
       "amount": "70.00",
@@ -71,7 +72,41 @@
       "expirationDate": "date",
       "quantity": 1,
       "url": "url",
-      "notes": "string"
+      "notes": "string",
+      "userID": 1
+    },
+    {
+      "forLocation": "Big Bush Max",
+      "datetime": "2020-06-16",
+      "discount": "10",
+      "expirationDate": "2020-06-29",
+      "quantity": "2",
+      "url": "n/a",
+      "notes": "For the Next fall Pumkin Seeds",
+      "id": 7,
+      "userID": 1
+    },
+    {
+      "forLocation": "AAAAAAAAAAAAAAAA",
+      "datetime": "2020-06-16",
+      "discount": "10",
+      "expirationDate": "2020-06-29",
+      "quantity": "2",
+      "url": "n/a",
+      "notes": "For the Next fall Pumkin Seeds",
+      "id": 7,
+      "userID": 1
+    },
+    {
+      "forLocation": "BBBBBBBBBBB",
+      "datetime": "2020-06-16",
+      "discount": "10",
+      "expirationDate": "2020-06-29",
+      "quantity": "2",
+      "url": "n/a",
+      "notes": "For the Next fall Pumkin Seeds",
+      "id": 7,
+      "userID": 1
     }
   ],
   "loyaltyRewardsCards": [

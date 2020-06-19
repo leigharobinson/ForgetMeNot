@@ -15,6 +15,9 @@ import LoyaltyRewardList from "./loyaltyReward/LoyaltyRewardList";
 import LoyaltyRewardDetail from "./loyaltyReward/LoyaltyRewardDetail";
 import LoyaltyRewardForm from "./loyaltyReward/LoyaltyRewardForm";
 import LoyaltyRewardEditForm from "./loyaltyReward/LoyaltyRewardEditForm";
+
+import CouponWithUser from "./coupon/CouponWithUser";
+
 const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 const ApplicationViews = () => {
   return (
@@ -153,6 +156,13 @@ const ApplicationViews = () => {
           } else {
             return <Redirect to="/login" />;
           }
+        }}
+      />
+      <Route
+        exact
+        path="/users/:userId(\d+)/details"
+        render={(props) => {
+          return <CouponWithUser {...props} />;
         }}
       />
     </React.Fragment>
