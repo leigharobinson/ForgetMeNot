@@ -16,20 +16,29 @@ import LoyaltyRewardDetail from "./loyaltyReward/LoyaltyRewardDetail";
 import LoyaltyRewardForm from "./loyaltyReward/LoyaltyRewardForm";
 import LoyaltyRewardEditForm from "./loyaltyReward/LoyaltyRewardEditForm";
 
-import CouponWithUser from "./coupon/CouponWithUser";
+const ApplicationViews = (props) => {
+  const hasUser = props.hasUser;
+  const setUser = props.setUser;
+  let userId = "";
+  if (hasUser) {
+    userId = JSON.parse(sessionStorage.getItem("credentials").id);
+  }
 
-const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
-const ApplicationViews = () => {
   return (
     <React.Fragment>
-      <Route path="/login" component={Login} />
+      <Route
+        path="/login"
+        render={(props) => {
+          return <Login setUser={setUser} hasUser={hasUser} {...props} />;
+        }}
+      />
       <Route path="/newUser" component={NewUserForm} />
       <Route
         exact
         path="/"
         render={(props) => {
-          if (isAuthenticated()) {
-            return <Home />;
+          if (hasUser) {
+            return <Home userId={userId} {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -39,8 +48,8 @@ const ApplicationViews = () => {
         exact
         path="/giftCards"
         render={(props) => {
-          if (isAuthenticated()) {
-            return <GiftCardList {...props} />;
+          if (hasUser) {
+            return <GiftCardList userId={userId} {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -69,8 +78,8 @@ const ApplicationViews = () => {
       <Route
         path="/giftCards/:giftCardId(\d+)/edit"
         render={(props) => {
-          if (isAuthenticated()) {
-            return <GiftCardEditForm {...props} />;
+          if (hasUser) {
+            return <GiftCardEditForm userId={userId} {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -80,8 +89,8 @@ const ApplicationViews = () => {
         exact
         path="/coupons"
         render={(props) => {
-          if (isAuthenticated()) {
-            return <CouponList {...props} />;
+          if (hasUser) {
+            return <CouponList userId={userId} {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -110,8 +119,8 @@ const ApplicationViews = () => {
       <Route
         path="/coupons/:couponId(\d+)/edit"
         render={(props) => {
-          if (isAuthenticated()) {
-            return <CouponEditForm {...props} />;
+          if (hasUser) {
+            return <CouponEditForm userId={userId} {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -121,8 +130,8 @@ const ApplicationViews = () => {
         exact
         path="/loyaltyRewardsCards"
         render={(props) => {
-          if (isAuthenticated()) {
-            return <LoyaltyRewardList {...props} />;
+          if (hasUser) {
+            return <LoyaltyRewardList userId={userId} {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -151,18 +160,11 @@ const ApplicationViews = () => {
       <Route
         path="/loyaltyRewardsCards/:loyaltyRewardId(\d+)/edit"
         render={(props) => {
-          if (isAuthenticated()) {
-            return <LoyaltyRewardEditForm {...props} />;
+          if (hasUser) {
+            return <LoyaltyRewardEditForm userId={userId} {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
-        }}
-      />
-      <Route
-        exact
-        path="/users/:userId(\d+)/details"
-        render={(props) => {
-          return <CouponWithUser {...props} />;
         }}
       />
     </React.Fragment>

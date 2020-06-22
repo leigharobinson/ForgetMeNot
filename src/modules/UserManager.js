@@ -26,9 +26,4 @@ export default {
       body: JSON.stringify(newUser),
     }).then((data) => data.json());
   },
-  getWithCoupons(id) {
-    return fetch(`${remoteURL}/users/${id}?_embed=coupons`).then((result) =>
-      result.json()
-    );
-  },
 };

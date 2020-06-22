@@ -60,12 +60,51 @@
       "url": "n/a",
       "notes": "Filler",
       "id": 8
+    },
+    {
+      "forLocation": "Abra Abra kadabra",
+      "datetime": "2020-06-19",
+      "amount": "70.00",
+      "expirationDate": "2020-07-11",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Filler",
+      "id": 9
+    },
+    {
+      "forLocation": "Target ",
+      "datetime": "2020-06-19",
+      "amount": "70.00",
+      "expirationDate": "2020-07-11",
+      "quantity": "1",
+      "url": "https://www.burpee.com/vegetables/pumpkins/pumpkin-big-max-prod000859.html",
+      "notes": "Filler",
+      "id": 10
+    },
+    {
+      "forLocation": "WWWWWWWWWWW",
+      "datetime": "2020-06-24",
+      "amount": "10.00",
+      "expirationDate": "2020-07-09",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Filler",
+      "id": 11
+    },
+    {
+      "forLocation": "Holla",
+      "datetime": "2020-06-21",
+      "amount": "1000000",
+      "expirationDate": "2020-07-11",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Testing",
+      "id": 12
     }
   ],
   "coupons": [
     {
       "id": 6,
-      "userId": 2,
       "datetime": "date",
       "forLocation": "JC Penny",
       "discount": "55%",
@@ -73,29 +112,7 @@
       "quantity": 1,
       "url": "url",
       "notes": "string",
-      "userID": 1
-    },
-    {
-      "forLocation": "Big Bush Max",
-      "datetime": "2020-06-16",
-      "discount": "10",
-      "expirationDate": "2020-06-29",
-      "quantity": "2",
-      "url": "n/a",
-      "notes": "For the Next fall Pumkin Seeds",
-      "id": 7,
-      "userID": 1
-    },
-    {
-      "forLocation": "AAAAAAAAAAAAAAAA",
-      "datetime": "2020-06-16",
-      "discount": "10",
-      "expirationDate": "2020-06-29",
-      "quantity": "2",
-      "url": "n/a",
-      "notes": "For the Next fall Pumkin Seeds",
-      "id": 7,
-      "userID": 1
+      "userId": 1
     },
     {
       "forLocation": "BBBBBBBBBBB",
@@ -106,7 +123,17 @@
       "url": "n/a",
       "notes": "For the Next fall Pumkin Seeds",
       "id": 7,
-      "userID": 1
+      "userId": 1
+    },
+    {
+      "forLocation": "Apple Stand",
+      "datetime": "2020-06-19",
+      "discount": "25%",
+      "expirationDate": "2020-07-11",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Ex",
+      "id": 8
     }
   ],
   "loyaltyRewardsCards": [

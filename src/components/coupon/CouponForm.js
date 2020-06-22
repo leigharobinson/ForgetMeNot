@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useReducer, useImperativeHandle } from "react";
 import CouponManager from "../../modules/CouponManager";
 import "./CouponForm.css";
 
@@ -38,12 +38,16 @@ const CouponForm = (props) => {
     } else {
       setIsLoading(true);
       // Create the animal and redirect user to animal list
-      CouponManager.post(coupon).then(() => props.history.push("/coupons"));
+
+      CouponManager.post(coupon, props.userId).then(() =>
+        props.history.push("/coupons")
+      );
     }
   };
 
   return (
     <>
+      <div></div>
       <form>
         <fieldset>
           <div className="formgrid">
