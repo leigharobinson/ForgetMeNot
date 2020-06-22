@@ -14,6 +14,7 @@ const CouponCard = (props) => {
         <Link to={`/coupons/${props.coupon.id}`}>
           <button>Details</button>
         </Link>
+
         <button
           type="button"
           onClick={() => props.history.push(`/coupons/${props.coupon.id}/edit`)}
