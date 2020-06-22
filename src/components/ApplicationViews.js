@@ -21,8 +21,9 @@ const ApplicationViews = (props) => {
   const setUser = props.setUser;
   let userId = "";
   if (hasUser) {
-    userId = JSON.parse(sessionStorage.getItem("credentials").id);
+    userId = JSON.parse(sessionStorage.getItem("credentials"));
   }
+  /////////
 
   return (
     <React.Fragment>
@@ -49,7 +50,7 @@ const ApplicationViews = (props) => {
         path="/giftCards"
         render={(props) => {
           if (hasUser) {
-            return <GiftCardList userId={userId} {...props} />;
+            return <GiftCardList {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -79,7 +80,7 @@ const ApplicationViews = (props) => {
         path="/giftCards/:giftCardId(\d+)/edit"
         render={(props) => {
           if (hasUser) {
-            return <GiftCardEditForm userId={userId} {...props} />;
+            return <GiftCardEditForm {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -90,7 +91,7 @@ const ApplicationViews = (props) => {
         path="/coupons"
         render={(props) => {
           if (hasUser) {
-            return <CouponList userId={userId} {...props} />;
+            return <CouponList {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -120,7 +121,7 @@ const ApplicationViews = (props) => {
         path="/coupons/:couponId(\d+)/edit"
         render={(props) => {
           if (hasUser) {
-            return <CouponEditForm userId={userId} {...props} />;
+            return <CouponEditForm {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -131,7 +132,7 @@ const ApplicationViews = (props) => {
         path="/loyaltyRewardsCards"
         render={(props) => {
           if (hasUser) {
-            return <LoyaltyRewardList userId={userId} {...props} />;
+            return <LoyaltyRewardList {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
@@ -161,7 +162,7 @@ const ApplicationViews = (props) => {
         path="/loyaltyRewardsCards/:loyaltyRewardId(\d+)/edit"
         render={(props) => {
           if (hasUser) {
-            return <LoyaltyRewardEditForm userId={userId} {...props} />;
+            return <LoyaltyRewardEditForm {...props} />;
           } else {
             return <Redirect to="/login" />;
           }

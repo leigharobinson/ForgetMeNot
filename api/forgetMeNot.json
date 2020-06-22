@@ -4,35 +4,35 @@
       "id": 1,
       "username": "mick",
       "email": "MargaretAnn23@gmail.com",
-      "password": "somethingThatShouldBeHidden"
+      "password": "123"
     },
     {
       "id": 2,
       "username": "Bonny",
       "email": "TabithaChar123@gmail.com",
-      "password": "123123"
+      "password": "123"
     },
     {
       "username": "Julie",
       "email": "TwoFourSixEight@gail.com",
-      "password": "12312311",
+      "password": "123",
       "id": 3
     },
     {
       "username": "Tyler",
       "email": "TMatoFishes@gmail.com",
-      "password": "222222",
+      "password": "123",
       "id": 4
     },
     {
       "username": "PartyBoi",
-      "password": "123123123",
+      "password": "123",
       "email": "FunNeverEnds@gmail.com",
       "id": 5
     },
     {
       "username": "BunnyHop123",
-      "password": "1231231231",
+      "password": "123",
       "email": "Bunny5@gmail.com",
       "id": 6
     },
@@ -51,7 +51,7 @@
   ],
   "giftCards": [
     {
-      "userID": 1,
+      "userId": 1,
       "forLocation": "Big Bush Max",
       "datetime": "2020-06-11",
       "amount": "70.00",
@@ -69,7 +69,8 @@
       "quantity": "1",
       "url": "n/a",
       "notes": "Filler",
-      "id": 9
+      "id": 9,
+      "userId": 1
     },
     {
       "forLocation": "Target ",
@@ -79,6 +80,7 @@
       "quantity": "1",
       "url": "https://www.burpee.com/vegetables/pumpkins/pumpkin-big-max-prod000859.html",
       "notes": "Filler",
+      "userId": 2,
       "id": 10
     },
     {
@@ -89,6 +91,7 @@
       "quantity": "1",
       "url": "n/a",
       "notes": "Filler",
+      "userId": 2,
       "id": 11
     },
     {
@@ -99,6 +102,7 @@
       "quantity": "1",
       "url": "n/a",
       "notes": "Testing",
+      "userId": 2,
       "id": 12
     }
   ],
@@ -126,6 +130,17 @@
       "userId": 1
     },
     {
+      "forLocation": "BBBBBBBBBBB",
+      "datetime": "2020-06-16",
+      "discount": "10",
+      "expirationDate": "2020-06-29",
+      "quantity": "2",
+      "url": "n/a",
+      "notes": "For the Next fall Pumkin Seeds",
+      "id": 7,
+      "userId": 2
+    },
+    {
       "forLocation": "Apple Stand",
       "datetime": "2020-06-19",
       "discount": "25%",
@@ -133,7 +148,8 @@
       "quantity": "1",
       "url": "n/a",
       "notes": "Ex",
-      "id": 8
+      "id": 8,
+      "userId": 2
     }
   ],
   "loyaltyRewardsCards": [
@@ -144,7 +160,38 @@
       "expirationDate": "2020-08-07",
       "url": "n/a",
       "notes": "Get a Free 6\" sub",
-      "id": 8
+      "id": 8,
+      "userId": 1
+    },
+    {
+      "forLocation": "Apple Stand",
+      "datetime": "2020-06-16",
+      "visitsUntilReward": "10",
+      "expirationDate": "2020-08-07",
+      "url": "n/a",
+      "notes": "Get a Free 6\" sub",
+      "id": 8,
+      "userId": 1
+    },
+    {
+      "forLocation": "Apple Stand",
+      "datetime": "2020-06-16",
+      "visitsUntilReward": "10",
+      "expirationDate": "2020-08-07",
+      "url": "n/a",
+      "notes": "Get a Free 6\" sub",
+      "id": 8,
+      "userId": 2
+    },
+    {
+      "forLocation": "Apple Stand",
+      "datetime": "2020-06-16",
+      "visitsUntilReward": "10",
+      "expirationDate": "2020-08-07",
+      "url": "n/a",
+      "notes": "Get a Free 6\" sub",
+      "id": 8,
+      "userId": 2
     }
   ]
 }

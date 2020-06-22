@@ -1,11 +1,13 @@
 const remoteURL = "http://localhost:5005";
-
+const currentUser = sessionStorage.getItem("credentials");
 export default {
   get(id) {
     return fetch(`${remoteURL}/users/${id}`).then((result) => result.json());
   },
   getAll() {
-    return fetch(`${remoteURL}/users`).then((result) => result.json());
+    return fetch(`${remoteURL}/users?userId=${currentUser}`).then((result) =>
+      result.json()
+    );
   },
   searchUser(username) {
     return fetch(`${remoteURL}/users/?&q=${username}`).then((result) =>

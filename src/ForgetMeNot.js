@@ -11,14 +11,15 @@ const ForgetMeNot = () => {
     setHasUser(isAuthenticated());
   };
 
-  const setUser = (user) => {
-    sessionStorage.setItem("credentials", JSON.stringify(user));
+  const setUser = (userId) => {
+    sessionStorage.setItem("credentials", userId);
     setHasUser(isAuthenticated());
   };
+
   return (
     <>
       <NavBar hasUser={hasUser} clearUser={clearUser} />
-      <ApplicationViews hasUser={hasUser} clearUser={setUser} />
+      <ApplicationViews hasUser={hasUser} setUser={setUser} />
     </>
   );
 };
