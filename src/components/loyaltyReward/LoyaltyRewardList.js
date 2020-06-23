@@ -10,6 +10,7 @@ const LoyaltyRewardList = (props) => {
     //After the data comes back from the API, we use the setCoupons function to update state
     return LoyaltyRewardManager.getAll().then((loyaltyRewardFromAPI) => {
       setLoyaltyRewards(loyaltyRewardFromAPI);
+      console.log(loyaltyRewardFromAPI);
     });
   };
   //got teh coupons from the API on the component's first render

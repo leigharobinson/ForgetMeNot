@@ -10,6 +10,7 @@ const GiftCardList = (props) => {
     //After the data comes back from the API, we use the setCoupons function to update state
     return GiftCardManager.getAll().then((giftCardsFromAPI) => {
       setGiftCards(giftCardsFromAPI);
+      console.log(giftCardsFromAPI);
     });
   };
   //got teh coupons from the API on the component's first render
