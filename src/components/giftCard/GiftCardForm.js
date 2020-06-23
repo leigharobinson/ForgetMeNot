@@ -10,6 +10,7 @@ const GiftCardForm = (props) => {
     quantity: "",
     url: "",
     notes: "",
+    userId: props.userId,
   });
   const [isLoading, setIsLoading] = useState(false);
 

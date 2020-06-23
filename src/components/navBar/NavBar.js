@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import { withRouter } from "react-router-dom";
+import React from "react";
+
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = (props) => {
   const handleLogout = () => {
     props.clearUser();
-    props.history.push("/");
   };
   return (
     <header>
@@ -37,8 +36,16 @@ const NavBar = (props) => {
               Loyalty Reward Cards
             </Link>
           </li>
+          {/* //TODO: make a CRUD Profile page */}
           <li>
-            <span className="nav-link"> </span>
+            <Link className="nav-link" to="/profile">
+              User Profile
+            </Link>
+          </li>
+          <li>
+            <button className="logout btn-nomore" onClick={handleLogout}>
+              Logout
+            </button>
           </li>
         </ul>
       </nav>

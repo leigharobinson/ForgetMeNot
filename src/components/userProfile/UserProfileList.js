@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import UserManager from "../../modules/UserManager";
-import Home from "../home/Home";
 
 const UserProfileList = (props) => {
   const [credentials, setCredentials] = useState({
@@ -16,18 +15,18 @@ const UserProfileList = (props) => {
 
   useEffect(() => {
     getUserProfile();
-  }, []);
+  });
 
   return (
     <div className="card">
-      <h2>Gift Card</h2>
+      <h2>Profile Manager</h2>
       <div className="card-content">
-        <div className="container-cards">
-          {users.map((user) => (
+        {/* <div className="container-cards">
+          {credentials.map((user) => (
             <Home key={credentials.id} user={user} {...props} />
           ))}
           {console.log(credentials.username)}
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
-import React, { useState, useReducer, useImperativeHandle } from "react";
+import React, { useState } from "react";
 import CouponManager from "../../modules/CouponManager";
 import "./CouponForm.css";
 
 const CouponForm = (props) => {
+  // console.log(props.userId);
   const [coupon, setCoupon] = useState({
     forLocation: "",
     datetime: "",
@@ -11,6 +12,7 @@ const CouponForm = (props) => {
     quantity: "",
     url: "",
     notes: "",
+    userId: props.userId,
   });
 
   const [isLoading, setIsLoading] = useState(false);
