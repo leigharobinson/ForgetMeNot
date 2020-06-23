@@ -9,6 +9,7 @@ const LoyaltyRewardForm = (props) => {
     expirationDate: "",
     url: "",
     notes: "",
+    userId: props.userId,
   });
   const [isLoading, setIsLoading] = useState(false);
 

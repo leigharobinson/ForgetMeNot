@@ -16,6 +16,8 @@ import LoyaltyRewardDetail from "./loyaltyReward/LoyaltyRewardDetail";
 import LoyaltyRewardForm from "./loyaltyReward/LoyaltyRewardForm";
 import LoyaltyRewardEditForm from "./loyaltyReward/LoyaltyRewardEditForm";
 
+import UserProfileList from "./userProfile/UserProfileList";
+
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
   const setUser = props.setUser;
@@ -33,7 +35,8 @@ const ApplicationViews = (props) => {
           return <Login setUser={setUser} hasUser={hasUser} {...props} />;
         }}
       />
-      <Route path="/newUser" component={NewUserForm} />
+      <Route exact path="/newUser" component={NewUserForm} />
+      <Route exact path="/profile" component={UserProfileList} />
       <Route
         exact
         path="/"
@@ -60,7 +63,7 @@ const ApplicationViews = (props) => {
         exact
         path="/giftCards/new"
         render={(props) => {
-          return <GiftCardForm {...props} />;
+          return <GiftCardForm userId={userId} {...props} />;
         }}
       />
       <Route
@@ -101,7 +104,7 @@ const ApplicationViews = (props) => {
         exact
         path="/coupons/new"
         render={(props) => {
-          return <CouponForm {...props} />;
+          return <CouponForm userId={userId} {...props} />;
         }}
       />
       <Route
@@ -142,7 +145,7 @@ const ApplicationViews = (props) => {
         exact
         path="/loyaltyRewardsCards/new"
         render={(props) => {
-          return <LoyaltyRewardForm {...props} />;
+          return <LoyaltyRewardForm userId={userId} {...props} />;
         }}
       />
       <Route

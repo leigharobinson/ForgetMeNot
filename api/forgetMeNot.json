@@ -37,13 +37,13 @@
       "id": 6
     },
     {
-      "username": "easy",
+      "username": "Easy",
       "password": "123",
       "email": "easy",
       "id": 7
     },
     {
-      "username": "easy",
+      "username": "Don",
       "password": "123",
       "email": "easy@gmail.com",
       "id": 8
@@ -104,6 +104,17 @@
       "notes": "Testing",
       "userId": 2,
       "id": 12
+    },
+    {
+      "forLocation": "Leigha's Apple stand",
+      "datetime": "2020-06-23",
+      "amount": "$100.00",
+      "expirationDate": "2020-06-25",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Trying to MVP it",
+      "userId": 1,
+      "id": 13
     }
   ],
   "coupons": [
@@ -150,6 +161,28 @@
       "notes": "Ex",
       "id": 8,
       "userId": 2
+    },
+    {
+      "forLocation": "Big Bush Max",
+      "datetime": "2020-06-23",
+      "discount": "24%",
+      "expirationDate": "2020-06-27",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "THis is the biggest Test ever",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "forLocation": "MVP",
+      "datetime": "2020-06-23",
+      "discount": "25%",
+      "expirationDate": "2020-07-11",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "THIS IS MVP",
+      "userId": 1,
+      "id": 10
     }
   ],
   "loyaltyRewardsCards": [
@@ -192,6 +225,16 @@
       "notes": "Get a Free 6\" sub",
       "id": 10,
       "userId": 2
+    },
+    {
+      "forLocation": "Leigha's Apple stand",
+      "datetime": "2020-06-23",
+      "visitsUntilReward": "2",
+      "expirationDate": "2020-07-10",
+      "url": "n/a",
+      "notes": "Almost MVP",
+      "userId": 1,
+      "id": 11
     }
   ]
 }
