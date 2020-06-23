@@ -10,6 +10,7 @@ const CouponList = (props) => {
     //After the data comes back from the API, we use the setCoupons function to update state
     return CouponManager.getAll().then((couponsFromAPI) => {
       setCoupons(couponsFromAPI);
+      console.log(couponsFromAPI);
     });
   };
   //got teh coupons from the API on the component's first render
