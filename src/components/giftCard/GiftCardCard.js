@@ -11,10 +11,12 @@ const GiftCard = (props) => {
         </h3>
         <p>Amount: ${props.giftCard.amount}</p>
         <p>Expiration: {props.giftCard.expirationDate}</p>
+        <p>Notes: {props.giftCard.notes}</p>
         <Link to={`/giftCards/${props.giftCard.id}`}>
-          <button>Details</button>
+          <button id="GiftCardButton">Details</button>
         </Link>
         <button
+          id="GiftCardButton"
           type="button"
           onClick={() =>
             props.history.push(`/giftCards/${props.giftCard.id}/edit`)

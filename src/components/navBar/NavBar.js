@@ -16,6 +16,11 @@ const NavBar = (props) => {
       </h1>
       <nav>
         <ul className="container">
+          {/* <li>
+            <Link className="nav-link" to="/homeCard">
+              Home Card
+            </Link>
+          </li> */}
           <li>
             <Link className="nav-link" to="/">
               Home
@@ -37,16 +42,15 @@ const NavBar = (props) => {
             </Link>
           </li>
           {/* //TODO: make a CRUD Profile page */}
-          <li>
+          {/* <li>
             <Link className="nav-link" to="/profile">
               User Profile
             </Link>
-          </li>
-          <li>
-            <button className="logout btn-nomore" onClick={handleLogout}>
-              Logout
-            </button>
-          </li>
+          </li> */}
+
+          <button className="logout btn-nomore" onClick={handleLogout}>
+            Logout
+          </button>
         </ul>
       </nav>
     </header>

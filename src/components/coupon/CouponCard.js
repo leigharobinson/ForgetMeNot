@@ -11,11 +11,13 @@ const CouponCard = (props) => {
         </h3>
         <p>Discount: {props.coupon.discount} OFF</p>
         <p>Expiration: {props.coupon.expirationDate}</p>
+        <p>Notes: {props.coupon.notes}</p>
         <Link to={`/coupons/${props.coupon.id}`}>
-          <button>Details</button>
+          <button id="CouponButton">Details</button>
         </Link>
 
         <button
+          id="CouponButton"
           type="button"
           onClick={() => props.history.push(`/coupons/${props.coupon.id}/edit`)}
         >
