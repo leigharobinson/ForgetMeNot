@@ -10,7 +10,7 @@ const GiftCardList = (props) => {
     //After the data comes back from the API, we use the setCoupons function to update state
     return GiftCardManager.getAll().then((giftCardsFromAPI) => {
       setGiftCards(giftCardsFromAPI);
-      console.log(giftCardsFromAPI);
+      // console.log(giftCardsFromAPI);
     });
   };
   //got teh coupons from the API on the component's first render
@@ -30,6 +30,7 @@ const GiftCardList = (props) => {
       {/* //add this button above your display of animal cards */}
       <section className="section-content">
         <button
+          id="NewGiftCardFormButton"
           type="button"
           className="btn"
           onClick={() => {

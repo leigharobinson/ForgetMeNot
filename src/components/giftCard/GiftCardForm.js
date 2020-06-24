@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GiftCardManager from "../../modules/GiftCardManager";
-
+// import "./GiftCard.css";
 const GiftCardForm = (props) => {
   const [giftCard, setGiftCard] = useState({
     forLocation: "",

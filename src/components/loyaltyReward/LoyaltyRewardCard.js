@@ -11,10 +11,12 @@ const LoyaltyRewardCard = (props) => {
         </h3>
         <p>Visits until Reward: {props.loyaltyReward.visitsUntilReward}</p>
         <p>Expiration: {props.loyaltyReward.expirationDate}</p>
+        <p>Notes: {props.loyaltyReward.notes}</p>
         <Link to={`/loyaltyRewardsCards/${props.loyaltyReward.id}`}>
-          <button>Details</button>
+          <button id="LoyaltyRewardButton">Details</button>
         </Link>
         <button
+          id="LoyaltyRewardButton"
           type="button"
           onClick={() =>
             props.history.push(

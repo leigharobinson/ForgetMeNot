@@ -10,7 +10,7 @@ const CouponList = (props) => {
     //After the data comes back from the API, we use the setCoupons function to update state
     return CouponManager.getAll().then((couponsFromAPI) => {
       setCoupons(couponsFromAPI);
-      console.log(couponsFromAPI);
+      // console.log(couponsFromAPI);
     });
   };
   //got teh coupons from the API on the component's first render
@@ -29,6 +29,7 @@ const CouponList = (props) => {
       {/* //add this button above your display of animal cards */}
       <section className="section-content">
         <button
+          id="NewCouponFormButton"
           type="button"
           className="btn"
           onClick={() => {

@@ -2,7 +2,7 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Login from "./authentication/Login";
 import NewUserForm from "./authentication/NewUserForm";
-import Home from "./home/Home";
+import HomeCard from "./home/HomeCard";
 import GiftCardList from "./giftCard/GiftCardList";
 import GiftCardDetail from "./giftCard/GiftCardDetail";
 import GiftCardForm from "./giftCard/GiftCardForm";
@@ -16,6 +16,7 @@ import LoyaltyRewardDetail from "./loyaltyReward/LoyaltyRewardDetail";
 import LoyaltyRewardForm from "./loyaltyReward/LoyaltyRewardForm";
 import LoyaltyRewardEditForm from "./loyaltyReward/LoyaltyRewardEditForm";
 
+import HomeList from "./home/HomeList";
 import UserProfileList from "./userProfile/UserProfileList";
 
 const ApplicationViews = (props) => {
@@ -35,19 +36,31 @@ const ApplicationViews = (props) => {
           return <Login setUser={setUser} hasUser={hasUser} {...props} />;
         }}
       />
-      <Route exact path="/newUser" component={NewUserForm} />
-      <Route exact path="/profile" component={UserProfileList} />
       <Route
         exact
         path="/"
         render={(props) => {
           if (hasUser) {
-            return <Home userId={userId} {...props} />;
+            return <HomeList userId={userId} hasUser={hasUser} {...props} />;
           } else {
             return <Redirect to="/login" />;
           }
         }}
       />
+      <Route exact path="/newUser" component={NewUserForm} />
+      <Route exact path="/profile" component={UserProfileList} />
+
+      {/* <Route
+        exact
+        path="/homeCard"
+        render={(props) => {
+          if (hasUser) {
+            return <HomeCard userId={userId} {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      /> */}
       <Route
         exact
         path="/giftCards"
