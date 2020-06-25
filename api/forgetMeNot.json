@@ -51,7 +51,7 @@
   ],
   "giftCards": [
     {
-      "userId": 2,
+      "userId": 1,
       "cardType": "Gift Card",
       "forLocation": "Target ",
       "datetime": "2020-06-19",
@@ -134,7 +134,7 @@
       "quantity": "1",
       "url": "https://www.montanas.ca/en.html",
       "notes": "Use this next time in Canada",
-      "id": 9
+      "id": 10
     }
   ],
   "loyaltyRewardsCards": [
@@ -154,7 +154,7 @@
       "cardType": "Loyalty Rewards Card",
       "forLocation": "Subway",
       "datetime": "06/24/2020, 05:08:18 PM",
-      "visitsUntilReward": "2",
+      "visitsUntilReward": "3",
       "expirationDate": "2020-07-02",
       "url": "n/a",
       "notes": "Testing",
