@@ -6,8 +6,10 @@ const HomeCard = (props) => {
       <div>
         {/* //TODO: SIngle Card Layout  */}
         <div className="card-content">
+          <h4>{props.card.cardType}</h4>
+          {/* <h4> {props.card.id}</h4> */}
           <h3>
-            For: <span className="card-for">{props.card.forLocation}</span>
+            <span className="card-for">{props.card.forLocation}</span>
           </h3>
           {/* // COnditionally render AMount  */}
           {props.card.amount && <p>Amount: ${props.card.amount}</p>}
@@ -19,12 +21,13 @@ const HomeCard = (props) => {
           )}
           <p>Expiration: {props.card.expirationDate}</p>
 
-          {/* <button
+          <button
             type="button"
-            onClick={() => props.deleteGiftCard(props.giftCard.id)}
+            onClick={() => props.deleteCard(props.card.id, props.card.cardType)}
           >
             Delete
-          </button> */}
+          </button>
+          <hr />
         </div>
       </div>
     </div>

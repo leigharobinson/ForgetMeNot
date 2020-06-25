@@ -39,7 +39,7 @@ const GiftCardDetail = (props) => {
 
   return (
     <div className="card">
-      <h2>Gift Card</h2>
+      <h2>Gift Card Details</h2>
       <div className="card-content">
         {/* <picture>
           <img src={require("./dog.svg")} alt="My Dog" />
@@ -47,7 +47,7 @@ const GiftCardDetail = (props) => {
         <h3>
           For: <span>{giftCard.forLocation}</span>
         </h3>
-        <p>Created: {giftCard.datetime}</p>
+        <p>Date Created: {giftCard.datetime}</p>
         <p>Amount: ${giftCard.amount}</p>
         <p>Expiration Date: {giftCard.expirationDate}</p>
         <p>Quantity: {giftCard.quantity}</p>

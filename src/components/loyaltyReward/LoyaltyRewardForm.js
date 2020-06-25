@@ -2,14 +2,25 @@ import React, { useState } from "react";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 
 const LoyaltyRewardForm = (props) => {
+  //This Is to get a timestamp on when cards are created
+  const timestamp = Date.now();
+
   const [loyaltyReward, setLoyaltyReward] = useState({
+    userId: props.userId,
+    cardType: "Loyalty Rewards Card",
     forLocation: "",
-    datetime: "",
+    datetime: new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }).format(timestamp),
     visitsUntilReward: "",
     expirationDate: "",
     url: "",
     notes: "",
-    userId: props.userId,
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,13 +30,12 @@ const LoyaltyRewardForm = (props) => {
     setLoyaltyReward(stateToChange);
   };
 
-  /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
+  /*  Local method for validation, set loadingStatus, create LR object, invoke the LRManager post method, and redirect to the full LRC list
    */
   const constructNewLoyaltyReward = (evt) => {
     evt.preventDefault();
     if (
       !loyaltyReward.forLocation ||
-      !loyaltyReward.datetime ||
       !loyaltyReward.visitsUntilReward ||
       !loyaltyReward.expirationDate ||
       !loyaltyReward.url ||
@@ -43,6 +53,9 @@ const LoyaltyRewardForm = (props) => {
 
   return (
     <>
+      <div>
+        <h1>Loyalty Reward Form</h1>
+      </div>
       <form>
         <fieldset>
           <div className="formgrid">
@@ -54,14 +67,7 @@ const LoyaltyRewardForm = (props) => {
               placeholder="Business Name"
             />
             <label htmlFor="forLocation">Business Name</label>
-            <input
-              type="date"
-              required
-              onChange={handleFieldChange}
-              id="datetime"
-              placeholder="date"
-            />
-            <label htmlFor="datetime">date created</label>
+
             <input
               type="text"
               required

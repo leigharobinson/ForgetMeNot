@@ -3,6 +3,8 @@ import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 
 const LoyaltyRewardEditForm = (props) => {
   const [loyaltyReward, setLoyaltyReward] = useState({
+    userId: props.userId,
+    cardType: "Loyalty Rewards Card",
     forLocation: "",
     datetime: "",
     visitsUntilReward: "",
@@ -25,13 +27,15 @@ const LoyaltyRewardEditForm = (props) => {
 
     // This is an edit, so we need the id
     const editedLoyaltyRewardCard = {
-      id: props.match.params.loyaltyRewardId,
+      userId: loyaltyReward.userId,
+      cardType: loyaltyReward.cardType,
       forLocation: loyaltyReward.forLocation,
       datetime: loyaltyReward.datetime,
       visitsUntilReward: loyaltyReward.visitsUntilReward,
       expirationDate: loyaltyReward.expirationDate,
       url: loyaltyReward.url,
       notes: loyaltyReward.notes,
+      id: props.match.params.loyaltyRewardId,
     };
 
     LoyaltyRewardManager.update(editedLoyaltyRewardCard).then(() =>
@@ -46,10 +50,13 @@ const LoyaltyRewardEditForm = (props) => {
         setIsLoading(false);
       }
     );
-  }, []);
+  }, [props.match.params.loyaltyRewardId]);
 
   return (
     <>
+      <div>
+        <h1> Edit Loyalty Reward Card</h1>
+      </div>
       <form>
         <fieldset>
           <div className="formgrid">
@@ -61,14 +68,7 @@ const LoyaltyRewardEditForm = (props) => {
               value={loyaltyReward.forLocation}
             />
             <label htmlFor="forLocation">Business Name</label>
-            <input
-              type=""
-              required
-              onChange={handleFieldChange}
-              id="datetime"
-              value={loyaltyReward.datetime}
-            />
-            <label htmlFor="datetime">date created</label>
+
             <input
               type="text"
               required

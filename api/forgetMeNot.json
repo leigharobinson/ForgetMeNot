@@ -51,28 +51,8 @@
   ],
   "giftCards": [
     {
-      "userId": 1,
-      "forLocation": "Big Bush Max",
-      "datetime": "2020-06-11",
-      "amount": "70.00",
-      "expirationDate": "2020-07-04",
-      "quantity": "1",
-      "url": "n/a",
-      "notes": "Filler",
-      "id": 8
-    },
-    {
-      "forLocation": "Abra Abra kadabra",
-      "datetime": "2020-06-19",
-      "amount": "70.00",
-      "expirationDate": "2020-07-11",
-      "quantity": "1",
-      "url": "n/a",
-      "notes": "Filler",
-      "id": 9,
-      "userId": 1
-    },
-    {
+      "userId": 2,
+      "cardType": "Gift Card",
       "forLocation": "Target ",
       "datetime": "2020-06-19",
       "amount": "70.00",
@@ -80,10 +60,11 @@
       "quantity": "1",
       "url": "https://www.burpee.com/vegetables/pumpkins/pumpkin-big-max-prod000859.html",
       "notes": "Filler",
-      "userId": 2,
       "id": 10
     },
     {
+      "userId": 2,
+      "cardType": "Gift Card",
       "forLocation": "WWWWWWWWWWW",
       "datetime": "2020-06-24",
       "amount": "10.00",
@@ -91,149 +72,92 @@
       "quantity": "1",
       "url": "n/a",
       "notes": "Filler",
-      "userId": 2,
       "id": 11
     },
     {
+      "userId": 2,
+      "cardType": "Gift Card",
       "forLocation": "Holla",
       "datetime": "2020-06-21",
-      "amount": "1000000",
+      "amount": "15",
       "expirationDate": "2020-07-11",
       "quantity": "1",
       "url": "n/a",
       "notes": "Testing",
-      "userId": 2,
       "id": 12
     },
     {
-      "forLocation": "Leigha's Apple stand",
-      "datetime": "2020-06-23",
-      "amount": "$100.00",
-      "expirationDate": "2020-06-25",
+      "userId": 1,
+      "cardType": "Gift Card",
+      "forLocation": "TJ Maxx",
+      "datetime": "06/24/2020, 05:05:05 PM",
+      "amount": "10.00",
+      "expirationDate": "2020-06-27",
       "quantity": "1",
       "url": "n/a",
-      "notes": "Trying to MVP it",
-      "userId": 1,
+      "notes": "Testing",
       "id": 13
     }
   ],
   "coupons": [
     {
-      "id": 6,
-      "datetime": "date",
-      "forLocation": "JC Penny",
-      "discount": "55%",
-      "expirationDate": "date",
-      "quantity": 1,
-      "url": "url",
-      "notes": "string",
-      "userId": 1
-    },
-    {
-      "forLocation": "BBBBBBBBBBB",
+      "userId": 2,
+      "cardType": "Coupon",
+      "forLocation": "Boston Tea House",
       "datetime": "2020-06-16",
-      "discount": "10",
+      "discount": "15%",
       "expirationDate": "2020-06-29",
       "quantity": "2",
       "url": "n/a",
       "notes": "For the Next fall Pumkin Seeds",
-      "id": 7,
-      "userId": 1
+      "id": 7
     },
     {
-      "forLocation": "BBBBBBBBBBB",
-      "datetime": "2020-06-16",
-      "discount": "10",
-      "expirationDate": "2020-06-29",
-      "quantity": "2",
-      "url": "n/a",
-      "notes": "For the Next fall Pumkin Seeds",
-      "id": 7,
-      "userId": 2
-    },
-    {
-      "forLocation": "Apple Stand",
+      "userId": 2,
+      "cardType": "Coupon",
+      "forLocation": "Target",
       "datetime": "2020-06-19",
       "discount": "25%",
       "expirationDate": "2020-07-11",
       "quantity": "1",
       "url": "n/a",
       "notes": "Ex",
-      "id": 8,
-      "userId": 2
+      "id": 8
     },
     {
-      "forLocation": "Big Bush Max",
-      "datetime": "2020-06-23",
+      "userId": 1,
+      "cardType": "Coupon",
+      "forLocation": "Montana's Steakhouse ",
+      "datetime": "06/24/2020, 04:57:41 PM",
       "discount": "24%",
-      "expirationDate": "2020-06-27",
+      "expirationDate": "2020-06-25",
       "quantity": "1",
-      "url": "n/a",
-      "notes": "THis is the biggest Test ever",
-      "userId": 1,
+      "url": "https://www.montanas.ca/en.html",
+      "notes": "Use this next time in Canada",
       "id": 9
-    },
-    {
-      "forLocation": "MVP",
-      "datetime": "2020-06-23",
-      "discount": "25%",
-      "expirationDate": "2020-07-11",
-      "quantity": "1",
-      "url": "n/a",
-      "notes": "THIS IS MVP",
-      "userId": 1,
-      "id": 10
     }
   ],
   "loyaltyRewardsCards": [
     {
-      "forLocation": "Apple Stand",
+      "userId": 2,
+      "cardType": "Loyalty Rewards Card",
+      "forLocation": "Baskin'Robbins",
       "datetime": "2020-06-16",
       "visitsUntilReward": "10",
       "expirationDate": "2020-08-07",
       "url": "n/a",
       "notes": "Get a Free 6\" sub",
-      "id": 7,
-      "userId": 1
+      "id": 10
     },
     {
-      "forLocation": "Apple Stand",
-      "datetime": "2020-06-16",
-      "visitsUntilReward": "10",
-      "expirationDate": "2020-08-07",
-      "url": "n/a",
-      "notes": "Get a Free 6\" sub",
-      "id": 8,
-      "userId": 1
-    },
-    {
-      "forLocation": "Apple Stand",
-      "datetime": "2020-06-16",
-      "visitsUntilReward": "10",
-      "expirationDate": "2020-08-07",
-      "url": "n/a",
-      "notes": "Get a Free 6\" sub",
-      "id": 9,
-      "userId": 2
-    },
-    {
-      "forLocation": "Apple Stand",
-      "datetime": "2020-06-16",
-      "visitsUntilReward": "10",
-      "expirationDate": "2020-08-07",
-      "url": "n/a",
-      "notes": "Get a Free 6\" sub",
-      "id": 10,
-      "userId": 2
-    },
-    {
-      "forLocation": "Leigha's Apple stand",
-      "datetime": "2020-06-23",
-      "visitsUntilReward": "2",
-      "expirationDate": "2020-07-10",
-      "url": "n/a",
-      "notes": "Almost MVP",
       "userId": 1,
+      "cardType": "Loyalty Rewards Card",
+      "forLocation": "Subway",
+      "datetime": "06/24/2020, 05:08:18 PM",
+      "visitsUntilReward": "2",
+      "expirationDate": "2020-07-02",
+      "url": "n/a",
+      "notes": "Testing",
       "id": 11
     }
   ]

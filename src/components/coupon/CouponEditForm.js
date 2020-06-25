@@ -3,6 +3,8 @@ import CouponManager from "../../modules/CouponManager";
 
 const CouponEditForm = (props) => {
   const [coupon, setCoupon] = useState({
+    userId: props.userId,
+    cardType: "Coupon",
     forLocation: "",
     datetime: "",
     discount: "",
@@ -26,7 +28,8 @@ const CouponEditForm = (props) => {
 
     // This is an edit, so we need the id
     const editedCoupon = {
-      id: props.match.params.couponId,
+      userId: coupon.userId,
+      cardType: coupon.cardType,
       forLocation: coupon.forLocation,
       datetime: coupon.datetime,
       discount: coupon.discount,
@@ -34,6 +37,7 @@ const CouponEditForm = (props) => {
       quantity: coupon.quantity,
       url: coupon.url,
       notes: coupon.notes,
+      id: props.match.params.couponId,
     };
 
     CouponManager.update(editedCoupon).then(() =>
@@ -46,10 +50,11 @@ const CouponEditForm = (props) => {
       setCoupon(coupon);
       setIsLoading(false);
     });
-  }, []);
+  }, [props.match.params.couponId]);
 
   return (
     <>
+      <h1>Edit Coupon</h1>
       <form>
         <fieldset>
           <div className="formgrid">
@@ -61,14 +66,7 @@ const CouponEditForm = (props) => {
               value={coupon.forLocation}
             />
             <label htmlFor="forLocation">Business Name</label>
-            <input
-              type=""
-              required
-              onChange={handleFieldChange}
-              id="datetime"
-              value={coupon.datetime}
-            />
-            <label htmlFor="datetime">date created</label>
+
             <input
               type="text"
               required

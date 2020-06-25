@@ -4,6 +4,7 @@ import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 import GiftCardManager from "../../modules/GiftCardManager";
 import HomeCard from "./HomeCard";
 import UserManager from "../../modules/UserManager";
+// import NewUserForm from "../authentication/NewUserForm";
 
 const HomeList = (props) => {
   const [user, setUser] = useState([]);
@@ -68,7 +69,7 @@ const HomeList = (props) => {
   }, []);
 
   let newArrayOfThree = [...coupons, ...giftCards, ...loyaltyRewards];
-  console.log(newArrayOfThree);
+  // console.log(newArrayOfThree);
 
   function compare(a, b) {
     if (a.forLocation < b.forLocation) {
@@ -83,31 +84,51 @@ const HomeList = (props) => {
   newArrayOfThree.sort(compare);
   let counter = 0;
 
+  const deleteCard = (id, cardType) => {
+    // console.log(cardType);
+    if (cardType === "Gift Card") {
+      // console.log("Gift Card", cardType);
+      GiftCardManager.delete(id).then(() =>
+        GiftCardManager.getAll().then(setGiftCards)
+      );
+    } else if (cardType === "Coupon") {
+      // console.log("Coupon", cardType);
+      CouponManager.delete(id).then(() =>
+        CouponManager.getAll().then(setCoupons)
+      );
+    } else if (cardType === "Loyalty Rewards Card") {
+      // console.log("LRC", cardType);
+      LoyaltyRewardManager.delete(id).then(() =>
+        LoyaltyRewardManager.getAll().then(setLoyaltyRewards)
+      );
+    } else {
+      return "WTF";
+    }
+  };
+
   return (
     <>
       <section>
         <div>InsertLogo</div>
         <h2>Welcome {user}!</h2>
-        <br></br>
+
         <div>
-          <h4>Card Library</h4>
-          <button>Search</button>
+          <h2>Card Library</h2>
+          {/* <button>Search</button> */}
         </div>
         <div className="container-cards">
           {newArrayOfThree.map((card) => {
             counter++;
             return (
-              <HomeCard key={counter} card={card} user={user} {...props} />
+              <HomeCard
+                key={counter}
+                card={card}
+                deleteCard={deleteCard}
+                user={user}
+                {...props}
+              />
             );
           })}
-          {/* {HomeCards.map((homecards) => (
-            <HomeCard
-            key={giftCard.id}
-            giftCard={giftCard}
-            deleteGiftCard={deleteGiftCard}
-            {...props}
-            />
-          ))} */}
         </div>
       </section>
     </>

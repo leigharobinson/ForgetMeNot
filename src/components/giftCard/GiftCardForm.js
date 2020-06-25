@@ -2,15 +2,34 @@ import React, { useState } from "react";
 import GiftCardManager from "../../modules/GiftCardManager";
 // import "./GiftCard.css";
 const GiftCardForm = (props) => {
+  const timestamp = Date.now();
+  // console.log(
+  //   new Intl.DateTimeFormat("en-US", {
+  //     year: "numeric",
+  //     month: "2-digit",
+  //     day: "2-digit",
+  //     hour: "2-digit",
+  //     minute: "2-digit",
+  //     second: "2-digit",
+  //   }).format(timestamp)
+  // );
   const [giftCard, setGiftCard] = useState({
+    userId: props.userId,
+    cardType: "Gift Card",
     forLocation: "",
-    datetime: "",
+    datetime: new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }).format(timestamp),
     amount: "",
     expirationDate: "",
     quantity: "",
     url: "",
     notes: "",
-    userId: props.userId,
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -26,7 +45,6 @@ const GiftCardForm = (props) => {
     evt.preventDefault();
     if (
       !giftCard.forLocation ||
-      !giftCard.datetime ||
       !giftCard.amount ||
       !giftCard.expirationDate ||
       !giftCard.quantity ||
@@ -46,6 +64,7 @@ const GiftCardForm = (props) => {
   return (
     <>
       <form>
+        <h1>Gift Card Form</h1>
         <fieldset>
           <div className="formgrid">
             <input
@@ -56,22 +75,15 @@ const GiftCardForm = (props) => {
               placeholder="Business Name"
             />
             <label htmlFor="forLocation">Business Name</label>
-            <input
-              type="date"
-              required
-              onChange={handleFieldChange}
-              id="datetime"
-              placeholder="date"
-            />
-            <label htmlFor="datetime">date created</label>
+
             <input
               type="text"
               required
               onChange={handleFieldChange}
               id="amount"
-              placeholder="$ 00.0"
+              placeholder=" 00.0"
             />
-            <label htmlFor="amount">Amount</label>
+            <label htmlFor="amount">Amount $</label>
             <input
               type="date"
               required

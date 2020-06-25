@@ -18,7 +18,9 @@ const GiftCardList = (props) => {
     getGiftCards();
   }, []);
 
+  // console.log(id);
   const deleteGiftCard = (id) => {
+    console.log(id);
     GiftCardManager.delete(id).then(() =>
       GiftCardManager.getAll().then(setGiftCards)
     );

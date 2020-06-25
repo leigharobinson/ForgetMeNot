@@ -35,7 +35,7 @@ const LoyaltyRewardDetail = (props) => {
 
   return (
     <div className="card">
-      <h2>Loyalty Reward Card</h2>
+      <h2>Loyalty Reward Card Details</h2>
       <div className="card-content">
         {/* <picture>
           <img src={require("./dog.svg")} alt="My Dog" />
