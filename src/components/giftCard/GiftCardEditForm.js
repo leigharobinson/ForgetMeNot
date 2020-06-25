@@ -3,6 +3,8 @@ import GiftCardManager from "../../modules/GiftCardManager";
 
 const GiftCardEditForm = (props) => {
   const [giftCard, setGiftCard] = useState({
+    userId: props.userId,
+    cardType: "Gift Card",
     forLocation: "",
     datetime: "",
     amount: "",
@@ -26,7 +28,8 @@ const GiftCardEditForm = (props) => {
 
     // This is an edit, so we need the id
     const editedGiftCard = {
-      id: props.match.params.giftCardId,
+      userId: giftCard.userId,
+      cardType: giftCard.cardType,
       forLocation: giftCard.forLocation,
       datetime: giftCard.datetime,
       amount: giftCard.amount,
@@ -34,6 +37,7 @@ const GiftCardEditForm = (props) => {
       quantity: giftCard.quantity,
       url: giftCard.url,
       notes: giftCard.notes,
+      id: props.match.params.giftCardId,
     };
 
     GiftCardManager.update(editedGiftCard).then(() =>
@@ -46,10 +50,13 @@ const GiftCardEditForm = (props) => {
       setGiftCard(giftCard);
       setIsLoading(false);
     });
-  }, []);
+  }, [props.match.params.giftCardId]);
 
   return (
     <>
+      <div>
+        <h1>Edit Gift Card</h1>
+      </div>
       <form>
         <fieldset>
           <div className="formgrid">
@@ -61,14 +68,7 @@ const GiftCardEditForm = (props) => {
               value={giftCard.forLocation}
             />
             <label htmlFor="forLocation">Business Name</label>
-            <input
-              type=""
-              required
-              onChange={handleFieldChange}
-              id="datetime"
-              value={giftCard.datetime}
-            />
-            <label htmlFor="datetime">date created</label>
+
             <input
               type="text"
               required

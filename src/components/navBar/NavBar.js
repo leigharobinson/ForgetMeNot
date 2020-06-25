@@ -16,11 +16,6 @@ const NavBar = (props) => {
       </h1>
       <nav>
         <ul className="container">
-          {/* <li>
-            <Link className="nav-link" to="/homeCard">
-              Home Card
-            </Link>
-          </li> */}
           <li>
             <Link className="nav-link" to="/">
               Home

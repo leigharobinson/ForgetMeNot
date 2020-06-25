@@ -40,7 +40,7 @@ const CouponDetail = (props) => {
 
   return (
     <div className="card">
-      <h2>Coupon Card</h2>
+      <h2>Coupon Card Details</h2>
 
       <div className="card-content">
         {/* <picture>

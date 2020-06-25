@@ -4,15 +4,35 @@ import "./CouponForm.css";
 
 const CouponForm = (props) => {
   // console.log(props.userId);
+  const timestamp = Date.now();
+  // console.log(
+  //   new Intl.DateTimeFormat("en-US", {
+  //     year: "numeric",
+  //     month: "2-digit",
+  //     day: "2-digit",
+  //     hour: "2-digit",
+  //     minute: "2-digit",
+  //     second: "2-digit",
+  //   }).format(timestamp)
+  // );
+  // expected output: "12/20/2012"
   const [coupon, setCoupon] = useState({
+    userId: props.userId,
+    cardType: "Coupon",
     forLocation: "",
-    datetime: "",
+    datetime: new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }).format(timestamp),
     discount: "",
     expirationDate: "",
     quantity: "",
     url: "",
     notes: "",
-    userId: props.userId,
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -29,7 +49,6 @@ const CouponForm = (props) => {
     evt.preventDefault();
     if (
       !coupon.forLocation ||
-      !coupon.datetime ||
       !coupon.discount ||
       !coupon.expirationDate ||
       !coupon.quantity ||
@@ -49,7 +68,9 @@ const CouponForm = (props) => {
 
   return (
     <>
-      <div></div>
+      <div>
+        <h1>Coupon Form</h1>
+      </div>
       <form>
         <fieldset>
           <div className="formgrid">
@@ -61,14 +82,14 @@ const CouponForm = (props) => {
               placeholder="Business Name"
             />
             <label htmlFor="forLocation">Business Name</label>
-            <input
+            {/* <input
               type="date"
               required
               onChange={handleFieldChange}
               id="datetime"
               placeholder="date"
             />
-            <label htmlFor="datetime">date created</label>
+            <label htmlFor="datetime">date created</label> */}
             <input
               type="text"
               required
