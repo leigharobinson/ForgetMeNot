@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import CouponManager from "../../modules/CouponManager";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 import GiftCardManager from "../../modules/GiftCardManager";

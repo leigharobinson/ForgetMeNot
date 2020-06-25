@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
@@ -43,9 +43,13 @@ const NavBar = (props) => {
             </Link>
           </li> */}
 
-          <button className="logout btn-nomore" onClick={handleLogout}>
+          <Button
+            color="danger"
+            className="logout btn-nomore"
+            onClick={handleLogout}
+          >
             Logout
-          </button>
+          </Button>
         </ul>
       </nav>
     </header>

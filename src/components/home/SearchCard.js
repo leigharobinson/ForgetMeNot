@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "reactstrap";
 import { firstLetterCase } from "../helpers/Helpers";
 import "./SearchCard.css";
 
@@ -76,15 +77,15 @@ const SearchCard = (props) => {
                 <p>Visits until Reward: {filteredCard.visitsUntilReward}</p>
               )}
               <p>{filteredCard.expirationDate}</p>
-              <button
+              <Button
+                color="danger"
                 disabled={props.isLoading}
-                type="button"
                 onClick={() =>
                   props.deleteCard(filteredCard.id, filteredCard.cardType)
                 }
               >
                 Delete
-              </button>
+              </Button>
             </div>
           </div>
         ))}
