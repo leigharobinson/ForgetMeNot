@@ -5,13 +5,12 @@ import GiftCardManager from "../../modules/GiftCardManager";
 import HomeCard from "./HomeCard";
 import UserManager from "../../modules/UserManager";
 // import NewUserForm from "../authentication/NewUserForm";
-
+import SearchCard from "./SearchCard";
 const HomeList = (props) => {
   const [user, setUser] = useState([]);
   const [giftCards, setGiftCards] = useState([]);
   const [loyaltyRewards, setLoyaltyRewards] = useState([]);
   const [coupons, setCoupons] = useState([]);
-
   const getUsername = () => {
     return UserManager.getAll().then((usernameFromAPI) => {
       // console.log(usernameFromAPI);
@@ -114,7 +113,13 @@ const HomeList = (props) => {
 
         <div>
           <h2>Card Library</h2>
-          {/* <button>Search</button> */}
+          <div>
+            <SearchCard
+              counter={counter}
+              deleteCard={deleteCard}
+              newArrayOfThree={newArrayOfThree}
+            />
+          </div>
         </div>
         <div className="container-cards">
           {newArrayOfThree.map((card) => {

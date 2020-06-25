@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./HomeCard.css";
 const HomeCard = (props) => {
   return (
-    <div>
+    <div id="home_card">
       <div>
         {/* //TODO: SIngle Card Layout  */}
         <div className="card-content">
