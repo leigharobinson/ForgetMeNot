@@ -8,17 +8,17 @@ const SearchCard = (props) => {
   const [word, setWord] = useState("");
   //filsterdispay will display the updated list based onthe search
   //it's default state is our cards list prop
-  const [filteredDisplay, setFilteredDisplay] = useState(props.newArrayOfThree);
+  const [filteredDisplay, setFilteredDisplay] = useState(props.allCards);
 
   //My OWN
-  // console.log(props.newArrayOfThree);
+  // console.log(props.allCards);
 
   //handleChange runs each time ther's a change in the input feild
   const handleChange = (e) => {
     // we hold the original list in a new array and convert all the names to lowercase
     // we do this to take away chance of user input error
     // Then we return Old List as an arry of objects to hold this changed list
-    let oldList = props.newArrayOfThree.map((filteredCard) => {
+    let oldList = props.allCards.map((filteredCard) => {
       return {
         id: filteredCard.id,
         forLocation: filteredCard.forLocation.toLowerCase(),
@@ -45,7 +45,7 @@ const SearchCard = (props) => {
       setFilteredDisplay(newList);
     } else {
       // if the input isn't modified, return the roginal list.
-      setFilteredDisplay(props.newArrayOfThree);
+      setFilteredDisplay(props.allCards);
     }
   };
   return (
@@ -76,7 +76,7 @@ const SearchCard = (props) => {
               {filteredCard.visitsUntilReward && (
                 <h2>Visits until Reward: {filteredCard.visitsUntilReward}</h2>
               )}
-              <h2>{filteredCard.expirationDate}</h2>
+              <p>Expiration: {filteredCard.expirationDate}</p>
               <Button
                 color="danger"
                 disabled={props.isLoading}

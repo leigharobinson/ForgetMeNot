@@ -18,8 +18,10 @@ const ForgetMeNot = () => {
 
   return (
     <>
-      <NavBar hasUser={hasUser} clearUser={clearUser} />
-      <ApplicationViews hasUser={hasUser} setUser={setUser} />
+      <div id="backgound_img">
+        <NavBar hasUser={hasUser} clearUser={clearUser} />
+        <ApplicationViews hasUser={hasUser} setUser={setUser} />
+      </div>
     </>
   );
 };

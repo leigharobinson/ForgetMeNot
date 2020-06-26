@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "reactstrap";
 import UserManager from "../../modules/UserManager";
+import "./Login.css";
 
 const Login = (props) => {
   const [credentials, setCredentials] = useState({
@@ -33,44 +34,46 @@ const Login = (props) => {
 
   return (
     <>
-      <h3>Forget Me Not!</h3>
-      <h5> Gift Cards, Coupons, & Loyalty Rewards </h5>
-      <form onSubmit={handleLogin}>
-        <fieldset>
-          <h3>Please sign in</h3>
-          <div className="formgrid">
-            <input
-              onChange={handleFieldChange}
-              type="username"
-              id="username"
-              placeholder="username"
-              required=""
-              autoFocus=""
-            />
-            <label htmlFor="username">User Name</label>
+      <div id="login_background">
+        <h3>Forget Me Not!</h3>
+        <h5> Gift Cards, Coupons, & Loyalty Rewards </h5>
+        <form onSubmit={handleLogin}>
+          <fieldset>
+            <h3>Please sign in</h3>
+            <div className="formgrid">
+              <input
+                onChange={handleFieldChange}
+                type="username"
+                id="username"
+                placeholder="username"
+                required=""
+                autoFocus=""
+              />
+              <label htmlFor="username">UserName</label>
 
-            <input
-              onChange={handleFieldChange}
-              type="password"
-              id="password"
-              placeholder="Password"
-              required=""
-            />
-            <label htmlFor="inputPassword">Password</label>
-          </div>
-          <Button type="submit">Sign in</Button>
+              <input
+                onChange={handleFieldChange}
+                type="password"
+                id="password"
+                placeholder="Password"
+                required=""
+              />
+              <label htmlFor="inputPassword">Password</label>
+            </div>
+            <Button type="submit">Sign in</Button>
 
-          <Button
-            type="button"
-            onClick={() => {
-              props.history.push("/newUser");
-            }}
-          >
-            Create New User
-          </Button>
-          <br />
-        </fieldset>
-      </form>
+            <Button
+              type="button"
+              onClick={() => {
+                props.history.push("/newUser");
+              }}
+            >
+              Create New User
+            </Button>
+            <br />
+          </fieldset>
+        </form>
+      </div>
     </>
   );
 };

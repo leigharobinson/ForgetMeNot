@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import CouponManager from "../../modules/CouponManager";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 import GiftCardManager from "../../modules/GiftCardManager";
-import HomeCard from "./HomeCard";
+// import HomeCard from "./HomeCard";
 import UserManager from "../../modules/UserManager";
 // import NewUserForm from "../authentication/NewUserForm";
 import SearchCard from "./SearchCard";
@@ -12,6 +12,7 @@ const HomeList = (props) => {
   const [giftCards, setGiftCards] = useState([]);
   const [loyaltyRewards, setLoyaltyRewards] = useState([]);
   const [coupons, setCoupons] = useState([]);
+  const [allCards, setAllCards] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -31,32 +32,28 @@ const HomeList = (props) => {
   //got the coupons from the API on the component's first render
   useEffect(() => {
     //After the data comes back from the API, we use the setCoupons function to update state
-    GiftCardManager.getAll().then((giftCardsFromAPI) => {
-      setGiftCards(giftCardsFromAPI);
-      // console.log(giftCardsFromAPI);
-      // setIsLoading(false);
-    });
-  }, [props.giftCardsFromAPI]);
+    GiftCardManager.getAll()
+      .then((giftCardsFromAPI) => {
+        setGiftCards(giftCardsFromAPI);
 
-  useEffect(() => {
-    //After the data comes back from the API, we use the setCoupons function to update state
-    CouponManager.getAll().then((couponsFromAPI) => {
-      setCoupons(couponsFromAPI);
-      // console.log(couponsFromAPI);
-      // setIsLoading(false);
-    });
-  }, [props.couponsFromAPI]);
+        return CouponManager.getAll();
+      })
+      .then((couponsFromAPI) => {
+        setCoupons(couponsFromAPI);
 
-  useEffect(() => {
-    LoyaltyRewardManager.getAll().then((loyaltyRewardFromAPI) => {
-      setLoyaltyRewards(loyaltyRewardFromAPI);
-      // console.log(loyaltyRewardFromAPI);
-      // setIsLoading(false);
-    });
+        return LoyaltyRewardManager.getAll();
+      })
+      .then((loyaltyRewardFromAPI) => {
+        console.log(giftCards, coupons, loyaltyRewardFromAPI);
+        setLoyaltyRewards(loyaltyRewardFromAPI);
+      });
   }, []);
 
-  let newArrayOfThree = [...coupons, ...giftCards, ...loyaltyRewards];
-  // console.log(newArrayOfThree);
+  useEffect(() => {
+    let newArrayOfThree = [...coupons, ...giftCards, ...loyaltyRewards];
+    setAllCards(newArrayOfThree.sort(compare));
+    console.log(newArrayOfThree);
+  }, [loyaltyRewards]);
 
   function compare(a, b) {
     if (a.forLocation < b.forLocation) {
@@ -67,9 +64,9 @@ const HomeList = (props) => {
     }
     return 0;
   }
+  // allCards.sort(compare);
 
-  newArrayOfThree.sort(compare);
-  let counter = 0;
+  // let counter = 0;
 
   const deleteCard = (id, cardType) => {
     // console.log(cardType);
@@ -105,14 +102,14 @@ const HomeList = (props) => {
             <SearchCard
               // isLoading={isLoading}
               deleteCard={deleteCard}
-              newArrayOfThree={newArrayOfThree}
+              allCards={allCards}
               user={user}
               {...props}
             />
           </div>
         </div>
         <hr></hr>
-        <div className="container-cards">
+        {/* <div className="container-cards">
           {newArrayOfThree.map((card) => {
             counter++;
             return (
@@ -125,7 +122,7 @@ const HomeList = (props) => {
               />
             );
           })}
-        </div>
+        </div> */}
       </section>
     </>
   );
