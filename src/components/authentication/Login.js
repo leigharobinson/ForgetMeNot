@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "reactstrap";
 import UserManager from "../../modules/UserManager";
 
 const Login = (props) => {
@@ -57,16 +58,16 @@ const Login = (props) => {
             />
             <label htmlFor="inputPassword">Password</label>
           </div>
-          <button type="submit">Sign in</button>
+          <Button type="submit">Sign in</Button>
 
-          <button
+          <Button
             type="button"
             onClick={() => {
               props.history.push("/newUser");
             }}
           >
             Create New User
-          </button>
+          </Button>
           <br />
         </fieldset>
       </form>

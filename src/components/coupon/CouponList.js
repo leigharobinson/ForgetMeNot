@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CouponManager from "../../modules/CouponManager";
+import { Button } from "reactstrap";
 import CouponCard from "./CouponCard";
 
 const CouponList = (props) => {
@@ -28,7 +29,7 @@ const CouponList = (props) => {
     <>
       {/* //add this button above your display of animal cards */}
       <section className="section-content">
-        <button
+        <Button
           id="NewCouponFormButton"
           type="button"
           className="btn"
@@ -37,7 +38,7 @@ const CouponList = (props) => {
           }}
         >
           Add Coupon
-        </button>
+        </Button>
         {/* //Finally we use map() to "loop over" the coupons array to show a list of coupon cards */}
       </section>
       <div className="container-cards">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GiftCardManager from "../../modules/GiftCardManager";
+import { Button } from "reactstrap";
 // import "./GiftCard.css";
 const GiftCardForm = (props) => {
   const timestamp = Date.now();
@@ -118,13 +119,13 @@ const GiftCardForm = (props) => {
             <label htmlFor="notes">Notes</label>
           </div>
           <div className="alignRight">
-            <button
+            <Button
               type="button"
               disabled={isLoading}
               onClick={constructNewGiftCard}
             >
               Submit
-            </button>
+            </Button>
           </div>
         </fieldset>
       </form>

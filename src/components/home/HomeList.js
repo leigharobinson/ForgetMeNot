@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import CouponManager from "../../modules/CouponManager";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 import GiftCardManager from "../../modules/GiftCardManager";
-// import HomeCard from "./HomeCard";
+import HomeCard from "./HomeCard";
 import UserManager from "../../modules/UserManager";
 // import NewUserForm from "../authentication/NewUserForm";
 import SearchCard from "./SearchCard";
@@ -12,7 +12,7 @@ const HomeList = (props) => {
   const [giftCards, setGiftCards] = useState([]);
   const [loyaltyRewards, setLoyaltyRewards] = useState([]);
   const [coupons, setCoupons] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     UserManager.getAll().then((usernameFromAPI) => {
@@ -24,7 +24,7 @@ const HomeList = (props) => {
           setUser(element.username);
         }
       });
-      setIsLoading(false);
+      // setIsLoading(false);
     });
   }, [props.userId]);
 
@@ -34,7 +34,7 @@ const HomeList = (props) => {
     GiftCardManager.getAll().then((giftCardsFromAPI) => {
       setGiftCards(giftCardsFromAPI);
       // console.log(giftCardsFromAPI);
-      setIsLoading(false);
+      // setIsLoading(false);
     });
   }, [props.giftCardsFromAPI]);
 
@@ -43,7 +43,7 @@ const HomeList = (props) => {
     CouponManager.getAll().then((couponsFromAPI) => {
       setCoupons(couponsFromAPI);
       // console.log(couponsFromAPI);
-      setIsLoading(false);
+      // setIsLoading(false);
     });
   }, [props.couponsFromAPI]);
 
@@ -51,12 +51,12 @@ const HomeList = (props) => {
     LoyaltyRewardManager.getAll().then((loyaltyRewardFromAPI) => {
       setLoyaltyRewards(loyaltyRewardFromAPI);
       // console.log(loyaltyRewardFromAPI);
-      setIsLoading(false);
+      // setIsLoading(false);
     });
   }, []);
 
   let newArrayOfThree = [...coupons, ...giftCards, ...loyaltyRewards];
-  // console.log(newArrayOfThree);
+  console.log(newArrayOfThree);
 
   function compare(a, b) {
     if (a.forLocation < b.forLocation) {
@@ -69,11 +69,11 @@ const HomeList = (props) => {
   }
 
   newArrayOfThree.sort(compare);
-  // let counter = 0;
+  let counter = 0;
 
   const deleteCard = (id, cardType) => {
     // console.log(cardType);
-    setIsLoading(true);
+    // setIsLoading(true);
     if (cardType === "Gift Card") {
       // console.log("Gift Card", cardType);
       GiftCardManager.delete(id).then(() =>
@@ -103,7 +103,7 @@ const HomeList = (props) => {
           <h4>Card Library</h4>
           <div>
             <SearchCard
-              isLoading={isLoading}
+              // isLoading={isLoading}
               deleteCard={deleteCard}
               newArrayOfThree={newArrayOfThree}
               user={user}
@@ -111,7 +111,8 @@ const HomeList = (props) => {
             />
           </div>
         </div>
-        {/* <div className="container-cards">
+        <hr></hr>
+        <div className="container-cards">
           {newArrayOfThree.map((card) => {
             counter++;
             return (
@@ -124,7 +125,7 @@ const HomeList = (props) => {
               />
             );
           })}
-        </div> */}
+        </div>
       </section>
     </>
   );
