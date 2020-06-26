@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 1,
-      "username": "Lea",
-      "email": "MargaretAnn23@gmail.com",
+      "username": "Tammie",
+      "email": "HouchenLady@gmail.com",
       "password": "123"
     },
     {
@@ -17,21 +17,15 @@
       "password": "123",
       "email": "partyPlanning_commity@gmail.com",
       "id": 3
+    },
+    {
+      "username": "Michael",
+      "password": "123",
+      "email": "westEnd123@gmail.com",
+      "id": 4
     }
   ],
   "giftCards": [
-    {
-      "userId": 1,
-      "cardType": "Gift Card",
-      "forLocation": "Target ",
-      "datetime": "2020-06-19",
-      "amount": "70.00",
-      "expirationDate": "2020-07-11",
-      "quantity": "1",
-      "url": "https://www.burpee.com/vegetables/pumpkins/pumpkin-big-max-prod000859.html",
-      "notes": "Hand Sanitizer",
-      "id": 10
-    },
     {
       "userId": 2,
       "cardType": "Gift Card",
@@ -115,6 +109,30 @@
       "url": "n/a",
       "notes": "Get gift for Angela",
       "id": 17
+    },
+    {
+      "userId": 1,
+      "cardType": "Gift Card",
+      "forLocation": "Target",
+      "datetime": "06/26/2020, 09:19:51 AM",
+      "amount": "50",
+      "expirationDate": "2020-06-30",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "use for food",
+      "id": 18
+    },
+    {
+      "userId": 4,
+      "cardType": "Gift Card",
+      "forLocation": "Kohl's",
+      "datetime": "06/26/2020, 02:38:06 PM",
+      "amount": "25",
+      "expirationDate": "2020-07-10",
+      "quantity": "1",
+      "url": "https://www.kohls.com/",
+      "notes": "Giftcard from Santa",
+      "id": 19
     }
   ],
   "coupons": [
@@ -177,6 +195,18 @@
       "url": "https://www.montanas.ca/en.html",
       "notes": "Use this next time need towels",
       "id": 11
+    },
+    {
+      "userId": 4,
+      "cardType": "Coupon",
+      "forLocation": "Macy's",
+      "datetime": "06/26/2020, 02:40:37 PM",
+      "discount": "25",
+      "expirationDate": "2020-08-08",
+      "quantity": "2",
+      "url": "https://www.macys.com/",
+      "notes": "Use for new shoes",
+      "id": 12
     }
   ],
   "loyaltyRewardsCards": [
@@ -201,6 +231,17 @@
       "url": "n/a",
       "notes": "Free Latte",
       "id": 12
+    },
+    {
+      "userId": 4,
+      "cardType": "Loyalty Rewards Card",
+      "forLocation": "Subway",
+      "datetime": "06/26/2020, 02:46:04 PM",
+      "visitsUntilReward": "5",
+      "expirationDate": "2020-08-07",
+      "url": "https://www.subway.com/en-US",
+      "notes": "Free 6\" Sub!",
+      "id": 13
     }
   ]
 }
