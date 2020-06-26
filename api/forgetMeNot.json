@@ -7,88 +7,16 @@
       "password": "123"
     },
     {
-      "username": "Michael Scott",
+      "username": "Dwight Schrute",
       "password": "123",
-      "email": "worlds_bestboss@gmail.com",
+      "email": "beetsbears_batlestar@gmail.com",
       "id": 2
     },
     {
-      "username": "Angela ",
+      "username": "Phyllis Lapin",
       "password": "123",
-      "email": "catLady@gmail.com",
+      "email": "partyPlanning_commity@gmail.com",
       "id": 3
-    },
-    {
-      "username": "Dwight Schrute",
-      "password": "123",
-      "email": "beetsbears_batlestar@gmail.com",
-      "id": 4
-    },
-    {
-      "username": "Jim Halpert",
-      "password": "123",
-      "email": "Ilove_pam@gmail.com",
-      "id": 5
-    },
-    {
-      "username": "Pam Beesly",
-      "password": "123",
-      "email": "artist_dreamer369@gmai.com",
-      "id": 6
-    },
-    {
-      "username": "Ryan Howard",
-      "password": "123",
-      "email": "Wuphf_NextBT@gmail.com",
-      "id": 7
-    },
-    {
-      "username": "Andy Bernard",
-      "password": "123",
-      "email": "a_capella_cornell@gmail.com",
-      "id": 8
-    },
-    {
-      "username": "Oscar Martinez",
-      "password": "123",
-      "email": "accountant246@gmail.com",
-      "id": 9
-    },
-    {
-      "username": "Phyllis Lapin",
-      "password": "123",
-      "email": "partyPlanning_commity@gmail.com",
-      "id": 10
-    },
-    {
-      "username": "Phyllis Lapin",
-      "password": "123",
-      "email": "partyPlanning_commity@gmail.com",
-      "id": 11
-    },
-    {
-      "username": "Meredith Palmer",
-      "password": "123",
-      "email": "redhair_dontcare@gmail.com",
-      "id": 12
-    },
-    {
-      "username": "Dwight Schrute",
-      "password": "123",
-      "email": "beetsbears_batlestar@gmail.com",
-      "id": 13
-    },
-    {
-      "username": "Dwight Schrute",
-      "password": "123",
-      "email": "beetsbears_batlestar@gmail.com",
-      "id": 14
-    },
-    {
-      "username": "Dwight Schrute",
-      "password": "123",
-      "email": "beetsbears_batlestar@gmail.com",
-      "id": 15
     }
   ],
   "giftCards": [
@@ -101,31 +29,31 @@
       "expirationDate": "2020-07-11",
       "quantity": "1",
       "url": "https://www.burpee.com/vegetables/pumpkins/pumpkin-big-max-prod000859.html",
-      "notes": "Filler",
+      "notes": "Hand Sanitizer",
       "id": 10
     },
     {
       "userId": 2,
       "cardType": "Gift Card",
-      "forLocation": "WWWWWWWWWWW",
+      "forLocation": "Staples",
       "datetime": "2020-06-24",
-      "amount": "10.00",
+      "amount": "250.00",
       "expirationDate": "2020-07-09",
       "quantity": "1",
       "url": "n/a",
-      "notes": "Filler",
+      "notes": "More Office Supplies",
       "id": 11
     },
     {
       "userId": 2,
       "cardType": "Gift Card",
-      "forLocation": "Holla",
+      "forLocation": "Tim Hortons",
       "datetime": "2020-06-21",
-      "amount": "15",
+      "amount": "25",
       "expirationDate": "2020-07-11",
       "quantity": "1",
       "url": "n/a",
-      "notes": "Testing",
+      "notes": "Canadian Coffee",
       "id": 12
     },
     {
@@ -137,7 +65,55 @@
       "expirationDate": "2020-06-27",
       "quantity": "1",
       "url": "n/a",
-      "notes": "Testing",
+      "notes": "Clothes",
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "cardType": "Gift Card",
+      "forLocation": "Target",
+      "datetime": "06/24/2020, 05:05:05 PM",
+      "amount": "10.00",
+      "expirationDate": "2020-06-27",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Back to school supplies",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "cardType": "Gift Card",
+      "forLocation": "Tupelo Honey Cafe",
+      "datetime": "06/24/2020, 05:05:05 PM",
+      "amount": "10.00",
+      "expirationDate": "2020-06-27",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Get a good meal",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "cardType": "Gift Card",
+      "forLocation": "Kohl's",
+      "datetime": "06/24/2020, 05:05:05 PM",
+      "amount": "10.00",
+      "expirationDate": "2020-06-27",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Buy Clothes",
+      "id": 13
+    },
+    {
+      "userId": 2,
+      "cardType": "Gift Card",
+      "forLocation": "H&M",
+      "datetime": "06/24/2020, 05:05:05 PM",
+      "amount": "10.00",
+      "expirationDate": "2020-06-27",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Get gift for Angela",
       "id": 13
     }
   ],
@@ -157,13 +133,25 @@
     {
       "userId": 2,
       "cardType": "Coupon",
-      "forLocation": "Target",
+      "forLocation": "Macy's",
       "datetime": "2020-06-19",
       "discount": "25%",
       "expirationDate": "2020-07-11",
-      "quantity": "1",
+      "quantity": "2",
       "url": "n/a",
-      "notes": "Ex",
+      "notes": "look for belt mom wanted",
+      "id": 8
+    },
+    {
+      "userId": 2,
+      "cardType": "Coupon",
+      "forLocation": "Macy's",
+      "datetime": "2020-06-19",
+      "discount": "15%",
+      "expirationDate": "2020-07-11",
+      "quantity": "2",
+      "url": "n/a",
+      "notes": "look for belt mom wanted",
       "id": 8
     },
     {
@@ -177,6 +165,18 @@
       "url": "https://www.montanas.ca/en.html",
       "notes": "Use this next time in Canada",
       "id": 10
+    },
+    {
+      "userId": 1,
+      "cardType": "Coupon",
+      "forLocation": "Bed, Bath, & Beyond ",
+      "datetime": "06/24/2020, 04:57:41 PM",
+      "discount": "24%",
+      "expirationDate": "2020-06-25",
+      "quantity": "1",
+      "url": "https://www.montanas.ca/en.html",
+      "notes": "Use this next time need towels",
+      "id": 11
     }
   ],
   "loyaltyRewardsCards": [
@@ -200,6 +200,17 @@
       "expirationDate": "2020-07-02",
       "url": "n/a",
       "notes": "Testing",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "cardType": "Loyalty Rewards Card",
+      "forLocation": "Frothy Moneky",
+      "datetime": "06/24/2020, 05:08:18 PM",
+      "visitsUntilReward": "10",
+      "expirationDate": "2020-07-02",
+      "url": "n/a",
+      "notes": "Free Latte",
       "id": 11
     }
   ]
