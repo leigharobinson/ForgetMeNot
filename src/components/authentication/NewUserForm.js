@@ -31,7 +31,7 @@ const NewUserForm = (props) => {
       UserManager.post(credentials).then(
         sessionStorage.setItem("credentials", JSON.stringify(credentials))
       );
-      // props.setUser(credentials.id);
+      // props.setUser(credentials[0].id);
       // props.history.push("/");
     }
   };

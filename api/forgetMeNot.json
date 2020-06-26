@@ -53,6 +53,42 @@
       "password": "123",
       "email": "accountant246@gmail.com",
       "id": 9
+    },
+    {
+      "username": "Phyllis Lapin",
+      "password": "123",
+      "email": "partyPlanning_commity@gmail.com",
+      "id": 10
+    },
+    {
+      "username": "Phyllis Lapin",
+      "password": "123",
+      "email": "partyPlanning_commity@gmail.com",
+      "id": 11
+    },
+    {
+      "username": "Meredith Palmer",
+      "password": "123",
+      "email": "redhair_dontcare@gmail.com",
+      "id": 12
+    },
+    {
+      "username": "Dwight Schrute",
+      "password": "123",
+      "email": "beetsbears_batlestar@gmail.com",
+      "id": 13
+    },
+    {
+      "username": "Dwight Schrute",
+      "password": "123",
+      "email": "beetsbears_batlestar@gmail.com",
+      "id": 14
+    },
+    {
+      "username": "Dwight Schrute",
+      "password": "123",
+      "email": "beetsbears_batlestar@gmail.com",
+      "id": 15
     }
   ],
   "giftCards": [
