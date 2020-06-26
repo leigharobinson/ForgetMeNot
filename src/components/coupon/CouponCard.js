@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
 const CouponCard = (props) => {
@@ -13,22 +14,23 @@ const CouponCard = (props) => {
         <p>Expiration: {props.coupon.expirationDate}</p>
         <p>Notes: {props.coupon.notes}</p>
         <Link to={`/coupons/${props.coupon.id}`}>
-          <button id="CouponButton">Details</button>
+          <Button id="CouponButton">Details</Button>
         </Link>
 
-        <button
+        <Button
           id="CouponButton"
           type="button"
           onClick={() => props.history.push(`/coupons/${props.coupon.id}/edit`)}
         >
           Edit
-        </button>
-        <button
+        </Button>
+        <Button
+          color="danger"
           type="button"
           onClick={() => props.deleteCoupon(props.coupon.id)}
         >
           Delete
-        </button>
+        </Button>
       </div>
     </div>
   );

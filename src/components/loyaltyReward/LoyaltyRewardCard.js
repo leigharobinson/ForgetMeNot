@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "reactstrap";
 const LoyaltyRewardCard = (props) => {
   return (
     <div className="card">
@@ -13,9 +14,9 @@ const LoyaltyRewardCard = (props) => {
         <p>Expiration: {props.loyaltyReward.expirationDate}</p>
         <p>Notes: {props.loyaltyReward.notes}</p>
         <Link to={`/loyaltyRewardsCards/${props.loyaltyReward.id}`}>
-          <button id="LoyaltyRewardButton">Details</button>
+          <Button id="LoyaltyRewardButton">Details</Button>
         </Link>
-        <button
+        <Button
           id="LoyaltyRewardButton"
           type="button"
           onClick={() =>
@@ -25,13 +26,14 @@ const LoyaltyRewardCard = (props) => {
           }
         >
           Edit
-        </button>
-        <button
+        </Button>
+        <Button
+          color="danger"
           type="button"
           onClick={() => props.deleteLoyaltyRewardCard(props.loyaltyReward.id)}
         >
           Delete
-        </button>
+        </Button>
       </div>
     </div>
   );

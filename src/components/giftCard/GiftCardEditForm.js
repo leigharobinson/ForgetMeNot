@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "reactstrap";
 import GiftCardManager from "../../modules/GiftCardManager";
 
 const GiftCardEditForm = (props) => {
@@ -111,14 +112,14 @@ const GiftCardEditForm = (props) => {
             <label htmlFor="notes">Notes</label>
           </div>
           <div className="alignRight">
-            <button
+            <Button
               type="button"
               disabled={isLoading}
               onClick={updateExistingGiftCard}
               className="btn btn-primary"
             >
               Submit
-            </button>
+            </Button>
           </div>
         </fieldset>
       </form>

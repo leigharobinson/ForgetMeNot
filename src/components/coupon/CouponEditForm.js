@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "reactstrap";
 import CouponManager from "../../modules/CouponManager";
 
 const CouponEditForm = (props) => {
@@ -109,14 +110,14 @@ const CouponEditForm = (props) => {
             <label htmlFor="notes">Notes</label>
           </div>
           <div className="alignRight">
-            <button
+            <Button
               type="button"
               disabled={isLoading}
               onClick={updateExistingCoupon}
               className="btn btn-primary"
             >
               Submit
-            </button>
+            </Button>
           </div>
         </fieldset>
       </form>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "reactstrap";
 import UserManager from "../../modules/UserManager";
 
 // const isAuthenticated = () =>
@@ -68,9 +69,9 @@ const NewUserForm = (props) => {
           />
           <label htmlFor="password">Password</label>
         </div>
-        <button type="submit" disabled={isLoading} onClick={constructNewUser}>
+        <Button type="submit" disabled={isLoading} onClick={constructNewUser}>
           Sign in
-        </button>
+        </Button>
       </fieldset>
     </form>
   );

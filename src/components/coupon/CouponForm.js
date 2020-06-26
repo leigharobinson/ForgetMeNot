@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "reactstrap";
 import CouponManager from "../../modules/CouponManager";
 import "./CouponForm.css";
 
@@ -133,13 +134,13 @@ const CouponForm = (props) => {
           </div>
 
           <div className="alignRight">
-            <button
+            <Button
               type="button"
               disabled={isLoading}
               onClick={constructNewCoupon}
             >
               Submit
-            </button>
+            </Button>
           </div>
         </fieldset>
       </form>

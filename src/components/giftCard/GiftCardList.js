@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GiftCardManager from "../../modules/GiftCardManager";
+import { Button } from "reactstrap";
 import GiftCard from "./GiftCardCard";
 
 const GiftCardList = (props) => {
@@ -31,7 +32,7 @@ const GiftCardList = (props) => {
     <>
       {/* //add this button above your display of animal cards */}
       <section className="section-content">
-        <button
+        <Button
           id="NewGiftCardFormButton"
           type="button"
           className="btn"
@@ -40,7 +41,7 @@ const GiftCardList = (props) => {
           }}
         >
           Add Gift Card
-        </button>
+        </Button>
       </section>
       <div className="container-cards">
         {giftCards.map((giftCard) => (

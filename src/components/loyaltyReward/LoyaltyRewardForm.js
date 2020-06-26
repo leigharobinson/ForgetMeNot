@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "reactstrap";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 
 const LoyaltyRewardForm = (props) => {
@@ -104,13 +105,13 @@ const LoyaltyRewardForm = (props) => {
             <label htmlFor="notes">Notes</label>
           </div>
           <div className="alignRight">
-            <button
+            <Button
               type="button"
               disabled={isLoading}
               onClick={constructNewLoyaltyReward}
             >
               Submit
-            </button>
+            </Button>
           </div>
         </fieldset>
       </form>

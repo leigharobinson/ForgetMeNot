@@ -59,7 +59,7 @@ const SearchCard = (props) => {
         {filteredDisplay.map((filteredCard, i) => (
           <div id="search_card" key={i}>
             <div>
-              <h4>{filteredCard.cardType}</h4>
+              <h5>{filteredCard.cardType}</h5>
               {/* <h4> {props.card.id}</h4> */}
               <h3>
                 <span className="card-for">
@@ -67,16 +67,16 @@ const SearchCard = (props) => {
                 </span>
               </h3>
               {/* // COnditionally render AMount  */}
-              {filteredCard.amount && <p>Amount: ${filteredCard.amount}</p>}
+              {filteredCard.amount && <h2>Amount: ${filteredCard.amount}</h2>}
               {/* COnditionally render discoung */}
               {filteredCard.discount && (
-                <p>Discount: {filteredCard.discount} OFF</p>
+                <h2>Discount: {filteredCard.discount} OFF</h2>
               )}
               {/* Conditially render LRewards */}
               {filteredCard.visitsUntilReward && (
-                <p>Visits until Reward: {filteredCard.visitsUntilReward}</p>
+                <h2>Visits until Reward: {filteredCard.visitsUntilReward}</h2>
               )}
-              <p>{filteredCard.expirationDate}</p>
+              <h2>{filteredCard.expirationDate}</h2>
               <Button
                 color="danger"
                 disabled={props.isLoading}

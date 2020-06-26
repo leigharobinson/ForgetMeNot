@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "reactstrap";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 
 const LoyaltyRewardDetail = (props) => {
@@ -51,9 +52,14 @@ const LoyaltyRewardDetail = (props) => {
         <p>Expiration Date: {loyaltyReward.expirationDate}</p>
         <p>Url: {loyaltyReward.url}</p>
         <p>Notes: {loyaltyReward.notes}</p>
-        <button type="button" disabled={isLoading} onClick={handleDelete}>
+        <Button
+          color="danger"
+          type="button"
+          disabled={isLoading}
+          onClick={handleDelete}
+        >
           Delete
-        </button>
+        </Button>
       </div>
     </div>
   );

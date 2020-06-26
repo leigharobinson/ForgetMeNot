@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "reactstrap";
 import CouponManager from "../../modules/CouponManager";
 // import "./CouponDetail.css";
 
@@ -55,9 +56,9 @@ const CouponDetail = (props) => {
         <p>Quantity: {coupon.quantity}</p>
         <p>Url: {coupon.url}</p>
         <p>Notes: {coupon.notes}</p>
-        <button type="button" disabled={isLoading} onClick={handleDelete}>
+        <Button type="button" disabled={isLoading} onClick={handleDelete}>
           Delete
-        </button>
+        </Button>
       </div>
     </div>
   );

@@ -7,13 +7,13 @@
       "password": "123"
     },
     {
-      "username": "Dwight Schrute",
+      "username": "Dwight",
       "password": "123",
       "email": "beetsbears_batlestar@gmail.com",
       "id": 2
     },
     {
-      "username": "Phyllis Lapin",
+      "username": "Phyllis",
       "password": "123",
       "email": "partyPlanning_commity@gmail.com",
       "id": 3
@@ -78,7 +78,7 @@
       "quantity": "1",
       "url": "n/a",
       "notes": "Back to school supplies",
-      "id": 13
+      "id": 14
     },
     {
       "userId": 1,
@@ -90,7 +90,7 @@
       "quantity": "1",
       "url": "n/a",
       "notes": "Get a good meal",
-      "id": 13
+      "id": 15
     },
     {
       "userId": 1,
@@ -102,7 +102,7 @@
       "quantity": "1",
       "url": "n/a",
       "notes": "Buy Clothes",
-      "id": 13
+      "id": 16
     },
     {
       "userId": 2,
@@ -114,7 +114,7 @@
       "quantity": "1",
       "url": "n/a",
       "notes": "Get gift for Angela",
-      "id": 13
+      "id": 17
     }
   ],
   "coupons": [
@@ -152,7 +152,7 @@
       "quantity": "2",
       "url": "n/a",
       "notes": "look for belt mom wanted",
-      "id": 8
+      "id": 9
     },
     {
       "userId": 1,
@@ -181,17 +181,6 @@
   ],
   "loyaltyRewardsCards": [
     {
-      "userId": 2,
-      "cardType": "Loyalty Rewards Card",
-      "forLocation": "Baskin'Robbins",
-      "datetime": "2020-06-16",
-      "visitsUntilReward": "10",
-      "expirationDate": "2020-08-07",
-      "url": "n/a",
-      "notes": "Get a Free 6\" sub",
-      "id": 10
-    },
-    {
       "userId": 1,
       "cardType": "Loyalty Rewards Card",
       "forLocation": "Subway",
@@ -211,7 +200,7 @@
       "expirationDate": "2020-07-02",
       "url": "n/a",
       "notes": "Free Latte",
-      "id": 11
+      "id": 12
     }
   ]
 }

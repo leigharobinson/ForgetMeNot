@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "reactstrap";
 import GiftCardManager from "../../modules/GiftCardManager";
 // import "../coupon/CouponDetail";
 const GiftCardDetail = (props) => {
@@ -54,9 +55,14 @@ const GiftCardDetail = (props) => {
         <p>Url: {giftCard.url}</p>
         <p>Notes: {giftCard.notes}</p>
 
-        <button type="button" disabled={isLoading} onClick={handleDelete}>
+        <Button
+          color="danger"
+          type="button"
+          disabled={isLoading}
+          onClick={handleDelete}
+        >
           Delete
-        </button>
+        </Button>
       </div>
     </div>
   );

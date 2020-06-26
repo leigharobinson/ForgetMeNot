@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "reactstrap";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 import LoyaltyRewardCard from "./LoyaltyRewardCard";
 
@@ -29,7 +30,7 @@ const LoyaltyRewardList = (props) => {
     <>
       {/* //add this button above your display of animal cards */}
       <section className="section-content">
-        <button
+        <Button
           id="NewLoyaltyRewardFormButton"
           type="button"
           className="btn"
@@ -38,7 +39,7 @@ const LoyaltyRewardList = (props) => {
           }}
         >
           Add Loyalty Reward Card
-        </button>
+        </Button>
       </section>
       <div className="container-cards">
         {loyaltyRewards.map((loyaltyReward) => (
