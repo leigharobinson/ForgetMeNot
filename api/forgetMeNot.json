@@ -2,8 +2,8 @@
   "users": [
     {
       "id": 1,
-      "username": "Lea",
-      "email": "MargaretAnn23@gmail.com",
+      "username": "Tammie",
+      "email": "HouchenLady@gmail.com",
       "password": "123"
     },
     {
@@ -20,18 +20,6 @@
     }
   ],
   "giftCards": [
-    {
-      "userId": 1,
-      "cardType": "Gift Card",
-      "forLocation": "Target ",
-      "datetime": "2020-06-19",
-      "amount": "70.00",
-      "expirationDate": "2020-07-11",
-      "quantity": "1",
-      "url": "https://www.burpee.com/vegetables/pumpkins/pumpkin-big-max-prod000859.html",
-      "notes": "Hand Sanitizer",
-      "id": 10
-    },
     {
       "userId": 2,
       "cardType": "Gift Card",
@@ -115,6 +103,18 @@
       "url": "n/a",
       "notes": "Get gift for Angela",
       "id": 17
+    },
+    {
+      "userId": 1,
+      "cardType": "Gift Card",
+      "forLocation": "Target",
+      "datetime": "06/26/2020, 09:19:51 AM",
+      "amount": "50",
+      "expirationDate": "2020-06-30",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "use for food",
+      "id": 18
     }
   ],
   "coupons": [
