@@ -49,7 +49,13 @@ const ApplicationViews = (props) => {
             }
           }}
         />
-        <Route exact path="/newUser" component={NewUserForm} />
+        <Route
+          exact
+          path="/newUser"
+          render={(props) => {
+            return <NewUserForm setUser={setUser} userId={userId} {...props} />;
+          }}
+        />
         {/* <Route exact path="/profile" component={UserProfileList} /> */}
 
         <Route

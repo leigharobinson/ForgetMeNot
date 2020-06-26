@@ -97,12 +97,10 @@ const HomeList = (props) => {
   return (
     <>
       <section>
-        <div>InsertLogo</div>
-        <h1>Forget Me Not!</h1>
-        <h2>Welcome {user}!</h2>
+        <h3>Welcome {user}!</h3>
 
         <div>
-          <h2>Card Library</h2>
+          <h4>Card Library</h4>
           <div>
             <SearchCard
               isLoading={isLoading}

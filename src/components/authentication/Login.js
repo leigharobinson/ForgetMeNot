@@ -21,7 +21,7 @@ const Login = (props) => {
         window.alert("Please fill out user name and password");
         //TODO ----  MAKE SURE IT IS USING PASSWORD TO AUTH
       } else if (credentials.password === existingUser[0].password) {
-        window.alert(`Welcome back ${existingUser[0].username}`);
+        // window.alert(`Welcome back ${existingUser[0].username}`);
         props.setUser(existingUser[0].id);
         props.history.push("/");
       } else {
@@ -57,9 +57,10 @@ const Login = (props) => {
             />
             <label htmlFor="inputPassword">Password</label>
           </div>
+          <button type="submit">Sign in</button>
+
           <button
             type="button"
-            className="btn"
             onClick={() => {
               props.history.push("/newUser");
             }}
@@ -67,7 +68,6 @@ const Login = (props) => {
             Create New User
           </button>
           <br />
-          <button type="submit">Sign in</button>
         </fieldset>
       </form>
     </>

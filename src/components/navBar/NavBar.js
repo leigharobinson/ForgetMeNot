@@ -25,13 +25,8 @@ const NavBar = (props) => {
         <Navbar color="faded" light>
           <NavbarBrand className="mr-auto" href="/">
             <picture>
-              <img
-                id="FGMNlogo"
-                src={require("../Images/FGMNlogo.png")}
-                alt="house"
-              />
+              <img id="Home" src={require("../Images/home.png")} alt="house" />
             </picture>
-            Forget Me Not
           </NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} className="mr-2" />
           <Collapse isOpen={!collapsed} navbar>

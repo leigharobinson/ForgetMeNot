@@ -2,63 +2,57 @@
   "users": [
     {
       "id": 1,
-      "username": "Mick",
+      "username": "Lea",
       "email": "MargaretAnn23@gmail.com",
       "password": "123"
     },
     {
-      "id": 2,
-      "username": "Bonny",
-      "email": "TabithaChar123@gmail.com",
-      "password": "123"
+      "username": "Michael Scott",
+      "password": "123",
+      "email": "worlds_bestboss@gmail.com",
+      "id": 2
     },
     {
-      "username": "Julie",
-      "email": "TwoFourSixEight@gail.com",
+      "username": "Angela ",
       "password": "123",
+      "email": "catLady@gmail.com",
       "id": 3
-    },
-    {
-      "username": "Tyler",
-      "email": "TMatoFishes@gmail.com",
-      "password": "123",
-      "id": 4
-    },
-    {
-      "username": "PartyBoi",
-      "password": "123",
-      "email": "FunNeverEnds@gmail.com",
-      "id": 5
-    },
-    {
-      "username": "BunnyHop123",
-      "password": "123",
-      "email": "Bunny5@gmail.com",
-      "id": 6
-    },
-    {
-      "username": "Easy",
-      "password": "123",
-      "email": "easy",
-      "id": 7
-    },
-    {
-      "username": "Don",
-      "password": "123",
-      "email": "easy@gmail.com",
-      "id": 8
     },
     {
       "username": "Dwight Schrute",
       "password": "123",
       "email": "beetsbears_batlestar@gmail.com",
-      "id": 9
+      "id": 4
     },
     {
       "username": "Jim Halpert",
       "password": "123",
-      "email": "Ilovepam@gmail.com",
-      "id": 10
+      "email": "Ilove_pam@gmail.com",
+      "id": 5
+    },
+    {
+      "username": "Pam Beesly",
+      "password": "123",
+      "email": "artist_dreamer369@gmai.com",
+      "id": 6
+    },
+    {
+      "username": "Ryan Howard",
+      "password": "123",
+      "email": "Wuphf_NextBT@gmail.com",
+      "id": 7
+    },
+    {
+      "username": "Andy Bernard",
+      "password": "123",
+      "email": "a_capella_cornell@gmail.com",
+      "id": 8
+    },
+    {
+      "username": "Oscar Martinez",
+      "password": "123",
+      "email": "accountant246@gmail.com",
+      "id": 9
     }
   ],
   "giftCards": [
