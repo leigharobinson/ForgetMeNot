@@ -47,6 +47,18 @@
       "password": "123",
       "email": "easy@gmail.com",
       "id": 8
+    },
+    {
+      "username": "Dwight Schrute",
+      "password": "123",
+      "email": "beetsbears_batlestar@gmail.com",
+      "id": 9
+    },
+    {
+      "username": "Jim Halpert",
+      "password": "123",
+      "email": "Ilovepam@gmail.com",
+      "id": 10
     }
   ],
   "giftCards": [

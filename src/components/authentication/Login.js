@@ -31,42 +31,46 @@ const Login = (props) => {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <fieldset>
-        <h3>Please sign in</h3>
-        <div className="formgrid">
-          <input
-            onChange={handleFieldChange}
-            type="username"
-            id="username"
-            placeholder="username"
-            required=""
-            autoFocus=""
-          />
-          <label htmlFor="username">User Name</label>
+    <>
+      {/* <h3>Forget Me Not!</h3> */}
+      <h5> Gift Cards, Coupons, & Loyalty Rewards </h5>
+      <form onSubmit={handleLogin}>
+        <fieldset>
+          <h3>Please sign in</h3>
+          <div className="formgrid">
+            <input
+              onChange={handleFieldChange}
+              type="username"
+              id="username"
+              placeholder="username"
+              required=""
+              autoFocus=""
+            />
+            <label htmlFor="username">User Name</label>
 
-          <input
-            onChange={handleFieldChange}
-            type="password"
-            id="password"
-            placeholder="Password"
-            required=""
-          />
-          <label htmlFor="inputPassword">Password</label>
-        </div>
-        <button
-          type="button"
-          className="btn"
-          onClick={() => {
-            props.history.push("/newUser");
-          }}
-        >
-          Create New User
-        </button>
-        <br />
-        <button type="submit">Sign in</button>
-      </fieldset>
-    </form>
+            <input
+              onChange={handleFieldChange}
+              type="password"
+              id="password"
+              placeholder="Password"
+              required=""
+            />
+            <label htmlFor="inputPassword">Password</label>
+          </div>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => {
+              props.history.push("/newUser");
+            }}
+          >
+            Create New User
+          </button>
+          <br />
+          <button type="submit">Sign in</button>
+        </fieldset>
+      </form>
+    </>
   );
 };
 

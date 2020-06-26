@@ -17,7 +17,7 @@ import LoyaltyRewardForm from "./loyaltyReward/LoyaltyRewardForm";
 import LoyaltyRewardEditForm from "./loyaltyReward/LoyaltyRewardEditForm";
 
 import HomeList from "./home/HomeList";
-import UserProfileList from "./userProfile/UserProfileList";
+// import UserProfileList from "./userProfile/UserProfileList";
 import PageNotFound from "./pageNotFound/PageNotFound";
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
@@ -50,7 +50,7 @@ const ApplicationViews = (props) => {
           }}
         />
         <Route exact path="/newUser" component={NewUserForm} />
-        <Route exact path="/profile" component={UserProfileList} />
+        {/* <Route exact path="/profile" component={UserProfileList} /> */}
 
         <Route
           exact
@@ -59,6 +59,7 @@ const ApplicationViews = (props) => {
             if (hasUser) {
               return <GiftCardList {...props} />;
             } else {
+              // window.alert("Please fill out user name and password");
               return <Redirect to="/login" />;
             }
           }}
@@ -101,6 +102,7 @@ const ApplicationViews = (props) => {
             if (hasUser) {
               return <CouponList {...props} />;
             } else {
+              // window.alert("Please fill out user name and password");
               return <Redirect to="/login" />;
             }
           }}
@@ -143,6 +145,7 @@ const ApplicationViews = (props) => {
             if (hasUser) {
               return <LoyaltyRewardList {...props} />;
             } else {
+              // window.alert("Please fill out user name and password");
               return <Redirect to="/login" />;
             }
           }}

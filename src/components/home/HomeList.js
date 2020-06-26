@@ -98,6 +98,7 @@ const HomeList = (props) => {
     <>
       <section>
         <div>InsertLogo</div>
+        <h1>Forget Me Not!</h1>
         <h2>Welcome {user}!</h2>
 
         <div>

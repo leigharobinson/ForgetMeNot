@@ -1,40 +1,8 @@
-/* mall {
-  font-size: 75%;
+img {
+  padding: 2px;
 }
 
-header {
-  background-color: darkblue;
-  border: cornflowerblue solid 3px;
+#FGMNlogo {
+  width: 5em;
+  height: auto;
 }
-
-.site-title {
-  color: ghostwhite;
-  text-align: center;
-}
-
-nav .container {
-  display: flex;
-  padding: 0;
-  margin-bottom: 0;
-}
-
-nav .container li {
-  flex: 1;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5em;
-  color: cornsilk;
-  box-sizing: border-box;
-  background-color: cornflowerblue;
-  list-style-type: none;
-}
-
-.nav-link {
-  color: cornsilk;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.nav-link:hover {
-  color: maroon;
-} */
