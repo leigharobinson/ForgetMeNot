@@ -6,6 +6,7 @@ import UserManager from "../../modules/UserManager";
 
 const NewUserForm = (props) => {
   const [credentials, setCredentials] = useState({
+    // userId: props.setUser,
     username: "",
     password: "",
     email: "",
@@ -30,8 +31,8 @@ const NewUserForm = (props) => {
       UserManager.post(credentials).then(
         sessionStorage.setItem("credentials", JSON.stringify(credentials))
       );
-      props.history.push("/");
     }
+    props.history.push("/");
   };
 
   return (

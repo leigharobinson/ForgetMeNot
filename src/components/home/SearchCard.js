@@ -1,40 +1,46 @@
 import React, { useState } from "react";
+import { Button } from "reactstrap";
+import { firstLetterCase } from "../helpers/Helpers";
 import "./SearchCard.css";
+
 const SearchCard = (props) => {
-  console.log(props.newArrayOfThree);
   //card will keep track of any change to the input in the filter box
   const [word, setWord] = useState("");
   //filsterdispay will display the updated list based onthe search
   //it's default state is our cards list prop
   const [filteredDisplay, setFilteredDisplay] = useState(props.newArrayOfThree);
 
+  //My OWN
+  // console.log(props.newArrayOfThree);
+
   //handleChange runs each time ther's a change in the input feild
   const handleChange = (e) => {
     // we hold the original list in a new array and convert all the names to lowercase
     // we do this to take away chance of user input error
     // Then we return Old List as an arry of objects to hold this changed list
-    let oldList = props.newArrayOfThree.map((person) => {
+    let oldList = props.newArrayOfThree.map((filteredCard) => {
       return {
-        id: person.id,
-        forLocation: person.forLocation.toLowerCase(),
-        cardType: person.cardType,
-        expirationDate: person.expirationDate,
-        amount: person.amount,
-        discount: person.discount,
-        visitsUntilReward: person.visitsUntilReward,
+        id: filteredCard.id,
+        forLocation: filteredCard.forLocation.toLowerCase(),
+        cardType: filteredCard.cardType,
+        expirationDate: filteredCard.expirationDate,
+        amount: filteredCard.amount,
+        discount: filteredCard.discount,
+        visitsUntilReward: filteredCard.visitsUntilReward,
       };
     });
     // if the input bar is not empty, run the following
     //esle if it's empty, setFilterDisplay to the original list prop
     if (e !== "") {
       let newList = [];
+
       //setCard keeps track of any changes in the input
       setWord(e);
-      //newList is an array that holds the persons that meet the search criteria.
-      newList = oldList.filter((person) =>
+      //newList is an array that holds the filteredCards that meet the search criteria.
+      newList = oldList.filter((filteredCard) =>
         // we call the includes method and pass in the 'word' state in lowercase
         //this checks if our oldList contains cards withthe 'word in its name
-        person.forLocation.includes(word.toLowerCase())
+        filteredCard.forLocation.includes(word.toLowerCase())
       );
       setFilteredDisplay(newList);
     } else {
@@ -50,29 +56,36 @@ const SearchCard = (props) => {
           placeholder="Search"
           onChange={(e) => handleChange(e.target.value)}
         />
-        {filteredDisplay.map((person, i) => (
+        {filteredDisplay.map((filteredCard, i) => (
           <div id="search_card" key={i}>
             <div>
-              <h4>{person.cardType}</h4>
+              <h4>{filteredCard.cardType}</h4>
               {/* <h4> {props.card.id}</h4> */}
               <h3>
-                <span className="card-for">{person.forLocation}</span>
+                <span className="card-for">
+                  {firstLetterCase(filteredCard.forLocation)}
+                </span>
               </h3>
               {/* // COnditionally render AMount  */}
-              {person.amount && <p>Amount: ${person.amount}</p>}
+              {filteredCard.amount && <p>Amount: ${filteredCard.amount}</p>}
               {/* COnditionally render discoung */}
-              {person.discount && <p>Discount: {person.discount} OFF</p>}
-              {/* Conditially render LRewards */}
-              {person.visitsUntilReward && (
-                <p>Visits until Reward: {person.visitsUntilReward}</p>
+              {filteredCard.discount && (
+                <p>Discount: {filteredCard.discount} OFF</p>
               )}
-              <p>{person.expirationDate}</p>
-              <button
-                type="button"
-                onClick={() => props.deleteCard(person.id, person.cardType)}
+              {/* Conditially render LRewards */}
+              {filteredCard.visitsUntilReward && (
+                <p>Visits until Reward: {filteredCard.visitsUntilReward}</p>
+              )}
+              <p>{filteredCard.expirationDate}</p>
+              <Button
+                color="danger"
+                disabled={props.isLoading}
+                onClick={() =>
+                  props.deleteCard(filteredCard.id, filteredCard.cardType)
+                }
               >
                 Delete
-              </button>
+              </Button>
             </div>
           </div>
         ))}

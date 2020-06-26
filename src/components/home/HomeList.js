@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+
 import CouponManager from "../../modules/CouponManager";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 import GiftCardManager from "../../modules/GiftCardManager";
-import HomeCard from "./HomeCard";
+// import HomeCard from "./HomeCard";
 import UserManager from "../../modules/UserManager";
 // import NewUserForm from "../authentication/NewUserForm";
 import SearchCard from "./SearchCard";
@@ -11,8 +12,10 @@ const HomeList = (props) => {
   const [giftCards, setGiftCards] = useState([]);
   const [loyaltyRewards, setLoyaltyRewards] = useState([]);
   const [coupons, setCoupons] = useState([]);
-  const getUsername = () => {
-    return UserManager.getAll().then((usernameFromAPI) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    UserManager.getAll().then((usernameFromAPI) => {
       // console.log(usernameFromAPI);
       // console.log(props.userId);
       usernameFromAPI.forEach(function (element) {
@@ -21,50 +24,35 @@ const HomeList = (props) => {
           setUser(element.username);
         }
       });
+      setIsLoading(false);
     });
-  };
+  }, [props.userId]);
 
+  //got the coupons from the API on the component's first render
   useEffect(() => {
-    getUsername();
-  });
-  //The initial state is an emptry array
-
-  const getGiftCards = () => {
     //After the data comes back from the API, we use the setCoupons function to update state
-    return GiftCardManager.getAll().then((giftCardsFromAPI) => {
+    GiftCardManager.getAll().then((giftCardsFromAPI) => {
       setGiftCards(giftCardsFromAPI);
       // console.log(giftCardsFromAPI);
+      setIsLoading(false);
     });
-  };
-  //got teh coupons from the API on the component's first render
+  }, [props.giftCardsFromAPI]);
+
   useEffect(() => {
-    getGiftCards();
-  }, []);
-
-  //The initial state is an emptry array
-
-  const getCoupons = () => {
     //After the data comes back from the API, we use the setCoupons function to update state
-    return CouponManager.getAll().then((couponsFromAPI) => {
+    CouponManager.getAll().then((couponsFromAPI) => {
       setCoupons(couponsFromAPI);
       // console.log(couponsFromAPI);
+      setIsLoading(false);
     });
-  };
-  //got teh coupons from the API on the component's first render
-  useEffect(() => {
-    getCoupons();
-  }, []);
+  }, [props.couponsFromAPI]);
 
-  const getLoyaltyRewards = () => {
-    //After the data comes back from the API, we use the setCoupons function to update state
-    return LoyaltyRewardManager.getAll().then((loyaltyRewardFromAPI) => {
+  useEffect(() => {
+    LoyaltyRewardManager.getAll().then((loyaltyRewardFromAPI) => {
       setLoyaltyRewards(loyaltyRewardFromAPI);
       // console.log(loyaltyRewardFromAPI);
+      setIsLoading(false);
     });
-  };
-  //got teh coupons from the API on the component's first render
-  useEffect(() => {
-    getLoyaltyRewards();
   }, []);
 
   let newArrayOfThree = [...coupons, ...giftCards, ...loyaltyRewards];
@@ -81,10 +69,11 @@ const HomeList = (props) => {
   }
 
   newArrayOfThree.sort(compare);
-  let counter = 0;
+  // let counter = 0;
 
   const deleteCard = (id, cardType) => {
     // console.log(cardType);
+    setIsLoading(true);
     if (cardType === "Gift Card") {
       // console.log("Gift Card", cardType);
       GiftCardManager.delete(id).then(() =>
@@ -108,20 +97,21 @@ const HomeList = (props) => {
   return (
     <>
       <section>
-        <div>InsertLogo</div>
-        <h2>Welcome {user}!</h2>
+        <h3>Welcome {user}!</h3>
 
         <div>
-          <h2>Card Library</h2>
+          <h4>Card Library</h4>
           <div>
             <SearchCard
-              counter={counter}
+              isLoading={isLoading}
               deleteCard={deleteCard}
               newArrayOfThree={newArrayOfThree}
+              user={user}
+              {...props}
             />
           </div>
         </div>
-        <div className="container-cards">
+        {/* <div className="container-cards">
           {newArrayOfThree.map((card) => {
             counter++;
             return (
@@ -134,7 +124,7 @@ const HomeList = (props) => {
               />
             );
           })}
-        </div>
+        </div> */}
       </section>
     </>
   );
