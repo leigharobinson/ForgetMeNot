@@ -56,7 +56,7 @@ const HomeList = (props) => {
   }, []);
 
   let newArrayOfThree = [...coupons, ...giftCards, ...loyaltyRewards];
-  console.log(newArrayOfThree);
+  // console.log(newArrayOfThree);
 
   function compare(a, b) {
     if (a.forLocation < b.forLocation) {

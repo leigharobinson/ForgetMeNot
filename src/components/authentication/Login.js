@@ -33,7 +33,7 @@ const Login = (props) => {
 
   return (
     <>
-      {/* <h3>Forget Me Not!</h3> */}
+      <h3>Forget Me Not!</h3>
       <h5> Gift Cards, Coupons, & Loyalty Rewards </h5>
       <form onSubmit={handleLogin}>
         <fieldset>
