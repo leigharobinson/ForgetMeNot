@@ -7,6 +7,8 @@ import GiftCardManager from "../../modules/GiftCardManager";
 import UserManager from "../../modules/UserManager";
 // import NewUserForm from "../authentication/NewUserForm";
 import SearchCard from "./SearchCard";
+
+
 const HomeList = (props) => {
   const [user, setUser] = useState([]);
   const [giftCards, setGiftCards] = useState([]);
@@ -15,17 +17,10 @@ const HomeList = (props) => {
   const [allCards, setAllCards] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
 
+  // Try just grabbing user by id. What you had before was a lot of redundant work.
   useEffect(() => {
-    UserManager.getAll().then((usernameFromAPI) => {
-      // console.log(usernameFromAPI);
-      // console.log(props.userId);
-      usernameFromAPI.forEach(function (element) {
-        if (props.userId === element.id) {
-          // console.log(element.username);
-          setUser(element.username);
-        }
-      });
-      // setIsLoading(false);
+    UserManager.get(props.userId).then((user) => {
+      setUser(user.username);
     });
   }, [props.userId]);
 
@@ -34,17 +29,20 @@ const HomeList = (props) => {
     //After the data comes back from the API, we use the setCoupons function to update state
     GiftCardManager.getAll()
       .then((giftCardsFromAPI) => {
+        console.log("gift cards fetched!", giftCardsFromAPI)
         setGiftCards(giftCardsFromAPI);
 
         return CouponManager.getAll();
       })
       .then((couponsFromAPI) => {
+        console.log("coupons fetched!", couponsFromAPI)
         setCoupons(couponsFromAPI);
 
         return LoyaltyRewardManager.getAll();
       })
       .then((loyaltyRewardFromAPI) => {
-        console.log(giftCards, coupons, loyaltyRewardFromAPI);
+        console.log("loyalty cards fetched!", loyaltyRewardFromAPI)
+
         setLoyaltyRewards(loyaltyRewardFromAPI);
       });
   }, []);
@@ -53,7 +51,7 @@ const HomeList = (props) => {
     let newArrayOfThree = [...coupons, ...giftCards, ...loyaltyRewards];
     setAllCards(newArrayOfThree.sort(compare));
     console.log(newArrayOfThree);
-  }, [loyaltyRewards]);
+  }, [loyaltyRewards, coupons, giftCards]);
 
   function compare(a, b) {
     if (a.forLocation < b.forLocation) {
