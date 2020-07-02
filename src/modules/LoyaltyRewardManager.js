@@ -1,5 +1,4 @@
 const remoteURL = "http://localhost:5005";
-const currentUser = sessionStorage.getItem("credentials");
 
 export default {
   get(id) {
@@ -8,6 +7,7 @@ export default {
     );
   },
   getAll() {
+    const currentUser = sessionStorage.getItem("credentials");
     return fetch(
       `${remoteURL}/loyaltyRewardsCards?userId=${currentUser}`
     ).then((result) => result.json());

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "reactstrap";
 import { firstLetterCase } from "../helpers/Helpers";
 import "./SearchCard.css";
@@ -7,11 +7,11 @@ const SearchCard = (props) => {
   //card will keep track of any change to the input in the filter box
   const [word, setWord] = useState("");
   //filsterdispay will display the updated list based onthe search
-  //it's default state is our cards list prop
-  const [filteredDisplay, setFilteredDisplay] = useState(props.allCards);
+  //its default state is our cards list prop <-- Joe changed this. See the useEffect below
+  const [filteredDisplay, setFilteredDisplay] = useState([]);
 
-  //My OWN
-  // console.log(props.allCards);
+  // Added this useEffect call to set filteredDisplay to props.allCards when the component mounts, instead of setting it in the useState method argument.
+  useEffect( () => setFilteredDisplay(props.allCards), [props.allCards])
 
   //handleChange runs each time ther's a change in the input feild
   const handleChange = (e) => {

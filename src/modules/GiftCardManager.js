@@ -1,6 +1,6 @@
 const remoteURL = "http://localhost:5005";
+console.log(sessionStorage.getItem("credentials"), "user?")
 
-const currentUser = sessionStorage.getItem("credentials");
 
 export default {
   get(id) {
@@ -9,6 +9,11 @@ export default {
     );
   },
   getAll() {
+    // Moved currentUser into this function so it's not 'null' when this page loads.
+    // BUT! Best idea is to pass the userId into this function when you call it.
+    // Then you don't need to set this variable at all. Just make getAll take an arg: getAll(currentUser)
+    // I would do the same thing in your other getAll methods
+    const currentUser = sessionStorage.getItem("credentials");
     return fetch(
       `${remoteURL}/giftCards?userId=${currentUser}`
     ).then((result) => result.json());
