@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Button } from "reactstrap";
+// import { button } from "reactstrap";
 import UserManager from "../../modules/UserManager";
 import "./Login.css";
+import { Icon } from "semantic-ui-react";
 
 const Login = (props) => {
   const [credentials, setCredentials] = useState({
@@ -38,7 +39,7 @@ const Login = (props) => {
         <h3>Forget Me Not!</h3>
         <h5> Gift Cards, Coupons, & Loyalty Rewards </h5>
         <form onSubmit={handleLogin}>
-          <fieldset>
+          <fieldset className="fieldset">
             <h3>Please sign in</h3>
             <div className="formgrid">
               <input
@@ -49,30 +50,41 @@ const Login = (props) => {
                 required=""
                 autoFocus=""
               />
-              <label htmlFor="username">UserName</label>
+              <label htmlFor="username">
+                <Icon name="user" size="large" />
+              </label>
 
               <input
                 onChange={handleFieldChange}
                 type="password"
                 id="password"
-                placeholder="Password"
+                placeholder="password"
                 required=""
               />
-              <label htmlFor="inputPassword">Password</label>
+              <label htmlFor="inputPassword">
+                <Icon name="lock" size="large" />
+              </label>
             </div>
-            <Button type="submit">Sign in</Button>
+            <button type="submit">Sign in</button>
 
-            <Button
+            <button
               type="button"
               onClick={() => {
                 props.history.push("/newUser");
               }}
             >
               Create New User
-            </Button>
+            </button>
             <br />
           </fieldset>
         </form>
+        <picture>
+          <img
+            className=""
+            // src={require("../Images/blinkingElephant.gif")}
+            alt="elephant"
+          />
+        </picture>
       </div>
     </>
   );

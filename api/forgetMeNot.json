@@ -207,6 +207,18 @@
       "url": "https://www.macys.com/",
       "notes": "Use for new shoes",
       "id": 12
+    },
+    {
+      "userId": 1,
+      "cardType": "Coupon",
+      "forLocation": "Nordik Spa",
+      "datetime": "07/03/2020, 10:21:09 PM",
+      "discount": "35% off next visit",
+      "expirationDate": "2020-10-28",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Spa Day!",
+      "id": 13
     }
   ],
   "loyaltyRewardsCards": [

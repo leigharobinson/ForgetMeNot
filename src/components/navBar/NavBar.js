@@ -8,7 +8,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-
+import { Icon } from "semantic-ui-react";
 import "./NavBar.css";
 
 const NavBar = (props) => {
@@ -25,7 +25,7 @@ const NavBar = (props) => {
         <Navbar color="faded" light>
           <NavbarBrand className="mr-auto" href="/">
             <picture>
-              <img id="Home" src={require("../Images/home.png")} alt="house" />
+              <Icon name="home" size="large" />
             </picture>
           </NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} className="mr-2" />
@@ -35,6 +35,7 @@ const NavBar = (props) => {
                 <NavLink href="/giftCards">
                   <picture>
                     <img
+                      class="giftCard_icon"
                       src={require("../Images/giftcard.png")}
                       alt="Gift Card"
                     />
@@ -46,8 +47,7 @@ const NavBar = (props) => {
                 <NavLink href="/coupons">
                   <picture>
                     <img
-                      height="36px"
-                      width="39px"
+                      class="Coupon_icon"
                       src={require("../Images/coupon.png")}
                       alt="Coupon Icon"
                     />
@@ -59,6 +59,7 @@ const NavBar = (props) => {
                 <NavLink href="/loyaltyRewardsCards">
                   <picture>
                     <img
+                      class="LRC_icon"
                       src={require("../Images/loyalty.png")}
                       alt="Loyalty Reward Card"
                     />
@@ -69,7 +70,7 @@ const NavBar = (props) => {
               <NavItem>
                 <NavLink onClick={handleLogout} href="/loyaltyRewardsCards">
                   <picture>
-                    <img src={require("../Images/logout.png")} alt="user" />
+                    <Icon name="user" size="large" />
                   </picture>
                   Logout
                 </NavLink>

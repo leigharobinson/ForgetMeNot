@@ -1,7 +1,18 @@
 img {
   padding: 2px;
 }
-
+.giftCard_icon {
+  width: 32.53px;
+  height: 34px;
+}
+.Coupon_icon {
+  width: 29.53px;
+  height: 28px;
+}
+.LRC_icon {
+  width: 32.53px;
+  height: 34px;
+}
 #FGMNlogo {
   width: 5em;
   height: auto;
