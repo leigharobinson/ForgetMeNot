@@ -90,7 +90,7 @@ const HomeList = (props) => {
     <>
       <div id="home_background">
         <div>
-          <div className="emptySpace"> .</div>
+          <h1 className="emptySpace"> .</h1>
           <div className="userGreating">
             <h3 className="colorLetters">Welcome {user}!</h3>
           </div>

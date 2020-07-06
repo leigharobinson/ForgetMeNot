@@ -9,6 +9,14 @@
 #emptySpace_C {
   color: rgb(189, 130, 130);
 }
+/* #arrowDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
+  margin-right: 2em;
+  border: 4px black solid;
+} */
+
 .Coupon_style {
   margin: 10px 10px 15px 10px;
   padding: 5px;

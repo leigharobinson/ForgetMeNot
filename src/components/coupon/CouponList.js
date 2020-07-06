@@ -30,6 +30,9 @@ const CouponList = (props) => {
     <>
       <div id="background_Coup">
         <h1 id="emptySpace_C">Hello </h1>
+        {/* <div id="arrowDiv">
+          <Icon name="arrow left" size="huge" />
+        </div> */}
         <div className="TopContainer">
           {/* //add this button above your display of animal cards */}
           <section className="section-content">
