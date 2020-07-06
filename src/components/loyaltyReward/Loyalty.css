@@ -6,7 +6,9 @@
   left: 0px;
   top: -589px;
 }
-
+#emptySpace_LR {
+  color: rgb(130, 136, 189);
+}
 .Loyalty_style {
   margin: 10px 10px 15px 10px;
   padding: 5px;

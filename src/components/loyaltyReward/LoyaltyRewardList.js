@@ -30,7 +30,7 @@ const LoyaltyRewardList = (props) => {
   return (
     <>
       <div id="background_Loy">
-        <div className="emptySpace">. </div>
+        <h1 id="emptySpace_LR">Hello </h1>
         <div className="TopContainer">
           {/* //add this button above your display of animal cards */}
           <section className="section-content">

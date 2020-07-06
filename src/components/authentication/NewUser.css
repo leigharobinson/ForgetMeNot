@@ -1,0 +1,71 @@
+#background_NewUser {
+  background-image: url("../Images/HomeBackground.png");
+  flex: auto;
+  width: 376.91px;
+  height: 1845.38px;
+  left: 0px;
+  top: -589px;
+}
+#emptySpace {
+  color: rgb(163, 218, 192);
+}
+.NU_style {
+  margin: 10px 10px 15px 10px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(204, 242, 224);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+.formgrid {
+  background-color: rgb(204, 242, 224);
+  /* border: 5px rgb(188, 189, 130) solid; */
+}
+.NU_fieldset input {
+  border: none;
+  border-radius: 5px;
+}
+.NU_fieldset label {
+  white-space: nowrap;
+  text-align: right;
+}
+.NU_fieldset {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 10px 10px;
+  /* border: 10px rgb(188, 189, 130) solid; */
+}
+
+.TopContainer_NU {
+  margin-top: 1em;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#GiftCardButton {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 45px;
+  background-color: rgb(130, 189, 161);
+  border: none;
+  height: 31.5px;
+  width: 65.22px;
+}
+
+.colorLetters {
+  color: rgb(30, 57, 44);
+}
+#btnHolder {
+  display: flex;
+  /* border: black 5px solid; */
+  align-items: center;
+  justify-content: flex-end;
+}
+.pictureOfApp {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin-left: 6em;
+  margin-top: 5.5em;
+}
