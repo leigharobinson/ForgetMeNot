@@ -56,7 +56,7 @@ const GiftCardEditForm = (props) => {
   return (
     <>
       <div id="background_gC">
-        <div className="emptySpace">. </div>
+        <h1 id="emptySpace_GC">Hello </h1>
         <div className="TopContainer">
           <h4 className="colorLetters">Edit Gift Card</h4>
         </div>

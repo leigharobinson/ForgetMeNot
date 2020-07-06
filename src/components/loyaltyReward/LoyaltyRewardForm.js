@@ -55,7 +55,7 @@ const LoyaltyRewardForm = (props) => {
   return (
     <>
       <div id="background_Loy">
-        <div className="emptySpace">. </div>
+        <h1 id="emptySpace_LR">Hello </h1>
         <div className="TopContainer">
           <h4 className="colorLetters">Loyalty Reward Form</h4>
         </div>

@@ -33,7 +33,7 @@ const GiftCardList = (props) => {
   return (
     <>
       <div id="background_gC">
-        <div className="emptySpace">. </div>
+        <h1 id="emptySpace_GC">Hello </h1>
         <div className="TopContainer">
           <h4 className="GiftCardTop colorLetters"></h4>
           {/* //add this button above your display of animal cards */}

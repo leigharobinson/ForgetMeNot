@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "reactstrap";
 import UserManager from "../../modules/UserManager";
-
+import { Icon } from "semantic-ui-react";
+import "./NewUser.css";
 // const isAuthenticated = () =>
 //   sessionStorage.getItem("credentials" || "user") !== null;
 
@@ -37,43 +38,74 @@ const NewUserForm = (props) => {
   };
 
   return (
-    <form onSubmit={handleFieldChange}>
-      <fieldset>
-        <h3>Create User Account</h3>
-        <div className="formgrid">
-          <input
-            onChange={handleFieldChange}
-            type="username"
-            id="username"
-            placeholder="username"
-            required=""
-            autoFocus=""
+    <div id="background_NewUser">
+      <div className="headingOFApp">
+        <picture>
+          <img
+            // className="headingOFApp"
+            src={require("../Images/forgetMeNot.svg")}
+            alt="Forget Me Not"
           />
-          <label htmlFor="username">User Name</label>
-          <input
-            onChange={handleFieldChange}
-            type="email"
-            id="email"
-            placeholder="Email address"
-            required=""
-            autoFocus=""
-          />
-          <label htmlFor="email">Email address</label>
+        </picture>
+      </div>
+      <div className="pictureOfApp">
+        <picture>
+          <img src={require("../Images/shadedLogo.png")} alt="Forget Me Not" />
+        </picture>
+      </div>
+      <div className="TopContainer_NU">
+        <h2 className="colorLetters ">Create User Account</h2>
+      </div>
+      <form onSubmit={handleFieldChange}>
+        <fieldset className="NU_fieldset NU_style">
+          <div className="formgrid">
+            <input
+              onChange={handleFieldChange}
+              type="username"
+              id="username"
+              placeholder="username"
+              required=""
+              autoFocus=""
+            />
+            <label htmlFor="username">
+              <Icon name="user" size="large" />
+            </label>
+            <input
+              onChange={handleFieldChange}
+              type="email"
+              id="email"
+              placeholder="Email address"
+              required=""
+              autoFocus=""
+            />
+            <label htmlFor="email">
+              <Icon name="mail" size="large" />
+            </label>
 
-          <input
-            onChange={handleFieldChange}
-            type="password"
-            id="password"
-            placeholder="Password"
-            required=""
-          />
-          <label htmlFor="password">Password</label>
-        </div>
-        <Button type="submit" disabled={isLoading} onClick={constructNewUser}>
-          Sign in
-        </Button>
-      </fieldset>
-    </form>
+            <input
+              onChange={handleFieldChange}
+              type="password"
+              id="password"
+              placeholder="Password"
+              required=""
+            />
+            <label htmlFor="password">
+              <Icon name="lock" size="large" />
+            </label>
+          </div>
+          <div id="btnHolder">
+            <Button
+              id="GiftCardButton"
+              type="submit"
+              disabled={isLoading}
+              onClick={constructNewUser}
+            >
+              Sign in
+            </Button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
   );
 };
 

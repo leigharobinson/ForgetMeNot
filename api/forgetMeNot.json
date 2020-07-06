@@ -41,6 +41,24 @@
       "password": "123",
       "email": "Full@gmail.com",
       "id": 7
+    },
+    {
+      "username": "Jacob",
+      "password": "123",
+      "email": "JacobMWalkson@gmail.com",
+      "id": 8
+    },
+    {
+      "username": "Lotty",
+      "password": "123",
+      "email": "morningSun@gmail.com",
+      "id": 9
+    },
+    {
+      "username": "Sandy",
+      "password": "123",
+      "email": "sandy@gmail.com",
+      "id": 10
     }
   ],
   "giftCards": [

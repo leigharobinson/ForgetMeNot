@@ -6,7 +6,9 @@
   left: 0px;
   top: -589px;
 }
-
+#emptySpace_C {
+  color: rgb(189, 130, 130);
+}
 .Coupon_style {
   margin: 10px 10px 15px 10px;
   padding: 5px;

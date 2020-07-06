@@ -56,7 +56,7 @@ const CouponEditForm = (props) => {
   return (
     <>
       <div id="background_Coup">
-        <div className="emptySpace">. </div>
+        <h1 id="emptySpace_C">Hello </h1>
         <div className="TopContainer">
           <h4 className="colorLetters">Edit Coupon</h4>
         </div>
