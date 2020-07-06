@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GiftCardManager from "../../modules/GiftCardManager";
 import { Button } from "reactstrap";
-// import "./GiftCard.css";
+import "./GiftCard.css";
 const GiftCardForm = (props) => {
   const timestamp = Date.now();
   // console.log(
@@ -64,71 +64,89 @@ const GiftCardForm = (props) => {
 
   return (
     <>
-      <form>
-        <h1>Gift Card Form</h1>
-        <fieldset>
-          <div className="formgrid">
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="forLocation"
-              placeholder="Business Name"
-            />
-            <label htmlFor="forLocation">Business Name</label>
+      <div id="background_gC">
+        <div className="emptySpace">. </div>
+        <div className="TopContainer">
+          <h4 className="colorLetters">Gift Card Form</h4>
+        </div>
+        <form>
+          <fieldset className="GiftCard_fieldset GiftCard_style">
+            <div className="formgrid">
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="forLocation"
+                placeholder="Business Name"
+              />
+              <label className="colorLetters" htmlFor="forLocation">
+                Business Name
+              </label>
 
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="amount"
-              placeholder=" 00.0"
-            />
-            <label htmlFor="amount">Amount $</label>
-            <input
-              type="date"
-              required
-              onChange={handleFieldChange}
-              id="expirationDate"
-              placeholder="expiratioinDate"
-            />
-            <label htmlFor="expirationDate">Expiration Date</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="quantity"
-              placeholder="quantity"
-            />
-            <label htmlFor="quantity">Quantity</label>
-            <input
-              type="url"
-              required
-              onChange={handleFieldChange}
-              id="url"
-              placeholder="url"
-            />
-            <label htmlFor="url">Business's url</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="notes"
-              placeholder="notes"
-            />
-            <label htmlFor="notes">Notes</label>
-          </div>
-          <div className="alignRight">
-            <Button
-              type="button"
-              disabled={isLoading}
-              onClick={constructNewGiftCard}
-            >
-              Submit
-            </Button>
-          </div>
-        </fieldset>
-      </form>
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="amount"
+                placeholder=" 00.0"
+              />
+              <label className="colorLetters" htmlFor="amount">
+                Amount $
+              </label>
+              <input
+                type="date"
+                required
+                onChange={handleFieldChange}
+                id="expirationDate"
+                placeholder="expiratioinDate"
+              />
+              <label className="colorLetters" htmlFor="expirationDate">
+                Expiration Date
+              </label>
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="quantity"
+                placeholder="quantity"
+              />
+              <label className="colorLetters" htmlFor="quantity">
+                Quantity
+              </label>
+              <input
+                type="url"
+                required
+                onChange={handleFieldChange}
+                id="url"
+                placeholder="url"
+              />
+              <label className="colorLetters" htmlFor="url">
+                Business's url
+              </label>
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="notes"
+                placeholder="notes"
+              />
+              <label className="colorLetters" htmlFor="notes">
+                Notes
+              </label>
+            </div>
+            <div className="alignRight">
+              <Button
+                id="GiftCardButton"
+                type="button"
+                disabled={isLoading}
+                onClick={constructNewGiftCard}
+              >
+                Submit
+              </Button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </>
   );
 };

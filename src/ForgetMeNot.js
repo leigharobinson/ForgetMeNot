@@ -16,14 +16,24 @@ const ForgetMeNot = () => {
     setHasUser(isAuthenticated());
   };
 
-  return (
-    <>
-      <div id="backgound_img">
-        <NavBar hasUser={hasUser} clearUser={clearUser} />
-        <ApplicationViews hasUser={hasUser} setUser={setUser} />
-      </div>
-    </>
-  );
+  if (isAuthenticated()) {
+    return (
+      <>
+        <div id="backgound_img">
+          <NavBar hasUser={hasUser} clearUser={clearUser} />
+          <ApplicationViews hasUser={hasUser} setUser={setUser} />
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div id="backgound_img">
+          <ApplicationViews hasUser={hasUser} setUser={setUser} />
+        </div>
+      </>
+    );
+  }
 };
 
 export default ForgetMeNot;

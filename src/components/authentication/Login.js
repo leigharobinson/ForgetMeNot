@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Button } from "reactstrap";
+// import { button } from "reactstrap";
 import UserManager from "../../modules/UserManager";
 import "./Login.css";
+import { Icon } from "semantic-ui-react";
 
 const Login = (props) => {
   const [credentials, setCredentials] = useState({
@@ -35,11 +36,26 @@ const Login = (props) => {
   return (
     <>
       <div id="login_background">
-        <h3>Forget Me Not!</h3>
-        <h5> Gift Cards, Coupons, & Loyalty Rewards </h5>
-        <form onSubmit={handleLogin}>
-          <fieldset>
-            <h3>Please sign in</h3>
+        <div className="headingOFApp">
+          <picture>
+            <img
+              // className="headingOFApp"
+              src={require("../Images/forgetMeNot.svg")}
+              alt="Forget Me Not"
+            />
+          </picture>
+        </div>
+        <div className="pictureOfApp">
+          <picture>
+            <img
+              src={require("../Images/shadedLogo.png")}
+              alt="Forget Me Not"
+            />
+          </picture>
+        </div>
+        <form className="inputContainer" onSubmit={handleLogin}>
+          <fieldset className="fieldset">
+            {/* <h3>Please sign in</h3> */}
             <div className="formgrid">
               <input
                 onChange={handleFieldChange}
@@ -49,30 +65,47 @@ const Login = (props) => {
                 required=""
                 autoFocus=""
               />
-              <label htmlFor="username">UserName</label>
+
+              <label className="userIcon" htmlFor="username">
+                <Icon name="user" size="large" />
+              </label>
 
               <input
                 onChange={handleFieldChange}
                 type="password"
                 id="password"
-                placeholder="Password"
+                placeholder="password"
                 required=""
               />
-              <label htmlFor="inputPassword">Password</label>
+              <label className="passwordIcon" htmlFor="inputPassword">
+                <Icon name="lock" size="large" />
+              </label>
             </div>
-            <Button type="submit">Sign in</Button>
-
-            <Button
-              type="button"
-              onClick={() => {
-                props.history.push("/newUser");
-              }}
-            >
-              Create New User
-            </Button>
-            <br />
+            <div className="buttonDiv">
+              <button className="LoginBtn" type="submit">
+                Login
+              </button>
+            </div>
+            <div className="buttonDiv2">
+              <button
+                className="createNewUserBtn"
+                type="button"
+                onClick={() => {
+                  props.history.push("/newUser");
+                }}
+              >
+                Create New User
+              </button>
+            </div>
           </fieldset>
         </form>
+        {/* <picture>
+          <img
+            className=""
+            src={require("../Images/blinkingElephant.gif")}
+            alt="elephant"
+          />
+        </picture> */}
       </div>
     </>
   );

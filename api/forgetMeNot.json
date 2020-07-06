@@ -23,6 +23,24 @@
       "password": "123",
       "email": "westEnd123@gmail.com",
       "id": 4
+    },
+    {
+      "username": "Mark",
+      "password": "123",
+      "email": "123_dogzRule@gmail.com",
+      "id": 5
+    },
+    {
+      "username": "Sarah",
+      "password": "123",
+      "email": "bearsSear@gmailcom",
+      "id": 6
+    },
+    {
+      "username": "Monty",
+      "password": "123",
+      "email": "Full@gmail.com",
+      "id": 7
     }
   ],
   "giftCards": [
@@ -185,18 +203,6 @@
       "id": 10
     },
     {
-      "userId": 1,
-      "cardType": "Coupon",
-      "forLocation": "Bed, Bath, & Beyond ",
-      "datetime": "06/24/2020, 04:57:41 PM",
-      "discount": "24%",
-      "expirationDate": "2020-06-25",
-      "quantity": "1",
-      "url": "https://www.montanas.ca/en.html",
-      "notes": "Use this next time need towels",
-      "id": 11
-    },
-    {
       "userId": 4,
       "cardType": "Coupon",
       "forLocation": "Macy's",
@@ -207,6 +213,30 @@
       "url": "https://www.macys.com/",
       "notes": "Use for new shoes",
       "id": 12
+    },
+    {
+      "userId": 1,
+      "cardType": "Coupon",
+      "forLocation": "Nordik Spa",
+      "datetime": "07/03/2020, 10:21:09 PM",
+      "discount": "35% off next visit",
+      "expirationDate": "2020-10-28",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Spa Day!",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "cardType": "Coupon",
+      "forLocation": "Outback",
+      "datetime": "07/06/2020, 02:05:59 PM",
+      "discount": "25% Off",
+      "expirationDate": "2020-07-22",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "use for food",
+      "id": 14
     }
   ],
   "loyaltyRewardsCards": [
@@ -215,7 +245,7 @@
       "cardType": "Loyalty Rewards Card",
       "forLocation": "Subway",
       "datetime": "06/24/2020, 05:08:18 PM",
-      "visitsUntilReward": "3",
+      "visitsUntilReward": "2",
       "expirationDate": "2020-07-02",
       "url": "n/a",
       "notes": "Testing",
@@ -224,7 +254,7 @@
     {
       "userId": 1,
       "cardType": "Loyalty Rewards Card",
-      "forLocation": "Frothy Moneky",
+      "forLocation": "Frothy Monkey",
       "datetime": "06/24/2020, 05:08:18 PM",
       "visitsUntilReward": "10",
       "expirationDate": "2020-07-02",
@@ -242,6 +272,17 @@
       "url": "https://www.subway.com/en-US",
       "notes": "Free 6\" Sub!",
       "id": 13
+    },
+    {
+      "userId": 1,
+      "cardType": "Loyalty Rewards Card",
+      "forLocation": "Taco Hut",
+      "datetime": "07/06/2020, 03:42:15 PM",
+      "visitsUntilReward": "3",
+      "expirationDate": "2020-08-25",
+      "url": "n/a",
+      "notes": "use for food",
+      "id": 14
     }
   ]
 }

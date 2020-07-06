@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import CouponManager from "../../modules/CouponManager";
+import { Icon } from "semantic-ui-react";
 import { Button } from "reactstrap";
 import CouponCard from "./CouponCard";
-
+import "./Coupon.css";
 const CouponList = (props) => {
   //The initial state is an emptry array
   const [coupons, setCoupons] = useState([]);
@@ -27,29 +28,35 @@ const CouponList = (props) => {
 
   return (
     <>
-      {/* //add this button above your display of animal cards */}
-      <section className="section-content">
-        <Button
-          id="NewCouponFormButton"
-          type="button"
-          className="btn"
-          onClick={() => {
-            props.history.push("/coupons/new");
-          }}
-        >
-          Add Coupon
-        </Button>
-        {/* //Finally we use map() to "loop over" the coupons array to show a list of coupon cards */}
-      </section>
-      <div className="container-cards">
-        {coupons.map((coupon) => (
-          <CouponCard
-            key={coupon.id}
-            coupon={coupon}
-            deleteCoupon={deleteCoupon}
-            {...props}
-          />
-        ))}
+      <div id="background_Coup">
+        <div className="emptySpace">. </div>
+        <div className="TopContainer">
+          {/* //add this button above your display of animal cards */}
+          <section className="section-content">
+            <Button
+              id="NewCouponFormButton"
+              type="button"
+              className="btn"
+              onClick={() => {
+                props.history.push("/coupons/new");
+              }}
+            >
+              <Icon name="add" size="large" />
+              Add Coupon
+            </Button>
+            {/* //Finally we use map() to "loop over" the coupons array to show a list of coupon cards */}
+          </section>
+        </div>
+        <div className="GiftCard_simp">
+          {coupons.map((coupon) => (
+            <CouponCard
+              key={coupon.id}
+              coupon={coupon}
+              deleteCoupon={deleteCoupon}
+              {...props}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "reactstrap";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
-
+import "./Loyalty.css";
 const LoyaltyRewardEditForm = (props) => {
   const [loyaltyReward, setLoyaltyReward] = useState({
     userId: props.userId,
@@ -55,68 +55,81 @@ const LoyaltyRewardEditForm = (props) => {
 
   return (
     <>
-      <div>
-        <h1> Edit Loyalty Reward Card</h1>
-      </div>
-      <form>
-        <fieldset>
-          <div className="formgrid">
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="forLocation"
-              value={loyaltyReward.forLocation}
-            />
-            <label htmlFor="forLocation">Business Name</label>
+      <div id="background_Loy">
+        <div className="emptySpace">. </div>
+        <div className="TopContainer">
+          <h4 className="colorLetters">Edit Loyalty Reward</h4>
+        </div>
 
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="visitsUntilReward"
-              value={loyaltyReward.visitsUntilReward}
-            />
-            <label htmlFor="avisitsUntilReward">
-              Number of Visits Until Reward
-            </label>
-            <input
-              type=""
-              required
-              onChange={handleFieldChange}
-              id="expirationDate"
-              value={loyaltyReward.expirationDate}
-            />
-            <label htmlFor="expirationDate">Expiration Date</label>
-            <input
-              type="url"
-              required
-              onChange={handleFieldChange}
-              id="url"
-              value={loyaltyReward.url}
-            />
-            <label htmlFor="url">Business's url</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="notes"
-              value={loyaltyReward.notes}
-            />
-            <label htmlFor="notes">Notes</label>
-          </div>
-          <div className="alignRight">
-            <Button
-              type="button"
-              disabled={isLoading}
-              onClick={updateExistingLoyaltyRewardCard}
-              className="btn btn-primary"
-            >
-              Submit
-            </Button>
-          </div>
-        </fieldset>
-      </form>
+        <form>
+          <fieldset className="Loyalty_fieldset Loyalty_style">
+            <div className="formgrid">
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="forLocation"
+                value={loyaltyReward.forLocation}
+              />
+              <label className="colorLetters" htmlFor="forLocation">
+                Business Name
+              </label>
+
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="visitsUntilReward"
+                value={loyaltyReward.visitsUntilReward}
+              />
+              <label className="colorLetters" htmlFor="avisitsUntilReward">
+                Number of Visits Until Reward
+              </label>
+              <input
+                type=""
+                required
+                onChange={handleFieldChange}
+                id="expirationDate"
+                value={loyaltyReward.expirationDate}
+              />
+              <label className="colorLetters" htmlFor="expirationDate">
+                Expiration Date
+              </label>
+              <input
+                type="url"
+                required
+                onChange={handleFieldChange}
+                id="url"
+                value={loyaltyReward.url}
+              />
+              <label className="colorLetters" htmlFor="url">
+                Business's url
+              </label>
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="notes"
+                value={loyaltyReward.notes}
+              />
+              <label className="colorLetters" htmlFor="notes">
+                Notes
+              </label>
+            </div>
+            <div className="alignRight">
+              <Button
+                id="GiftCardButton"
+                type="button"
+                disabled={isLoading}
+                onClick={updateExistingLoyaltyRewardCard}
+                className="btn btn-primary"
+              >
+                Submit
+              </Button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </>
   );
 };

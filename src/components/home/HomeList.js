@@ -3,12 +3,9 @@ import React, { useState, useEffect } from "react";
 import CouponManager from "../../modules/CouponManager";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
 import GiftCardManager from "../../modules/GiftCardManager";
-// import HomeCard from "./HomeCard";
 import UserManager from "../../modules/UserManager";
-// import NewUserForm from "../authentication/NewUserForm";
 import SearchCard from "./SearchCard";
-
-
+import "./Home.css";
 const HomeList = (props) => {
   const [user, setUser] = useState([]);
   const [giftCards, setGiftCards] = useState([]);
@@ -29,19 +26,19 @@ const HomeList = (props) => {
     //After the data comes back from the API, we use the setCoupons function to update state
     GiftCardManager.getAll()
       .then((giftCardsFromAPI) => {
-        console.log("gift cards fetched!", giftCardsFromAPI)
+        console.log("gift cards fetched!", giftCardsFromAPI);
         setGiftCards(giftCardsFromAPI);
 
         return CouponManager.getAll();
       })
       .then((couponsFromAPI) => {
-        console.log("coupons fetched!", couponsFromAPI)
+        console.log("coupons fetched!", couponsFromAPI);
         setCoupons(couponsFromAPI);
 
         return LoyaltyRewardManager.getAll();
       })
       .then((loyaltyRewardFromAPI) => {
-        console.log("loyalty cards fetched!", loyaltyRewardFromAPI)
+        console.log("loyalty cards fetched!", loyaltyRewardFromAPI);
 
         setLoyaltyRewards(loyaltyRewardFromAPI);
       });
@@ -91,37 +88,24 @@ const HomeList = (props) => {
 
   return (
     <>
-      <section>
-        <h3>Welcome {user}!</h3>
-
+      <div id="home_background">
         <div>
-          <h4>Card Library</h4>
-          <div>
-            <SearchCard
-              // isLoading={isLoading}
-              deleteCard={deleteCard}
-              allCards={allCards}
-              user={user}
-              {...props}
-            />
+          <div className="emptySpace"> .</div>
+          <div className="userGreating">
+            <h3 className="colorLetters">Welcome {user}!</h3>
           </div>
-        </div>
-        <hr></hr>
-        {/* <div className="container-cards">
-          {newArrayOfThree.map((card) => {
-            counter++;
-            return (
-              <HomeCard
-                key={counter}
-                card={card}
+          <div>
+            <div className="searchCard">
+              <SearchCard
                 deleteCard={deleteCard}
+                allCards={allCards}
                 user={user}
                 {...props}
               />
-            );
-          })}
-        </div> */}
-      </section>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
