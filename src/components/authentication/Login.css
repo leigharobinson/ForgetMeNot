@@ -1,16 +1,148 @@
 #login_background {
-  background-image: url("../Images/HomeBackground.svg");
+  background-image: url("../Images/HomeBackground.png");
   flex: auto;
   width: 376.91px;
   height: 1845.38px;
   left: 0px;
   top: -589px;
 }
+
 .fieldset {
   width: 19em;
   height: auto;
   background-color: rgb(204, 242, 224);
+  padding: 20px;
+  display: flex;
+  border-radius: 15px;
 }
 .formgrid {
   background-color: rgb(204, 242, 224);
+  padding: 10px;
+
+  /* margin: 5px; */
+  border-radius: 15px;
+  /* border-radius: 10%; */
+}
+#password {
+  border-radius: 5px;
+  border: none;
+  padding: 5px 5px;
+  /* box-shadow: 4px 4px; */
+}
+#username {
+  border-radius: 5px;
+  border: none;
+  /* box-shadow: 4px 4px; */
+}
+.headingOFApp {
+  padding-top: 2em;
+  padding-left: 2em;
+}
+.inputContainer {
+  margin-top: 4.5em;
+}
+@keyframes wiggle {
+  25% {
+    transform: scale(0.8, 1.3);
+  }
+  50% {
+    transform: scale(1.1, 0.8);
+  }
+  75% {
+    transform: scale(0.7, 1.2);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1, 1);
+  }
+  /* 25% {
+    transform: scale(1.05, 1.05);
+  } */
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  /* 75% {
+    transform: scale(1.05, 1.05);
+  } */
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.createNewUserBtn:hover {
+  background-color: rgb(130, 189, 161);
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  transform: translateY(-7px);
+  color: #fff;
+}
+.createNewUserBtn {
+  margin: 5px;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  text-align: center;
+  background-color: rgb(130, 189, 161);
+  border-radius: 45px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+}
+.LoginBtn {
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  background-color: rgb(130, 189, 161);
+  border-radius: 45px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+}
+.pictureOfApp {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin-left: 6em;
+  margin-top: 5.5em;
+}
+/* .pictureOfApp img {
+  width: 200px;
+  height: auto;
+  animation: zoom 5s infinite;
+} */
+.pictureOfApp img {
+  width: 180px;
+  height: auto;
+  animation: zoom 5s ease-in-out infinite;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  /* cursor: pointer; */
+}
+
+/* button:focus {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+} */
+.buttonDiv2 {
+  display: flex;
+  justify-content: center;
+  /* cursor: pointer; */
+}
+
+.passwordIcon {
+  display: flex;
+  justify-content: center;
+}
+.userIcon {
+  display: flex;
+  justify-content: center;
 }

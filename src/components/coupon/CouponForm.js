@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "reactstrap";
 import CouponManager from "../../modules/CouponManager";
-import "./CouponForm.css";
+import "./Coupon.css";
+// import "../giftCard/GiftCard.css";
 
 const CouponForm = (props) => {
   // console.log(props.userId);
@@ -69,81 +70,90 @@ const CouponForm = (props) => {
 
   return (
     <>
-      <div>
-        <h1>Coupon Form</h1>
-      </div>
-      <form>
-        <fieldset>
-          <div className="formgrid">
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="forLocation"
-              placeholder="Business Name"
-            />
-            <label htmlFor="forLocation">Business Name</label>
-            {/* <input
-              type="date"
-              required
-              onChange={handleFieldChange}
-              id="datetime"
-              placeholder="date"
-            />
-            <label htmlFor="datetime">date created</label> */}
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="discount"
-              placeholder="%"
-            />
-            <label htmlFor="discount">Discount</label>
-            <input
-              type="date"
-              required
-              onChange={handleFieldChange}
-              id="expirationDate"
-              placeholder="expiratioinDate"
-            />
-            <label htmlFor="expirationDate">Expiration Date</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="quantity"
-              placeholder="quantity"
-            />
-            <label htmlFor="quantity">Quantity</label>
-            <input
-              type="url"
-              required
-              onChange={handleFieldChange}
-              id="url"
-              placeholder="url"
-            />
-            <label htmlFor="url">Business's url</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="notes"
-              placeholder="notes"
-            />
-            <label htmlFor="notes">Notes</label>
-          </div>
+      <div id="background_Coup">
+        <div className="emptySpace">. </div>
+        <div className="TopContainer">
+          <h4 className="colorLetters">Coupon Form</h4>
+        </div>
+        <form>
+          <fieldset className="Coupon_fieldset GiftCard_style">
+            <div className="formgrid">
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="forLocation"
+                placeholder="Business Name"
+              />
+              <label className="colorLetters" htmlFor="forLocation">
+                Business Name
+              </label>
 
-          <div className="alignRight">
-            <Button
-              type="button"
-              disabled={isLoading}
-              onClick={constructNewCoupon}
-            >
-              Submit
-            </Button>
-          </div>
-        </fieldset>
-      </form>
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="discount"
+                placeholder="%"
+              />
+              <label className="colorLetters" htmlFor="discount">
+                Discount
+              </label>
+              <input
+                type="date"
+                required
+                onChange={handleFieldChange}
+                id="expirationDate"
+                placeholder="expiratioinDate"
+              />
+              <label className="colorLetters" htmlFor="expirationDate">
+                Expiration Date
+              </label>
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="quantity"
+                placeholder="quantity"
+              />
+              <label className="colorLetters" htmlFor="quantity">
+                Quantity
+              </label>
+              <input
+                type="url"
+                required
+                onChange={handleFieldChange}
+                id="url"
+                placeholder="url"
+              />
+              <label className="colorLetters" htmlFor="url">
+                Business's url
+              </label>
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="notes"
+                placeholder="notes"
+              />
+              <label className="colorLetters" htmlFor="notes">
+                Notes
+              </label>
+            </div>
+
+            <div className="alignRight">
+              <Button
+                id="GiftCardButton"
+                type="button"
+                disabled={isLoading}
+                onClick={constructNewCoupon}
+              >
+                Submit
+              </Button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </>
   );
 };

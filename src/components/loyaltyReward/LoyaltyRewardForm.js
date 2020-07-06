@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "reactstrap";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
-
+import "./Loyalty.css";
 const LoyaltyRewardForm = (props) => {
   //This Is to get a timestamp on when cards are created
   const timestamp = Date.now();
@@ -54,67 +54,72 @@ const LoyaltyRewardForm = (props) => {
 
   return (
     <>
-      <div>
-        <h1>Loyalty Reward Form</h1>
-      </div>
-      <form>
-        <fieldset>
-          <div className="formgrid">
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="forLocation"
-              placeholder="Business Name"
-            />
-            <label htmlFor="forLocation">Business Name</label>
+      <div id="background_Loy">
+        <div className="emptySpace">. </div>
+        <div className="TopContainer">
+          <h4 className="colorLetters">Loyalty Reward Form</h4>
+        </div>
 
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="visitsUntilReward"
-              placeholder="visitsUntilReward"
-            />
-            <label htmlFor="visitsUntilReward">
-              Number of Visits Until Next Reward
-            </label>
-            <input
-              type="date"
-              required
-              onChange={handleFieldChange}
-              id="expirationDate"
-              placeholder="expiratioinDate"
-            />
-            <label htmlFor="expirationDate">Expiration Date</label>
-            <input
-              type="url"
-              required
-              onChange={handleFieldChange}
-              id="url"
-              placeholder="url"
-            />
-            <label htmlFor="url">Business's url</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="notes"
-              placeholder="notes"
-            />
-            <label htmlFor="notes">Notes</label>
-          </div>
-          <div className="alignRight">
-            <Button
-              type="button"
-              disabled={isLoading}
-              onClick={constructNewLoyaltyReward}
-            >
-              Submit
-            </Button>
-          </div>
-        </fieldset>
-      </form>
+        <form>
+          <fieldset className="Loyalty_fieldset Loyalty_style">
+            <div className="formgrid">
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="forLocation"
+                placeholder="Business Name"
+              />
+              <label htmlFor="forLocation">Business Name</label>
+
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="visitsUntilReward"
+                placeholder="Visit until reward"
+              />
+              <label htmlFor="visitsUntilReward">
+                Visits Until Next Reward
+              </label>
+              <input
+                type="date"
+                required
+                onChange={handleFieldChange}
+                id="expirationDate"
+                placeholder="expiratioinDate"
+              />
+              <label htmlFor="expirationDate">Expiration Date</label>
+              <input
+                type="url"
+                required
+                onChange={handleFieldChange}
+                id="url"
+                placeholder="url"
+              />
+              <label htmlFor="url">Business's url</label>
+              <input
+                type="text"
+                required
+                onChange={handleFieldChange}
+                id="notes"
+                placeholder="notes"
+              />
+              <label htmlFor="notes">Notes</label>
+            </div>
+            <div className="alignRight">
+              <Button
+                id="GiftCardButton"
+                type="button"
+                disabled={isLoading}
+                onClick={constructNewLoyaltyReward}
+              >
+                Submit
+              </Button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </>
   );
 };

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "reactstrap";
 import CouponManager from "../../modules/CouponManager";
-// import "./CouponDetail.css";
+import "./Coupon.css";
+import "./CouponForm.css";
 
 const CouponDetail = (props) => {
   const [coupon, setCoupon] = useState({
@@ -40,27 +41,43 @@ const CouponDetail = (props) => {
   };
 
   return (
-    <div className="card">
-      <h2>Coupon Card Details</h2>
-
-      <div className="card-content">
-        {/* <picture>
+    <>
+      <div id="background_Coup">
+        <div className="emptySpace">. </div>
+        <div className="TopContainer">
+          <h4 className="colorLetters">Coupon Card Details</h4>
+        </div>
+        <div className="card Coupon_fieldset Coupon_style">
+          <div className="card-content">
+            {/* <picture>
           <img src={require("./dog.svg")} alt="My Dog" />
         </picture> */}
-        <h3>
-          For: <span>{coupon.forLocation}</span>
-        </h3>
-        <p>Created: {coupon.datetime}</p>
-        <p>Discount: {coupon.discount}</p>
-        <p>Expiration Date: {coupon.expirationDate}</p>
-        <p>Quantity: {coupon.quantity}</p>
-        <p>Url: {coupon.url}</p>
-        <p>Notes: {coupon.notes}</p>
-        <Button type="button" disabled={isLoading} onClick={handleDelete}>
-          Delete
-        </Button>
+            <h3>
+              <span className="colorLetters">{coupon.forLocation}</span>
+            </h3>
+            <p className="colorLetters">Created: {coupon.datetime}</p>
+            <p className="colorLetters">Discount: {coupon.discount}</p>
+            <p className="colorLetters">
+              Expiration Date: {coupon.expirationDate}
+            </p>
+            <p className="colorLetters">Quantity: {coupon.quantity}</p>
+            <p className="colorLetters">Url: {coupon.url}</p>
+            <p className="colorLetters">Notes: {coupon.notes}</p>
+            <div id="btnHolder">
+              <Button
+                id="deletebtn"
+                type="button"
+                color="danger"
+                disabled={isLoading}
+                onClick={handleDelete}
+              >
+                Delete
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

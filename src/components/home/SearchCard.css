@@ -1,5 +1,37 @@
 #search_card {
   margin: 15px;
-  padding: 5px;
-  border: 5px solid blue;
+  padding: 10px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  background-color: rgb(204, 242, 224);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+#deletebtn {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 45px;
+}
+#btnHolder {
+  display: flex;
+  /* border: black 5px solid; */
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#search_border {
+  /* border: black 5px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+#search_bar {
+  margin: 5px;
+  border-radius: 45px;
+  white-space: nowrap;
+  text-align: center;
+  border: none;
+  height: 31.5px;
+}
+.colorLetters {
+  color: rgb(30, 57, 44);
 }

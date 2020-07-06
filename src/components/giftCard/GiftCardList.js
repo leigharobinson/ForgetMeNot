@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Icon } from "semantic-ui-react";
+
 import GiftCardManager from "../../modules/GiftCardManager";
 import { Button } from "reactstrap";
 import GiftCard from "./GiftCardCard";
-
+import "./GiftCard.css";
 const GiftCardList = (props) => {
   //The initial state is an emptry array
   const [giftCards, setGiftCards] = useState([]);
@@ -30,28 +32,37 @@ const GiftCardList = (props) => {
   //Finally we use map() to "loop over" the coupons array to show a list of coupon cards
   return (
     <>
-      {/* //add this button above your display of animal cards */}
-      <section className="section-content">
-        <Button
-          id="NewGiftCardFormButton"
-          type="button"
-          className="btn"
-          onClick={() => {
-            props.history.push("/giftCards/new");
-          }}
-        >
-          Add Gift Card
-        </Button>
-      </section>
-      <div className="container-cards">
-        {giftCards.map((giftCard) => (
-          <GiftCard
-            key={giftCard.id}
-            giftCard={giftCard}
-            deleteGiftCard={deleteGiftCard}
-            {...props}
-          />
-        ))}
+      <div id="background_gC">
+        <div className="emptySpace">. </div>
+        <div className="TopContainer">
+          <h4 className="GiftCardTop colorLetters"></h4>
+          {/* //add this button above your display of animal cards */}
+          <section className="section-content">
+            <Button
+              id="NewGiftCardFormButton"
+              type="button"
+              className="btn"
+              onClick={() => {
+                props.history.push("/giftCards/new");
+              }}
+            >
+              <Icon name="add" size="large" />
+              Add Gift Card
+            </Button>
+          </section>
+        </div>
+        <div className="GiftCard_simp">
+          <div className="container-cards">
+            {giftCards.map((giftCard) => (
+              <GiftCard
+                key={giftCard.id}
+                giftCard={giftCard}
+                deleteGiftCard={deleteGiftCard}
+                {...props}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );

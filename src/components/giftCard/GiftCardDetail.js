@@ -39,30 +39,40 @@ const GiftCardDetail = (props) => {
   };
 
   return (
-    <div className="card">
-      <h2>Gift Card Details</h2>
-      <div className="card-content">
-        {/* <picture>
+    <div id="background_gC">
+      <div className="emptySpace">. </div>
+      <div className="TopContainer">
+        <h4 className="colorLetters">Gift Card Details</h4>
+      </div>
+
+      <div className="GiftCard_style GiftCard_fieldset ">
+        <div>
+          {/* <picture>
           <img src={require("./dog.svg")} alt="My Dog" />
         </picture> */}
-        <h3>
-          For: <span>{giftCard.forLocation}</span>
-        </h3>
-        <p>Date Created: {giftCard.datetime}</p>
-        <p>Amount: ${giftCard.amount}</p>
-        <p>Expiration Date: {giftCard.expirationDate}</p>
-        <p>Quantity: {giftCard.quantity}</p>
-        <p>Url: {giftCard.url}</p>
-        <p>Notes: {giftCard.notes}</p>
-
-        <Button
-          color="danger"
-          type="button"
-          disabled={isLoading}
-          onClick={handleDelete}
-        >
-          Delete
-        </Button>
+          <h3>
+            <span className="colorLetters">{giftCard.forLocation}</span>
+          </h3>
+          <h2 className="colorLetters">Amount: ${giftCard.amount}</h2>
+          <p className="colorLetters">Date Created: {giftCard.datetime}</p>
+          <p className="colorLetters">
+            Expiration Date: {giftCard.expirationDate}
+          </p>
+          <p className="colorLetters">Quantity: {giftCard.quantity}</p>
+          <p className="colorLetters">Url: {giftCard.url}</p>
+          <p className="colorLetters">Notes: {giftCard.notes}</p>
+          <div id="btnHolder">
+            <Button
+              id="deletebtn"
+              color="danger"
+              type="button"
+              disabled={isLoading}
+              onClick={handleDelete}
+            >
+              Delete
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );

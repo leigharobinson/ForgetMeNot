@@ -36,11 +36,26 @@ const Login = (props) => {
   return (
     <>
       <div id="login_background">
-        <h3>Forget Me Not!</h3>
-        <h5> Gift Cards, Coupons, & Loyalty Rewards </h5>
-        <form onSubmit={handleLogin}>
+        <div className="headingOFApp">
+          <picture>
+            <img
+              // className="headingOFApp"
+              src={require("../Images/forgetMeNot.svg")}
+              alt="Forget Me Not"
+            />
+          </picture>
+        </div>
+        <div className="pictureOfApp">
+          <picture>
+            <img
+              src={require("../Images/shadedLogo.png")}
+              alt="Forget Me Not"
+            />
+          </picture>
+        </div>
+        <form className="inputContainer" onSubmit={handleLogin}>
           <fieldset className="fieldset">
-            <h3>Please sign in</h3>
+            {/* <h3>Please sign in</h3> */}
             <div className="formgrid">
               <input
                 onChange={handleFieldChange}
@@ -50,7 +65,8 @@ const Login = (props) => {
                 required=""
                 autoFocus=""
               />
-              <label htmlFor="username">
+
+              <label className="userIcon" htmlFor="username">
                 <Icon name="user" size="large" />
               </label>
 
@@ -61,30 +77,35 @@ const Login = (props) => {
                 placeholder="password"
                 required=""
               />
-              <label htmlFor="inputPassword">
+              <label className="passwordIcon" htmlFor="inputPassword">
                 <Icon name="lock" size="large" />
               </label>
             </div>
-            <button type="submit">Sign in</button>
-
-            <button
-              type="button"
-              onClick={() => {
-                props.history.push("/newUser");
-              }}
-            >
-              Create New User
-            </button>
-            <br />
+            <div className="buttonDiv">
+              <button className="LoginBtn" type="submit">
+                Login
+              </button>
+            </div>
+            <div className="buttonDiv2">
+              <button
+                className="createNewUserBtn"
+                type="button"
+                onClick={() => {
+                  props.history.push("/newUser");
+                }}
+              >
+                Create New User
+              </button>
+            </div>
           </fieldset>
         </form>
-        <picture>
+        {/* <picture>
           <img
             className=""
-            // src={require("../Images/blinkingElephant.gif")}
+            src={require("../Images/blinkingElephant.gif")}
             alt="elephant"
           />
-        </picture>
+        </picture> */}
       </div>
     </>
   );

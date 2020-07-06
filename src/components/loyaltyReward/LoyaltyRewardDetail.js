@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "reactstrap";
 import LoyaltyRewardManager from "../../modules/LoyaltyRewardManager";
-
+import "./Loyalty.css";
 const LoyaltyRewardDetail = (props) => {
   const [loyaltyReward, setLoyaltyReward] = useState({
     forLocation: "",
@@ -35,14 +35,17 @@ const LoyaltyRewardDetail = (props) => {
   };
 
   return (
-    <div className="card">
-      <h2>Loyalty Reward Card Details</h2>
-      <div className="card-content">
+    <div id="background_Loy">
+      <div className="emptySpace">. </div>
+      <div className="TopContainer">
+        <h4 className="colorLetters">Loyalty Reward Card Details</h4>
+      </div>
+
+      <fieldset className="Loyalty_fieldset Loyalty_style">
         {/* <picture>
           <img src={require("./dog.svg")} alt="My Dog" />
         </picture> */}
         <h3>
-          For:{" "}
           <span style={{ color: "darkslategrey" }}>
             {loyaltyReward.forLocation}
           </span>
@@ -52,15 +55,18 @@ const LoyaltyRewardDetail = (props) => {
         <p>Expiration Date: {loyaltyReward.expirationDate}</p>
         <p>Url: {loyaltyReward.url}</p>
         <p>Notes: {loyaltyReward.notes}</p>
-        <Button
-          color="danger"
-          type="button"
-          disabled={isLoading}
-          onClick={handleDelete}
-        >
-          Delete
-        </Button>
-      </div>
+        <div id="btnHolder">
+          <Button
+            id="deletebtn"
+            color="danger"
+            type="button"
+            disabled={isLoading}
+            onClick={handleDelete}
+          >
+            Delete
+          </Button>
+        </div>
+      </fieldset>
     </div>
   );
 };

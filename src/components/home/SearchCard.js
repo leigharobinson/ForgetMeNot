@@ -11,7 +11,7 @@ const SearchCard = (props) => {
   const [filteredDisplay, setFilteredDisplay] = useState([]);
 
   // Added this useEffect call to set filteredDisplay to props.allCards when the component mounts, instead of setting it in the useState method argument.
-  useEffect( () => setFilteredDisplay(props.allCards), [props.allCards])
+  useEffect(() => setFilteredDisplay(props.allCards), [props.allCards]);
 
   //handleChange runs each time ther's a change in the input feild
   const handleChange = (e) => {
@@ -51,17 +51,20 @@ const SearchCard = (props) => {
   return (
     <>
       <div>
-        Seach:
-        <input
-          placeholder="Search"
-          onChange={(e) => handleChange(e.target.value)}
-        />
+        <div id="search_border">
+          <h4 className="colorLetters">Card Library:</h4>
+          <input
+            id="search_bar"
+            placeholder="Search"
+            onChange={(e) => handleChange(e.target.value)}
+          />
+        </div>
         {filteredDisplay.map((filteredCard, i) => (
           <div id="search_card" key={i}>
             <div>
-              <h5>{filteredCard.cardType}</h5>
+              <h5 className="colorLetters">{filteredCard.cardType}</h5>
               {/* <h4> {props.card.id}</h4> */}
-              <h3>
+              <h3 className="colorLetters">
                 <span className="card-for">
                   {firstLetterCase(filteredCard.forLocation)}
                 </span>
@@ -70,22 +73,31 @@ const SearchCard = (props) => {
               {filteredCard.amount && <h2>Amount: ${filteredCard.amount}</h2>}
               {/* COnditionally render discoung */}
               {filteredCard.discount && (
-                <h2>Discount: {filteredCard.discount} OFF</h2>
+                <h2 className="colorLetters">
+                  Discount: {filteredCard.discount} OFF
+                </h2>
               )}
               {/* Conditially render LRewards */}
               {filteredCard.visitsUntilReward && (
-                <h2>Visits until Reward: {filteredCard.visitsUntilReward}</h2>
+                <h2 className="colorLetters">
+                  Visits until Reward: {filteredCard.visitsUntilReward}
+                </h2>
               )}
-              <p>Expiration: {filteredCard.expirationDate}</p>
-              <Button
-                color="danger"
-                disabled={props.isLoading}
-                onClick={() =>
-                  props.deleteCard(filteredCard.id, filteredCard.cardType)
-                }
-              >
-                Delete
-              </Button>
+              <p className="colorLetters">
+                Expiration: {filteredCard.expirationDate}
+              </p>
+              <div id="btnHolder">
+                <Button
+                  id="deletebtn"
+                  color="danger"
+                  disabled={props.isLoading}
+                  onClick={() =>
+                    props.deleteCard(filteredCard.id, filteredCard.cardType)
+                  }
+                >
+                  Delete
+                </Button>
+              </div>
             </div>
           </div>
         ))}

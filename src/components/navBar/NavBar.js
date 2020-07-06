@@ -23,57 +23,70 @@ const NavBar = (props) => {
     <>
       <div>
         <Navbar color="faded" light>
-          <NavbarBrand className="mr-auto" href="/">
-            <picture>
-              <Icon name="home" size="large" />
-            </picture>
-          </NavbarBrand>
+          <div id="plain">
+            <NavbarBrand className="mr-auto" href="/">
+              <div id="Nav_Container">
+                <picture>
+                  <Icon name="home" size="large" />
+                </picture>
+                <h4 id="title">Forget Me Not</h4>
+              </div>
+            </NavbarBrand>
+          </div>
           <NavbarToggler onClick={toggleNavbar} className="mr-2" />
           <Collapse isOpen={!collapsed} navbar>
             <Nav navbar>
+              <div id="GC_gold">
+                <NavItem>
+                  <NavLink href="/giftCards">
+                    <picture>
+                      <img
+                        class="giftCard_icon"
+                        src={require("../Images/giftcard.png")}
+                        alt="Gift Card"
+                      />
+                    </picture>
+                    Gift Cards
+                  </NavLink>
+                </NavItem>
+              </div>
               <NavItem>
-                <NavLink href="/giftCards">
-                  <picture>
-                    <img
-                      class="giftCard_icon"
-                      src={require("../Images/giftcard.png")}
-                      alt="Gift Card"
-                    />
-                  </picture>
-                  Gift Cards
-                </NavLink>
+                <div id="C_pink">
+                  <NavLink href="/coupons">
+                    <picture>
+                      <img
+                        class="Coupon_icon"
+                        src={require("../Images/coupon.png")}
+                        alt="Coupon Icon"
+                      />
+                    </picture>
+                    Coupons
+                  </NavLink>
+                </div>
               </NavItem>
               <NavItem>
-                <NavLink href="/coupons">
-                  <picture>
-                    <img
-                      class="Coupon_icon"
-                      src={require("../Images/coupon.png")}
-                      alt="Coupon Icon"
-                    />
-                  </picture>
-                  Coupons
-                </NavLink>
+                <div id="LR_purp">
+                  <NavLink href="/loyaltyRewardsCards">
+                    <picture>
+                      <img
+                        class="LRC_icon"
+                        src={require("../Images/loyalty.png")}
+                        alt="Loyalty Reward Card"
+                      />
+                    </picture>
+                    Loyalty Rewards
+                  </NavLink>
+                </div>
               </NavItem>
               <NavItem>
-                <NavLink href="/loyaltyRewardsCards">
-                  <picture>
-                    <img
-                      class="LRC_icon"
-                      src={require("../Images/loyalty.png")}
-                      alt="Loyalty Reward Card"
-                    />
-                  </picture>
-                  Loyalty Rewards
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink onClick={handleLogout} href="/loyaltyRewardsCards">
-                  <picture>
-                    <Icon name="user" size="large" />
-                  </picture>
-                  Logout
-                </NavLink>
+                <div id="plain1">
+                  <NavLink onClick={handleLogout} href="/loyaltyRewardsCards">
+                    <picture>
+                      <Icon name="user" size="large" />
+                    </picture>
+                    Logout
+                  </NavLink>
+                </div>
               </NavItem>
             </Nav>
           </Collapse>

@@ -1,0 +1,100 @@
+#background_gC {
+  background-image: url("../Images/GiftCard2.png");
+  flex: auto;
+  width: 376.91px;
+  height: 1845.38px;
+  left: 0px;
+  top: -589px;
+}
+
+.GiftCard_style {
+  margin: 10px 10px 15px 10px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(204, 242, 224);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.GiftCard_simp {
+  margin: 5px 10px;
+  padding: 5px;
+}
+
+.formgrid {
+  background-color: rgb(204, 242, 224);
+  /* border: 5px rgb(188, 189, 130) solid; */
+}
+.GiftCard_fieldset input {
+  border: none;
+  border-radius: 45px;
+}
+.GiftCard_fieldset label {
+  white-space: nowrap;
+  text-align: right;
+}
+.GiftCard_fieldset {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 5px 5px;
+  border: 10px rgb(188, 189, 130) solid;
+}
+
+#deletebtn {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* #emptySpace {
+} */
+.TopContainer {
+  margin-top: 9em;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#NewGiftCardFormButton {
+  border-radius: 45px;
+  border: none;
+  background-color: rgb(188, 189, 130);
+  /* background-color: rgb(130, 189, 161); */
+  margin: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  height: 31.5px;
+  width: 151px;
+}
+#deletebtn {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 45px;
+  height: 31.5px;
+  width: 65.22px;
+}
+.btnBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#GiftCardButton {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 45px;
+  background-color: rgb(130, 189, 161);
+  border: none;
+  height: 31.5px;
+  width: 65.22px;
+}
+#CouponButton {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 45px;
+  background-color: rgb(130, 189, 161);
+  border: none;
+  height: 31.5px;
+  width: 65.22px;
+}
+.colorLetters {
+  color: rgb(30, 57, 44);
+}
+#btnHolder {
+  display: flex;
+  /* border: black 5px solid; */
+  align-items: center;
+  justify-content: flex-end;
+}

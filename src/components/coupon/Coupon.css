@@ -1,0 +1,58 @@
+#background_Coup {
+  background-image: url("../Images/Coupon1.png");
+  flex: auto;
+  width: 376.91px;
+  height: 1845.38px;
+  left: 0px;
+  top: -589px;
+}
+
+.Coupon_style {
+  margin: 10px 10px 15px 10px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(204, 242, 224);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+.GiftCard_simp {
+  margin: 5px 10px;
+  padding: 5px;
+}
+#deletebtn {
+  /* padding: 5px; */
+  margin: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+#NewCouponFormButton {
+  border-radius: 45px;
+  border: none;
+  background-color: rgb(189, 130, 130);
+  /* background-color: rgb(130, 189, 161); */
+  margin: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  height: 31.5px;
+  width: 151px;
+}
+.Coupon_fieldset {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 5px 5px;
+  border: 10px rgb(189, 130, 130) solid;
+}
+.Coupon_fieldset input {
+  border: none;
+  border-radius: 45px;
+}
+.Coupon_fieldset label {
+  white-space: nowrap;
+  text-align: right;
+}
+.colorLetters {
+  color: rgb(30, 57, 44);
+}
+#btnHolder {
+  display: flex;
+  /* border: black 5px solid; */
+  align-items: center;
+  justify-content: flex-end;
+}

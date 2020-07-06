@@ -17,3 +17,29 @@ img {
   width: 5em;
   height: auto;
 }
+#Nav_Container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#title {
+  margin-left: 3.2em;
+  color: lightgray;
+  /* color: rgb(220, 220, 220); */
+}
+#GC_gold {
+  background-color: rgb(188, 189, 130);
+  border: solid 4px white;
+}
+#C_pink {
+  background-color: rgb(189, 130, 130);
+  border: solid 4px white;
+}
+#LR_purp {
+  background-color: rgb(130, 136, 189);
+  border: solid 4px white;
+}
+#plain1 {
+  background-color: rgb(204, 242, 224);
+  border: solid 4px white;
+}
