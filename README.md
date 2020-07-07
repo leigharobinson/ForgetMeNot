@@ -1,68 +1,99 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="./src/components/Images/PlainLogo.png" width="100" height="100">
+<img src="./src/components/Images/GiftCardLogo.png" width="100" height="100">
+<img src="./src/components/Images/CouponLogo.png" width="100" height="100">
+<img src="./src/components/Images/LoyaltyLogo.png" width="100" height="100">
 
-## Available Scripts
+#Forget Me Not
 
-In the project directory, you can run:
+## Gift Cards, Coupons, & Loyalty Rewards Tracker
 
-### `npm start`
+**Description:** I created an app that allows users to build a virtual wallet that can fast sort their Gift Cards, Coupons and Rewards as well as track important information such as expiration dates.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Purpose:** I like to be smart with my money and hate forgetting to use the various of Gift Cards, Coupons, & Loyalty Rewards in my wallet. One of the big obstacles I have to using my cards is that there are so many it's hard to remember what I have. I also regularly forget other important details such as when they expire or what I intended to use them for. This App is a way to help organize all this information so that users can quickly know what they have available for use.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+### **To run this marvelous code:**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone it down
 
-### `npm run build`
+1. Go to your terminal of choice and create a new folder
+1. Copy the SSH key in git hub
+1. In your terminal write: git clone `git@github.com:leigharobinson/ForgetMeNot.git`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Launch from Terminal
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. `cd` into forgetMeNot
+1. `npm install`
+1. `npm start` \*If doesn't open automatically then paste http://localhost:3000 in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Now Launch JSON file
 
-### `npm run eject`
+1. `cd forgetMeNot/api`
+1. `json-server -p 5005 -w forgetMeNot.json
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### **Using the App:**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Register an account (\*) Note: this is not true authentication. DO NOT STORE SENSITIVE INFORMATION! Email addresses are saved openly in the JSON database and not protected.f
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Click "Create New User" btn
+2. Fill Out "Create User Account" form and then Sign in
 
-## Learn More
+<img src="./src/components/Images/FirstStep1.png" width="150" height="325"> <img src="./src/components/Images/SecondStep1.png" width="150" height="325">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Once You're Signed in, click Navbar and select what Card you would like to add to "Forget Me Not"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="./src/components/Images/ThirdStep.png" width="150" height="325">
 
-### Code Splitting
+2. For this demonstration, I will select Gift Card
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<img src="./src/components/Images/FourthStep.png" width="150" height="325">
 
-### Analyzing the Bundle Size
+3. Once on Gift Card select the "Add Gift Card" btn
+4. Then fill out the Gift Card Form & press Submit
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<img src="./src/components/Images/FifthStep.png" width="150" height="325">
 
-### Making a Progressive Web App
+5. Now that your form has been submitted, a virtual card representation of your physical card will display on the "Gift Card page" as well as the "Main page."
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+   Access the "Main page" by clicking the house icon
 
-### Advanced Configuration
+<img src="./src/components/Images/SixStep.png" width="150" height="325"> <img src="./src/components/Images/SevenStep.png" width="150" height="325">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+6. Buttons accessible on different pages of the App allow for the functionality of the word written on them. Cards can be created, read, updated, updated, and deleted.
+7. Once the User has added multiple cards of different types and for different businesses, the "Home Page" has a Search input that allows for quick sorting of all of the User's Cards. Cards are also by default listed alphabetically by the establishment's name.
 
-### Deployment
+### **Technologies Used**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+---
 
-### `npm run build` fails to minify
+To build this app the following were used:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+- [Semantic UI](https://react.semantic-ui.com/) for icons
+- [React Router](https://reacttraining.com/react-router/) for page routing
+- [Reactstrap](https://reactstrap.github.io/components/navbar/)
+- [BootStrap](https://getbootstrap.com/) for buttons and to enable Reactstrap
+
+### Skills Utilized
+
+1. API Calls: POST, PUT, DELETE, GET
+1. JavaScript: Objects, Arrays, Functions, etc.
+1. Persistent data storage with JSON server
+1. Github Scrum workflow
+1. CSS
+1. Semantic HTML
+1. React: hooks, props, routes
+1. Modular code
+
+## Troubleshooting
+
+If you are having trouble getting the application running:
+
+- Double check your file paths to make sure they are in the right directories
+- Make sure all dependencies are installed
+- Check to make sure your servers are correct. Should be `localhost:3000` for app and `localhost:5005` for the JSON server.
+- Contact me through my linkedin and I would be happy to try and help (https://www.linkedin.com/in/leigha-robinson/)
