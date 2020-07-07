@@ -1,9 +1,6 @@
-<img src="./src/components/Images/PlainLogo.png" width="100" height="100">
-<img src="./src/components/Images/GiftCardLogo.png" width="100" height="100">
-<img src="./src/components/Images/CouponLogo.png" width="100" height="100">
-<img src="./src/components/Images/LoyaltyLogo.png" width="100" height="100">
+<img src="./src/components/Images/PlainLogo.png" width="100" height="100"><img src="./src/components/Images/GiftCardLogo.png" width="100" height="100"><img src="./src/components/Images/CouponLogo.png" width="100" height="100"><img src="./src/components/Images/LoyaltyLogo.png" width="100" height="100">
 
-#Forget Me Not
+# Forget Me Not
 
 ## Gift Cards, Coupons, & Loyalty Rewards Tracker
 
