@@ -59,6 +59,18 @@
       "password": "123",
       "email": "sandy@gmail.com",
       "id": 10
+    },
+    {
+      "username": "Margo",
+      "password": "123",
+      "email": "Full@gmail.com",
+      "id": 11
+    },
+    {
+      "username": "GitHub Test",
+      "password": "123",
+      "email": "GitHub_best@gmail.com",
+      "id": 12
     }
   ],
   "giftCards": [
@@ -169,6 +181,30 @@
       "url": "https://www.kohls.com/",
       "notes": "Giftcard from Santa",
       "id": 19
+    },
+    {
+      "userId": 1,
+      "cardType": "Gift Card",
+      "forLocation": "Games Workshop",
+      "datetime": "07/06/2020, 08:36:56 PM",
+      "amount": "100",
+      "expirationDate": "2020-10-21",
+      "quantity": "1",
+      "url": "n/a",
+      "notes": "Get that Daughters of Kane",
+      "id": 20
+    },
+    {
+      "userId": 12,
+      "cardType": "Gift Card",
+      "forLocation": "TechBargains",
+      "datetime": "07/06/2020, 09:43:30 PM",
+      "amount": "250",
+      "expirationDate": "2020-12-23",
+      "quantity": "1",
+      "url": "https://www.techbargains.com/",
+      "notes": "Use to get better Tech Gear",
+      "id": 21
     }
   ],
   "coupons": [
@@ -207,18 +243,6 @@
       "url": "n/a",
       "notes": "look for belt mom wanted",
       "id": 9
-    },
-    {
-      "userId": 1,
-      "cardType": "Coupon",
-      "forLocation": "Montana's Steakhouse ",
-      "datetime": "06/24/2020, 04:57:41 PM",
-      "discount": "24%",
-      "expirationDate": "2020-06-25",
-      "quantity": "1",
-      "url": "https://www.montanas.ca/en.html",
-      "notes": "Use this next time in Canada",
-      "id": 10
     },
     {
       "userId": 4,

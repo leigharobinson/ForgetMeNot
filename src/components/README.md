@@ -1,155 +1,98 @@
-![alt text](/Images/NashvilleSkyLine.png)
-# Title: Welcome to Nashville! 
+<img src="./Images/PlainLogo.png"  width="100" height="100"> <img src="./Images/GiftCardLogo.png"  width="100" height="100"><img src="./Images/CouponLogo.png"  width="100" height="100"><img src="./Images/LoyaltyLogo.png"  width="100" height="100">
 
-**Description:** We created an app that allows users to build an itinerary for a day trip to Nashville.
+# Forget Me Not
 
-**Purpose:** To practice dividing labor within a programing team in order to build an app that has CRUD capabilities. 
+## Gift Cards, Coupons, & Loyalty Rewards Tracker
 
+---
 
-**To run our marvelous code:**
+**Description:** I created an app that allows users to build a virtual wallet that can fast sort their Gift Cards, Coupons and Rewards as well as track important information such as expiration dates.
+
+**Purpose:** I like to be smart with my money and hate forgetting to use the various of Gift Cards, Coupons, & Loyalty Rewards in my walet. One of the big obsitcals I have to using my cards is that there are so many it's hard to remeber what I have. I also regualrly forget other important details such as when they expire or what I intended to use them for. This App is a way to help organize all this information so that users can quickly know what they have avalible for use.
+
+---
+
+### **To run this marvelous code:**
+
 1. Clone it down
-    1. Go to your terminal of choice and create a new folder
-    2. Copy the SSH key in git hub
-    3. In your terminal write: git clone ~paste your SSH key here~
 
-2. This project relies on access to four different APIs. 
-    * Parks: [Metro Gov API](https://dev.socrata.com/foundry/data.nashville.gov/xbru-cfzi)
-    * Art: [Metro Gov API](https://dev.socrata.com/foundry/data.nashville.gov/eviu-nxp6)
-    * Food: [OpenTable API](http://opentable.herokuapp.com/)
-    * Music: [Ticketmaster API](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/)
+   1. Go to your terminal of choice and create a new folder
+   2. Copy the SSH key in git hub
+   3. In your terminal write: git clone `git@github.com:leigharobinson/ForgetMeNot.git`
 
-  You will need to register and obtain an app key and app id. only for __OpenTable__ and __Ticketmaster API__.
+2. Launch from Terminal
 
-__For security purposes, do not push up that data to github.__ Note that the .gitignore includes scripts/keys.js. Create that file and add your info to it as an object like so:
+   1. `cd` into forgetMeNot
+   2. `npm install`
+   3. `npm start` \*If doesn't open automatically then paste http://localhost:3000 in your browser.
 
-     
-      const app_keys = {
-        app_id: "your id",
-        app_key: "your key"
-      }
-    
+3. Now Launch JSON file
 
+   1. `cd forgetMeNot/api`
+   2. `json-server -p 5005 -w forgetMeNot.json
 
-3. In the project root, run your dev server of choice (example grate (e.g.) serve or http-server)
+### **Using the App:**
 
 ---
 
-## Contributors
+- Register an account (\*) Note: this is not true authentication. DO NOT STORE SENSITIVE INFORMATION! Email addresses are saved openly in the JSON database and not protected.f
 
-![alt text][logo]
+1. Click "Create New User" btn
+2. Fill Out "Create User Account" form and then Sign in
 
-[logo]: /Images/LeapingLizardsLogoOne.png
+<img src="./Images/FirstStep1.png"  width="150" height="325"> <img src="./Images/SecondStep1.png"  width="150" height="325">
 
-- Ronald Lankford
-- Zach Nicholson
-- Evan Raynolds
-- Leigha Robinson
+1. Once You're Signed in, click Navbar and select what Card you would like to add to "Forget Me Not"
+
+<img src="./Images/ThirdStep.png"  width="150" height="325">
+
+2. For this demonstration, I will select Gift Card
+
+<img src="./Images/FourthStep.png"  width="150" height="325">
+ 
+ 3. Once on Gift Card select the "Add Gift Card" btn
+ 4. Then fill out the Gift Card Form & press Submitt
+
+<img src="./Images/FifthStep.png"  width="150" height="325">
+
+5. Now that your form has been submitted, a virtual card representation of your physical card wil display on the "Gift Card page" as well as the "Main page."
+
+   Access the "Main page" by clicking the house icon
+
+<img src="./Images/SixStep.png"  width="150" height="325"> <img src="./Images/SevenStep.png"  width="150" height="325">
+
+6. Buttons accessable on different pages of the App allow for the functionality of the word written on them. Cards can be created, read, updated, and deleted.
+7. Once the User has added mutliple cards of different types and for different businesses, the "Home Page" has a Search input that allows for quick sorting of all of the User's Cards. Cards are also by default listed alphabetically by the establishment's name.
+
+### **Technologies Used**
 
 ---
 
-# Welcome to Nashville: Build an itinerary for a day trip to Music City
+To build this app the following were used:
 
-In this app users can search for four different things to do/visit in Nashville:
-* parks -- using the Nashville [Metro Gov API](https://dev.socrata.com/foundry/data.nashville.gov/xbru-cfzi)
-* public art collections -- using Nashville [Metro Gov API](https://dev.socrata.com/foundry/data.nashville.gov/eviu-nxp6)
-* restaurants -- using the [Zomato API](https://developers.zomato.com/api)
-* concerts -- using the [Ticketmaster API](https://developer.ticketmaster.com/products-and-docs/apis/getting-started/)
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-You will be utilizing all of the skills and concepts that you've learned up to this point in the course.
+  - [Semantic UI](https://react.semantic-ui.com/) for icons
+  - [React Router](https://reacttraining.com/react-router/) for page routing
+  - [Reactstrap](https://reactstrap.github.io/components/navbar/)
+  - [BootStrap](https://getbootstrap.com/) for buttons and to enable Reactstrap
 
-1. Functions
-1. Persistent data storage
-1. Github
-1. CSS
-1. Building DOM components
-1. Handling user events
-1. Modular code
-1. Semantic HTML
-1. [Valid HTML5](https://validator.w3.org/)
+  ### Skills Utilized
 
-## Itinerary Builder
+  1. API Calls: POST, PUT, DELETE, GET
+  1. JavaScript: Objects, Arrays, Functions, etc.
+  1. Persistent data storage with JSON server
+  1. Github Scrum workflow
+  1. CSS
+  1. Semantic HTML
+  1. React: hooks, props, routes
+  1. Modular code
 
-When the user searches for any of the four categories of things to do, the results should be listed in the DOM. Each result item should have an affordance to add the item to the current itinerary. Use your awesome new skills to select the text of the search result ( ie "John Mellencamp at the Ryman" ) and add it to the itinerary list. See the wireframe below for a visual cue for how this might look.
+  ## Troubleshooting
 
+  If you are having trouble getting the application running:
 
-## Professional Requirements
-
-1. Only one itinerary needs to exist at a time. If a user selects an item to add to the itinerary, and an item already exists for that category in the itinerary, then you will need to update the corresponding itinerary item in the DOM with the new data.
-1. All teammates must be using http-server during development. `json-server` should only be used if you have time to work on the stretch goal (_see below_).
-1. Each teammate is responsible for one API module. If your group has five members, one person is responsible for the module that interacts with the DOM and the data from the API modules. In a four-person team, the team will decide how to handle the development of that module.
-1. The README for your project should include instructions on how another person can download and run the application. **PRO TIP:** Don't wait until the very end to create the README. [Readme Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-1. DO NOT FORGET to use a `.gitignore` file to keep git from tracking `.DS_Store`, **your API Keys**, and, if necessary, API directory (stretch goal).
-1. CSS for structure is part of MVP. CSS for style (animations, colors, fonts) is _secondary_. Do not add any additional visual enhancements until you have a fully functional app. 
-1. The goal of every member of the team is to _implement functionality with JavaScript_.
-
-## Visual Feature List
-
-To help you along, here is a wireframe of how your app might look
-
-![welcome wireframe](./welcom-to-nashville-example.png)
-
-## Notes about the APIs
-
-### Ticketmaster API
-
-The Ticketmaster API requires an `apikey` to be included in the url.
-
-For example:
-```js
-const concertApi = {
-  searchForQueen() {
-    return fetch("http://app.ticketmaster.com/discovery/v1/events.json?keyword=Queen&apikey=__YOUR_API_KEY_HERE__")
-      .then(response => response.json());
-  }
-};
-```
-
-### Zomato API
-
-Here's an example fetch to search restuarants in Nashville.
-
-* 1138 is the `id` for the city of Nashville
-* `entity_type` must be set to `city`
-* Your API key must be added as an `apikey` query string parameter
-
-```js
-return fetch("https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&start=first&sort=rating&apikey=__YOUR_API_KEY_HERE__")
-    .then(r => r.json())
-```
-
-### Nashville Metro Open Data API
-
-This API does not require an API key.
-
-### Keeping track of API Keys
-
-_**NEVER store API Keys in Github!!!**_
-
-You will need to a separate JavaScript module with `const`s to store your API Keys. The module's filename should be added to your `.gitignore` to prevent if from being added to your git repo.
-
-## Stretch Goal
-
-Persist your itinerary with `json-server`. You only need to have a single itinerary. If the user selects a different park, restaurant, etc, use a PUT to update the itinerary with the new data.
-
-To start you off, here's an example of what the itinerary in your API might look like in your database once it's created by the user.
-
-```json
-{
-  "itinerary":
-      {
-        "id": 1,
-        "park": "Centennial Park",
-        "restaurant": "Prince’s Hot Chicken",
-        "meetup": "Meeple Mountain Board Game Night",
-        "concert": "John Mellencamp at the Ryman"
-      }
-}
-```
-## Stretchier Goals
-
-Add a "more info" link to each of the Public Art search result entries. This link should open a new tab. Use the URL from the `page_link` property as the link's `href`.
-
-## Stretchiest Goals
-* Add an affordance to finalize an itinerary, and start a new one.
-  * Add ability to view one or all of the itineraries
-* Instead of displaying all the search fields, search results, and itinerary list at the same time, add a nav bar or other feature(s) for hiding/showing what the user wants to view
+  - Double check your file paths to make sure they are in the right directories
+  - Make sure all dependencies are installed
+  - Check to make sure your servers are correct. Should be `localhost:3000` for app and `localhost:5005` for the JSON server.
+  - Contact me through my linkedin and I would be happy to try and help (https://www.linkedin.com/in/leigha-robinson/)
