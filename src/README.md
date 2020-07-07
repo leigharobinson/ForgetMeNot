@@ -38,7 +38,7 @@
 1. Click "Create New User" btn
 2. Fill Out "Create User Account" form and then Sign in
 
-<img src="../src/components/Images/FirstStep1.png" width="150" height="325"> <img src="../Images/SecondStep1.png" width="150" height="325">
+<img src="../src/components/Images/FirstStep1.png" width="150" height="325"> <img src="../src/components/Images/SecondStep1.png" width="150" height="325">
 
 1. Once You're Signed in, click Navbar and select what Card you would like to add to "Forget Me Not"
 
@@ -47,6 +47,7 @@
 2. For this demonstration, I will select Gift Card
 
 <img src="../src/components/Images/FourthStep.png" width="150" height="325">
+
 3. Once on Gift Card select the "Add Gift Card" btn
 4. Then fill out the Gift Card Form & press Submit
 
@@ -54,9 +55,9 @@
 
 5. Now that your form has been submitted, a virtual card representation of your physical card will display on the "Gift Card page" as well as the "Main page."
 
-Access the "Main page" by clicking the house icon
+   Access the "Main page" by clicking the house icon
 
-<img src="../src/components/Images/SixStep.png" width="150" height="325"> <img src="./Images/SevenStep.png" width="150" height="325">
+<img src="../src/components/Images/SixStep.png" width="150" height="325"> <img src="../src/components/Images/SevenStep.png" width="150" height="325">
 
 6. Buttons accessible on different pages of the App allow for the functionality of the word written on them. Cards can be created, read, updated, updated, and deleted.
 7. Once the User has added multiple cards of different types and for different businesses, the "Home Page" has a Search input that allows for quick sorting of all of the User's Cards. Cards are also by default listed alphabetically by the establishment's name.
